@@ -34,12 +34,30 @@ namespace VFETribals
                     Find.WindowStack.Add(new Window_CustomizeCornerStones());
                 }
             };
+
+            var eraAdvancementDef = DefDatabase<EraAdvancementDef>.AllDefsListForReading
+                .FirstOrDefault(x => x.newTechLevel - 1 == Faction.OfPlayer.def.techLevel);
+            if (eraAdvancementDef != null)
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = eraAdvancementDef.label,
+                    defaultDesc = eraAdvancementDef.description,
+                    disabled = DefDatabase<ResearchProjectDef>.AllDefs.Where(x => x.techLevel == Faction.OfPlayer.def.techLevel)
+                        .Any(x => x.IsFinished is false),
+                    action = () =>
+                    {
+                        GameComponent_Tribals.Instance.AdvanceToEra(eraAdvancementDef);
+                    }
+                };
+            }
+
             yield return new Command_Action
             {
                 defaultLabel = "DEV: increase cornerstone point",
                 action = () =>
                 {
-                    GameComponent_Tribals.Instance.IncrementCornerstonePoint();
+                    GameComponent_Tribals.Instance.availableCornerStonePoints++;
                 }
             };
         }
@@ -48,6 +66,12 @@ namespace VFETribals
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
     public class HotSwappableAttribute : Attribute
     {
+    }
+
+    public class EraAdvancementDef : Def
+    {
+        public TechLevel newTechLevel;
+        public int cornerstonePoint;
     }
 
     [HotSwappable]
@@ -63,7 +87,7 @@ namespace VFETribals
     {
         public int availableCornerStonePoints;
 
-        public TechLevel playerTechLevel;
+        public TechLevel? playerTechLevel;
 
         public static GameComponent_Tribals Instance;
 
@@ -77,21 +101,24 @@ namespace VFETribals
             Instance = this;
         }
 
-        public void IncrementCornerstonePoint()
+        public void AdvanceToEra(EraAdvancementDef def)
         {
-            availableCornerStonePoints++;
+            playerTechLevel = Faction.OfPlayer.def.techLevel = def.newTechLevel;
+            availableCornerStonePoints += def.cornerstonePoint;
         }
 
         public override void FinalizeInit()
         {
             base.FinalizeInit();
-            Log.Message("FinalizeInit: " + Faction.OfPlayer.def.techLevel);
+            if (playerTechLevel.HasValue)
+            {
+                Faction.OfPlayer.def.techLevel = playerTechLevel.Value;
+            }
         }
 
         public override void StartedNewGame()
         {
             base.StartedNewGame();
-            Log.Message("StartedNewGame: " + Faction.OfPlayer.def.techLevel);
             playerTechLevel = Faction.OfPlayer.def.techLevel;
         }
 
