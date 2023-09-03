@@ -20,5 +20,9 @@ Ethos lock is currently on. The ethos text will not auto-regenerate.</VFET.Ethos
 	<VFET.UnlockCornerstone>Unlock cornerstone</VFET.UnlockCornerstone>
 	<VFET.StatsReport_Cornerstones>Relevant cornerstones</VFET.StatsReport_Cornerstones>
 	<VFET.WorkDisabledByMissingResearch>Research {0} to unlock it</VFET.WorkDisabledByMissingResearch>
-
+	<VFET.FormIdeology>Form ideology</VFET.FormIdeology>
+	<VFET.FormIdeologyDesc>What should your colonists believe? These beliefs affect gameplay and visuals. You will be able to recruit others to your beliefs, or take on their beliefs.\n\n
+Choosing classic will allow you to play without the ideology system. All Ideology expansion content remains active.\n\n
+Choosing fluid will allow you to start with a basic ideology and develop it over time.\n\n
+Choosing fixed allows you to customize the ideology and every aspect of it. This may take some time.</VFET.FormIdeologyDesc>
 </LanguageData>

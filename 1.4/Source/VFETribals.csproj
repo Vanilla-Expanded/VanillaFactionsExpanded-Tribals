@@ -62,8 +62,10 @@
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HarmonyPatches\Page_ChooseIdeoPreset_DoNext_Patch.cs" />
+    <Compile Include="UI\ChoiceLetter_ConfigureIdeo.cs" />
     <Compile Include="HarmonyPatches\Designator_GizmoOnGUI_Patch.cs" />
-    <Compile Include="HarmonyPatches\PageUtility_StitchedPages_Patch.cs" />
+    <Compile Include="HarmonyPatches\Page_ChooseIdeoPreset_PostOpen_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_CombinedDisabledWorkTags_Patch.cs" />
     <Compile Include="HarmonyPatches\ResearchManager_FinishProject_Patch.cs" />
     <Compile Include="UI\Alert_AvailableCornerstonePoints.cs" />
@@ -80,6 +82,9 @@
     <Compile Include="HarmonyPatches\StatWorker_GetExplanationUnfinalized_Patch.cs" />
     <Compile Include="HarmonyPatches\StatWorker_GetValueUnfinalized_Patch.cs" />
     <Compile Include="Defs\TribalResearchProjectDef.cs" />
+    <Compile Include="HarmonyPatches\FactionIdeosTracker_RecalculateIdeosBasedOnPlayerPawns_Patch.cs" />
+    <Compile Include="UI\Page_ConfigureFluidIdeo_Colonists.cs" />
+    <Compile Include="UI\Page_ConfigureIdeo_Colonists.cs" />
     <Compile Include="UI\VFET_DefOf.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="VFETribalsMod.cs" />

@@ -115,10 +115,6 @@ namespace VFETribals
 
             if (VFET_DefOf.VFET_Culture.IsFinished is false)
             {
-                if (classicIdeologyMode.HasValue is false)
-                {
-                    classicIdeologyMode = Find.IdeoManager.classicMode;
-                }
                 Find.IdeoManager.classicMode = true;
             }
         }
@@ -130,7 +126,6 @@ namespace VFETribals
             Scribe_Values.Look(ref playerTechLevel, "playerTechLevel");
             Scribe_Values.Look(ref ethos, "ethos");
             Scribe_Values.Look(ref ethosLocked, "ethosLocked");
-            Scribe_Values.Look(ref classicIdeologyMode, "classicIdeologyMode");
             Scribe_Collections.Look(ref cornerstones, "cornerstones", LookMode.Def);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {

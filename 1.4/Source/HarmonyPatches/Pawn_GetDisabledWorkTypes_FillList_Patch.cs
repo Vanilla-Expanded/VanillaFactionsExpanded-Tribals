@@ -31,8 +31,6 @@ namespace VFETribals
                     }
                 }
             }
-
-            Log.Message(Find.IdeoManager.classicMode + " classic");
         }
     }
 }
