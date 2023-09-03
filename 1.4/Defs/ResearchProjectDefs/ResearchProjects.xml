@@ -25,14 +25,190 @@
     <baseCost>50</baseCost>
 	<tab>VFET_Basics</tab>
     <techLevel>Animal</techLevel>
-    <researchViewX>0.00</researchViewX>
-    <researchViewY>1.40</researchViewY>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
 	<unlocksWorkTypes>
 		<li>Growing</li>
 	</unlocksWorkTypes>
 	<unlocksDesignators>
 		<li>Designator_ZoneAdd_Growing</li>
 	</unlocksDesignators>
+    <prerequisites>
+      <li>VFET_Fire</li>
+    </prerequisites>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Cultivation</defName>
+    <label>cultivation</label>
+    <description>Expand crop variety with more specific, difficult to grow plants, such as smokeleaf or psychoid plant.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <prerequisites>
+      <li>VFET_Agriculture</li>
+    </prerequisites>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Medicine</defName>
+    <label>medicine</label>
+    <description>Introduce basic medical care and herbal treatment methods. Unlocks doctoring and patient jobs.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+	<unlocksWorkTypes>
+		<li>Doctor</li>
+		<li>Patient</li>
+	</unlocksWorkTypes>
+    <prerequisites>
+      <li>VFET_Cultivation</li>
+    </prerequisites>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_AnimalHandling</defName>
+    <label>animal handling</label>
+    <description>Learn to grow various staple crops. Unlocks growing job.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+	<unlocksWorkTypes>
+		<li>Handling</li>
+	</unlocksWorkTypes>
+	<unlocksDesignators>
+		<li>Designator_Tame</li>
+		<li>Designator_Slaughter</li>
+	</unlocksDesignators>
+    <prerequisites>
+      <li>VFET_Fire</li>
+    </prerequisites>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Mining</defName>
+    <label>mining</label>
+    <description>Develop methods to extract resources from the earth using force. Unlocks mining job.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+	<unlocksWorkTypes>
+		<li>Mining</li>
+	</unlocksWorkTypes>
+	<unlocksDesignators>
+		<li>Designator_Mine</li>
+		<li>Designator_SmoothSurface</li>
+	</unlocksDesignators>
+    <prerequisites>
+      <li>VFET_Fire</li>
+    </prerequisites>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Construction</defName>
+    <label>construction</label>
+    <description>Learn the absolute basic techniques of building and structural design. Unlocks the ability to build walls and roofs.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+	<unlocksWorkTypes>
+		<li>Construction</li>
+	</unlocksWorkTypes>
+	<unlocksDesignators>
+		<li>Designator_Deconstruct</li>
+		<li>Designator_AreaBuildRoof</li>
+		<li>Designator_RemoveFloor</li>
+		<li>Designator_RemoveBridge</li>
+	</unlocksDesignators>
+    <prerequisites>
+      <li>VFET_Mining</li>
+    </prerequisites>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Furniture</defName>
+    <label>furniture</label>
+    <description>Introduce basic furniture crafting for improved living conditions.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <prerequisites>
+      <li>VFET_Construction</li>
+    </prerequisites>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Tribalwear</defName>
+    <label>tribalwear</label>
+    <description>Introduce basic furniture crafting for improved living conditions.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>2.10</researchViewY>
+    <prerequisites>
+      <li>VFET_Fire</li>
+    </prerequisites>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Hunting</defName>
+    <label>hunting</label>
+    <description>Introduce basic furniture crafting for improved living conditions.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+	<unlocksWorkTypes>
+		<li>Hunting</li>
+	</unlocksWorkTypes>
+	<unlocksDesignators>
+		<li>Designator_Hunt</li>
+	</unlocksDesignators>
+    <prerequisites>
+      <li>VFET_Fire</li>
+    </prerequisites>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Weapons</defName>
+    <label>weapons</label>
+    <description>Introduce basic weaponry for defense against enemies.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+    <prerequisites>
+      <li>VFET_Hunting</li>
+    </prerequisites>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Bow</defName>
+    <label>bow</label>
+    <description>Unlock the ability to craft the staple of ranged combat - a short bow.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+    <prerequisites>
+      <li>VFET_Weapons</li>
+    </prerequisites>
   </VFETribals.TribalResearchProjectDef>
 
   <VFETribals.TribalResearchProjectDef>
@@ -42,11 +218,18 @@
     <baseCost>50</baseCost>
 	<tab>VFET_Basics</tab>
     <techLevel>Animal</techLevel>
-    <researchViewX>0.00</researchViewX>
+    <researchViewX>4.00</researchViewX>
     <researchViewY>1.40</researchViewY>
 	<unlocksWorkTags>
 		<li>Intellectual</li>
 	</unlocksWorkTags>
+    <prerequisites>
+      <li>VFET_Medicine</li>
+	  <li>VFET_Tribalwear</li>
+	  <li>VFET_Furniture</li>
+	  <li>VFET_AnimalHandling</li>
+	  <li>VFET_Bow</li>
+    </prerequisites>
   </VFETribals.TribalResearchProjectDef>
 
 </Defs>
