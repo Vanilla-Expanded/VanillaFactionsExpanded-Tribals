@@ -21,7 +21,7 @@ namespace VFETribals
                 defaultLabel = "DEV: customize cornerstones",
                 action = () =>
                 {
-                    Find.WindowStack.Add(new Window_CustomizeCornerStones());
+                    Find.WindowStack.Add(new Window_CustomizeCornerstones());
                 }
             };
 

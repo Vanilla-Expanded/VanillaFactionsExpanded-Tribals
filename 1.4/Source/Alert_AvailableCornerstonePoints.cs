@@ -22,7 +22,7 @@ namespace VFETribals
         public override void OnClick()
         {
             base.OnClick();
-            Find.WindowStack.Add(new Window_CustomizeCornerStones());
+            Find.WindowStack.Add(new Window_CustomizeCornerstones());
         }
     }
 }

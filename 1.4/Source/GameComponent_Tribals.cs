@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
 using Verse;
+using Verse.Grammar;
 
 namespace VFETribals
 {
@@ -14,7 +15,7 @@ namespace VFETribals
         public string ethos;
         public bool ethosLocked;
 
-        public List<CornerstoneDef> cornerstones;
+        public List<CornerstoneDef> cornerstones = new List<CornerstoneDef>();
 
         public static GameComponent_Tribals Instance;
 
@@ -37,6 +38,16 @@ namespace VFETribals
         public void OffsetAvailableCornerstonePoints(int offset)
         {
             availableCornerstonePoints += offset;
+        }
+
+        public void AddCornerstone(CornerstoneDef def)
+        {
+            availableCornerstonePoints--;
+            cornerstones.Add(def);
+            if (ethosLocked is false)
+            {
+                ethos = GetNewEthos();
+            }
         }
 
         public override void GameComponentTick()
@@ -70,7 +81,12 @@ namespace VFETribals
 
         public string GetNewEthos()
         {
-            return "";
+            var ethos = "";
+            foreach (var def in cornerstones)
+            {
+                ethos += def.blurb.Formatted(Faction.OfPlayer.NameColored).Resolve();
+            }
+            return ethos;
         }
 
         public override void ExposeData()

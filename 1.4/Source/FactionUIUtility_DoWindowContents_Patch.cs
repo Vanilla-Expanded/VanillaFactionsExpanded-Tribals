@@ -12,11 +12,11 @@ namespace VFETribals
         {
             if (ModCompatibility.VFEClassicalActive)
             {
-                if (Widgets.ButtonText(new Rect(120f + 15, 10f, 120f, 30f), "VFET.Cornerstones".Translate())) Find.WindowStack.Add(new Window_CustomizeCornerStones());
+                if (Widgets.ButtonText(new Rect(120f + 15, 10f, 120f, 30f), "VFET.Cornerstones".Translate())) Find.WindowStack.Add(new Window_CustomizeCornerstones());
             }
             else
             {
-                if (Widgets.ButtonText(new Rect(0, 10f, 120f, 30f), "VFET.Cornerstones".Translate())) Find.WindowStack.Add(new Window_CustomizeCornerStones());
+                if (Widgets.ButtonText(new Rect(0, 10f, 120f, 30f), "VFET.Cornerstones".Translate())) Find.WindowStack.Add(new Window_CustomizeCornerstones());
             }
         }
     }

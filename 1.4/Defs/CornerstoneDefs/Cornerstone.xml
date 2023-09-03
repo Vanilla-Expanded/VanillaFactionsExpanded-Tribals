@@ -5,7 +5,7 @@
 	<defName>VFET_PathOfSwiftWinds</defName>
 	<label>Path of the Swift Winds</label>
 	<description>Movement speed is increased by +0.5.</description>
-	<blurb>The people of [ColonyName] revere the winds that guide their every step, believing swift movement is a sign of favor.</blurb>
+	<blurb>The people of {0} revere the winds that guide their every step, believing swift movement is a sign of favor.</blurb>
 	<statOffsets>
 		<MoveSpeed>0.5</MoveSpeed>
 	</statOffsets>
