@@ -84,7 +84,7 @@ namespace VFETribals
             var ethos = "";
             foreach (var def in cornerstones)
             {
-                ethos += def.blurb.Formatted(Faction.OfPlayer.NameColored).Resolve();
+                ethos += def.blurb.Formatted(Faction.OfPlayer.NameColored).Resolve() + " ";
             }
             return ethos;
         }
