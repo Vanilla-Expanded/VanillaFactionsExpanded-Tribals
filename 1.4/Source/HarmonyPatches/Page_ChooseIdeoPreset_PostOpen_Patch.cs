@@ -11,11 +11,10 @@ namespace VFETribals
     {
         public static void Postfix(Page_ChooseIdeoPreset __instance)
         {
-            if (Current.Game.Scenario == VFET_DefOf.VFET_WildMen.scenario)
+            if (Current.Game.Scenario == VFET_DefOf.VFET_WildMenScenario.scenario)
             {
                 if (Find.WindowStack.WindowOfType<Page_ChooseIdeoPreset>() != null)
                 {
-                    Find.IdeoManager.classicMode = true;
                     __instance.DoNext();
                 }
             }

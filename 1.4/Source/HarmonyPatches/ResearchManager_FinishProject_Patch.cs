@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using System.Collections.Generic;
 using Verse;
 
 namespace VFETribals
@@ -19,10 +20,11 @@ namespace VFETribals
                     }
                 }
 
-                if (project == VFET_DefOf.VFET_Culture)
+                if (Faction.OfPlayer.def == VFET_DefOf.VFET_WildMen && project == VFET_DefOf.VFET_Culture 
+                    && ModsConfig.IdeologyActive)
                 {
-                    Find.IdeoManager.classicMode = GameComponent_Tribals.Instance.classicIdeologyMode.Value;
-
+                    Find.LetterStack.ReceiveLetter(LetterMaker.MakeLetter("VFET.FormIdeology".Translate(), 
+                        "VFET.FormIdeologyDesc".Translate(), VFET_DefOf.VFET_ConfigureIdeo));
                 }
             }
         }

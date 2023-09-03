@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using Verse;
 
 namespace VFETribals
 {
@@ -6,6 +7,8 @@ namespace VFETribals
     public static class VFET_DefOf 
     {
         public static TribalResearchProjectDef VFET_Culture;
-        public static ScenarioDef VFET_WildMen;
+        [DefAlias("VFET_WildMen")] public static ScenarioDef VFET_WildMenScenario;
+        public static FactionDef VFET_WildMen;
+        public static LetterDef VFET_ConfigureIdeo;
     }
 }
