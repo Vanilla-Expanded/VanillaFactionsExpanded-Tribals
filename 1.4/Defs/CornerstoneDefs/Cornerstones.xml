@@ -4,10 +4,20 @@
   <VFETribals.CornerstoneDef>
 	<defName>VFET_PathOfSwiftWinds</defName>
 	<label>Path of the Swift Winds</label>
-	<description>Movement speed is increased by +0.5.</description>
+	<description>Movement speed is increased by +0.15.</description>
 	<blurb>The people of {0} revere the winds that guide their every step, believing swift movement is a sign of favor.</blurb>
 	<statOffsets>
-		<MoveSpeed>0.5</MoveSpeed>
+		<MoveSpeed>0.15</MoveSpeed>
+	</statOffsets>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_CultOfInnerStrength</defName>
+	<label>Cult of Inner Strength</label>
+	<description>People are more resilient and their mental break threshold is decreased by 5%.</description>
+	<blurb>The inhabitants of {0} are taught from a young age to cultivate mental resilience, believing in the strength of the mind.</blurb>
+	<statOffsets>
+		<MentalBreakThreshold>-0.05</MentalBreakThreshold>
 	</statOffsets>
   </VFETribals.CornerstoneDef>
   
@@ -20,5 +30,416 @@
 		<PsychicSensitivity>1.1</PsychicSensitivity>
 	</statFactors>
   </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_BreathOfTheAncients</defName>
+	<label>Breath of the Ancients</label>
+	<description>Toxic resistance is increased by 0.3</description>
+	<blurb>The lineage of {0} claims they inherit the resistance from their ancestors, capable of withstanding toxic environments.</blurb>
+	<statOffsets>
+		<ToxicResistance>0.3</ToxicResistance>
+	</statOffsets>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_LorekeepersTradition</defName>
+	<label>Lorekeepers' Tradition</label>
+	<description>Learning rate of all skills is increased by 10%.</description>
+	<blurb>Every child in {0} is taught the value of knowledge, ensuring a society of quick learners.</blurb>
+	<statFactors>
+		<GlobalLearningFactor>1.1</GlobalLearningFactor>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_EmbraceOfTheNight</defName>
+	<label>Embrace of the Night</label>
+	<description>Rest while sleeping is gained 10% faster.</description>
+	<blurb>Nighttime in {0} is considered a sacred period of rest and rejuvenation.</blurb>
+	<statFactors>
+		<RestRateMultiplier>1.1</RestRateMultiplier>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_RitualOfQuickFeast</defName>
+	<label>Ritual of Quick Feast</label>
+	<description>Eating speed is 25% faster.</description>
+	<blurb>In {0}, meals are a swift affair, symbolizing the need to make the most of every moment.</blurb>
+	<statFactors>
+		<EatingSpeed>1.25</EatingSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_WalkersInColdShadows</defName>
+	<label>Walkers in Cold Shadows</label>
+	<description>Comfortable minimum temperature is 5 degrees lower.</description>
+	<blurb>To the people of {0}, enduring cold is a testament to their hardiness.</blurb>
+	<statOffsets>
+		<ComfyTemperatureMin>-5</ComfyTemperatureMin>
+	</statOffsets>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_ChildrenOfTheScorchingSun</defName>
+	<label>Children of the Scorching Sun</label>
+	<description>Comfortable maximum temperature is 5 degrees higher.</description>
+	<blurb>The sun-baked lands of {0} have shaped its people, making them thrive in the heat.</blurb>
+	<statOffsets>
+		<ComfyTemperatureMax>5</ComfyTemperatureMax>
+	</statOffsets>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_FollowersOfTheHealingWaters</defName>
+	<label>Followers of the Healing Waters</label>
+	<description>Immunity to diseases is gained 10% faster.</description>
+	<blurb>Healing springs are revered in {0}, believed to grant faster recovery from ailments.</blurb>
+	<statFactors>
+		<ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_OrderoftheMendingHands</defName>
+	<label>Order of the Mending Hands</label>
+	<description>Injuries are healed 10% faster.</description>
+	<blurb>{0} holds a tradition of skilled healers, accelerating the recovery of injuries.</blurb>
+	<statFactors>
+		<InjuryHealingFactor>1.1</InjuryHealingFactor>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_CreedOfTheStoic</defName>
+	<label>Creed of the Stoic</label>
+	<description>Pain threshold, at which colonists go unconscious due to pain, is increased by 10%.</description>
+	<blurb>Pain is seen as a teacher in {0}, and its inhabitants have a higher tolerance because of this belief.</blurb>
+	<statOffsets>
+		<PainShockThreshold>0.1</PainShockThreshold>
+	</statOffsets>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_NomadsOfAbundance</defName>
+	<label>Nomads of Abundance</label>
+	<description>Travellers forage additional 0.3 nutrition per day.</description>
+	<blurb>The nomadic traditions of {0} have honed their foraging skills, ensuring no traveler goes hungry.</blurb>
+	<statOffsets>
+		<ForagedNutritionPerDay>0.3</ForagedNutritionPerDay>
+	</statOffsets>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_DisciplesOfCleanliness</defName>
+	<label>Disciples of Cleanliness</label>
+	<description>Filth produced by people is reduced by 25%.</description>
+	<blurb>Purity and cleanliness are virtues held in high regard by {0}.</blurb>
+	<statFactors>
+		<FilthRate>0.75</FilthRate>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_WayOfTheRestedSpirit</defName>
+	<label>Way of the Rested Spirit</label>
+	<description>Need to rest depletes 10% slower.</description>
+	<blurb>{0} believes in conserving energy, allowing them to be ever ready for the challenges ahead.</blurb>
+	<statFactors>
+		<RestFallRateFactor>0.90</RestFallRateFactor>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_DiplomatsOfSilverTongue</defName>
+	<label>Diplomats of Silver Tongue</label>
+	<description>Colonists are 10% better at negotiating.</description>
+	<blurb>Words are a powerful tool for the people of {0}, making them masterful negotiators.</blurb>
+	<statFactors>
+		<NegotiationAbility>1.1</NegotiationAbility>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_ProtectorsOfOrder</defName>
+	<label>Protectors of Order</label>
+	<description>Chance to successfully arrest someone is increased by 15%.</description>
+	<blurb>{0} has a reputation for its skilled enforcers, ensuring peace by swiftly apprehending troublemakers.</blurb>
+	<statOffsets>
+		<ArrestSuccessChance>0.15</ArrestSuccessChance>
+	</statOffsets>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_MerchantsOfProsperity</defName>
+	<label>Merchants of Prosperity</label>
+	<description>Trade prices are improved by 5%.</description>
+	<blurb>The marketplace of {0} is renowned for its fair and advantageous trade deals.</blurb>
+	<statFactors>
+		<TradePriceImprovement>1.05</TradePriceImprovement>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_CharismaticEnclave</defName>
+	<label>Charismatic Enclave</label>
+	<description>Social impact of all colonists is increased by 10%.</description>
+	<blurb>Every citizen of {0} is raised with the virtues of empathy and charisma, enhancing their social prowess.</blurb>
+	<statFactors>
+		<SocialImpact>1.1</SocialImpact>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_WhisperersToTheWild</defName>
+	<label>Whisperers to the Wild</label>
+	<description>A chance to tame animals is increased by 10%.</description>
+	<blurb>The age-old bond between {0} and animals enables its people to tame the wild with ease.</blurb>
+	<statFactors>
+		<TameAnimalChance>1.1</TameAnimalChance>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_GuildOfDiligence</defName>
+	<label>Guild of Diligence</label>
+	<description>Global work speed is increased by 5%.</description>
+	<blurb>"Time is gold," a mantra etched deep within the ethos of {0}, driving them to work efficiently.</blurb>
+	<statFactors>
+		<WorkSpeedGlobal>1.05</WorkSpeedGlobal>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_DevotedMiners</defName>
+	<label>Devoted Miners</label>
+	<description>Mining speed is increased by 10%.</description>
+	<blurb>The landscape of {0} has trained its miners to extract resources swiftly and proficiently.</blurb>
+	<statFactors>
+		<MiningSpeed>1.10</MiningSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_SeekersOfHiddenDepths</defName>
+	<label>Seekers of Hidden Depths</label>
+	<description>Deep drilling speed is increased by 15%.</description>
+	<blurb>Driven by the promise of riches beneath, {0}'s drillers penetrate the rock at unparalleled speeds.</blurb>
+	<statFactors>
+		<DeepDrillingSpeed>1.15</DeepDrillingSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_StewardsOftheVein</defName>
+	<label>Stewards of the Vein</label>
+	<description>The resource yield of mining jobs is increased by 10%.</description>
+	<blurb>Every strike in {0}'s mines promises a bountiful reward, thanks to their efficient extraction techniques.</blurb>
+	<statFactors>
+		<MiningYield>1.10</MiningYield>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_ScholarsOfProgress</defName>
+	<label>Scholars of Progress</label>
+	<description>Research speed is increased by 5%.</description>
+	<blurb>The academic tradition of {0} is unmatched, pushing boundaries with accelerated research.</blurb>
+	<statFactors>
+		<ResearchSpeed>1.05</ResearchSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_KeepersOfThePasture</defName>
+	<label>Keepers of the Pasture</label>
+	<description>The yield of resources obtained from animal handling is increased by 15%.</description>
+	<blurb>The bond between {0} and their livestock ensures that they reap the most from their herds.</blurb>
+	<statFactors>
+		<AnimalGatherYield>1.15</AnimalGatherYield>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_SowersOfAbundance</defName>
+	<label>Sowers of Abundance</label>
+	<description>Plant work speed is increased by 15%.</description>
+	<blurb>Through careful nurturing, the farmers of {0} tend to their crops with unparalleled expertise.</blurb>
+	<statFactors>
+		<PlantWorkSpeed>1.15</PlantWorkSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_HarvestersOfBounty</defName>
+	<label>Harvesters of Bounty</label>
+	<description>The resource yield of plant jobs is increased by 10%.</description>
+	<blurb>The fertile lands of {0} yield more under the hands of its skilled cultivators.</blurb>
+	<statFactors>
+		<PlantHarvestYield>1.10</PlantHarvestYield>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_ShadowsOfTheHunt</defName>
+	<label>Shadows of the Hunt</label>
+	<description>Hunting stealth is increased by 20%.</description>
+	<blurb>The hunters of {0} move silently, becoming one with nature to claim their prey.</blurb>
+	<statFactors>
+		<HuntingStealth>1.20</HuntingStealth>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_MasonsOfTheFuture</defName>
+	<label>Masons of the Future</label>
+	<description>The speed of construction work is increased by 10%.</description>
+	<blurb>Structures rise swiftly in {0}, a testament to the craftsmanship of its builders.</blurb>
+	<statFactors>
+		<ConstructionSpeed>1.10</ConstructionSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_CustodiansOfPurity</defName>
+	<label>Custodians of Purity</label>
+	<description>Cleaning speed is increased by 20%.</description>
+	<blurb>Cleanliness is next to godliness for the people of {0}, who believe in swift and efficient sanitation.</blurb>
+	<statFactors>
+		<CleaningSpeed>1.20</CleaningSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_HealersOfSwiftHand</defName>
+	<label>Healers of Swift Hand</label>
+	<description>Medical tend speed is increased by 10%.</description>
+	<blurb>The medical artisans of {0} are renowned for their swift treatments, ensuring minimal suffering.</blurb>
+	<statFactors>
+		<MedicalTendSpeed>1.10</MedicalTendSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_PhysiciansOfPrecision</defName>
+	<label>Physicians of Precision</label>
+	<description>Medical tend quality is improved by 5%.</description>
+	<blurb>Through years of dedication, {0}'s medical practitioners have honed their craft to near perfection.</blurb>
+	<statFactors>
+		<MedicalTendQuality>1.05</MedicalTendQuality>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_SurgeonsOfExcellence</defName>
+	<label>Surgeons of Excellence</label>
+	<description>Medical operation speed is 15% faster.</description>
+	<blurb>The surgical theatres of {0} are a sight to behold, with operations being completed at remarkable speeds.</blurb>
+	<statFactors>
+		<MedicalOperationSpeed>1.15</MedicalOperationSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_WarriorsOfPrecision</defName>
+	<label>Warriors of Precision</label>
+	<description>Chance to hit a melee attack is improved by 5%.</description>
+	<blurb>{0}'s warriors have the prowess to strike with unmatched accuracy in close combat.</blurb>
+	<statFactors>
+		<MeleeHitChance>1.05</MeleeHitChance>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_DancersOfTheBattlefield</defName>
+	<label>Dancers of the Battlefield</label>
+	<description>Chance to dodge a melee attack is improved by 5%.</description>
+	<blurb>The soldiers of {0} weave through combat with grace, effortlessly dodging enemy blows.</blurb>
+	<statFactors>
+		<MeleeDodgeChance>1.05</MeleeDodgeChance>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_Marksmen</defName>
+	<label>Marksmen</label>
+	<description>Shooting accuracy is increased by 5%.</description>
+	<blurb>Drawing inspiration from ancient archers, {0}'s shooters rarely miss their mark.</blurb>
+	<statFactors>
+		<ShootingAccuracyPawn>1.05</ShootingAccuracyPawn>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_QuickdrawMasters</defName>
+	<label>Quickdraw Masters</label>
+	<description>Aiming a ranged weapon takes 10% less time.</description>
+	<blurb>In the heart of {0}, aiming swiftly and shooting is considered both an art and a vital survival skill.</blurb>
+	<statFactors>
+		<AimingDelayFactor>0.9</AimingDelayFactor>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_MortarVisionaries</defName>
+	<label>Mortar Visionaries</label>
+	<description>Mortars fired by the colonists are 15% more accurate.</description>
+	<blurb>{0}'s mortar teams boast unrivaled accuracy, bringing devastation upon their foes.</blurb>
+	<statFactors>
+		<MortarMissRadiusFactor>0.85</MortarMissRadiusFactor>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_DiligentDoers</defName>
+	<label>Diligent Doers</label>
+	<description>The speed of unskilled labor tasks is 10% faster.</description>
+	<blurb>Every task, no matter how mundane, is approached with zeal and efficiency in {0}.</blurb>
+	<statFactors>
+		<GeneralLaborSpeed>1.1</GeneralLaborSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_ChemistsOfEfficacy</defName>
+	<label>Chemists of Efficacy</label>
+	<description>The speed of drug synthesis is 15% faster.</description>
+	<blurb>{0}'s drug synthesizers work at a blistering pace, ensuring medicines and drugs are always available.</blurb>
+	<statFactors>
+		<DrugSynthesisSpeed>1.15</DrugSynthesisSpeed>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_CulinaryConnoisseurs</defName>
+	<label>Culinary Connoisseurs</label>
+	<description>Chances of causing food poisoning are reduced by 20%.</description>
+	<blurb>The kitchens of {0} take utmost care in food preparation, ensuring their meals are both delicious and safe.</blurb>
+	<statFactors>
+		<FoodPoisonChance>0.8</FoodPoisonChance>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_TechScavengers</defName>
+	<label>Tech Scavengers</label>
+	<description>Yield of resources obtained from shredding mechanoids is 20% higher.</description>
+	<blurb>With adept hands and discerning eyes, {0} makes the most out of every defeated mechanoid.</blurb>
+	<statFactors>
+		<ButcheryMechanoidEfficiency>1.2</ButcheryMechanoidEfficiency>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_MasterButchers</defName>
+	<label>Master Butchers</label>
+	<description>Yield of resources obtained from butchering creatures is 10% higher.</description>
+	<blurb>Every creature is honored in death, with {0} ensuring nothing goes to waste.</blurb>
+	<statFactors>
+		<ButcheryFleshEfficiency>1.1</ButcheryFleshEfficiency>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
   
 </Defs>
