@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
 using Verse;
 
 namespace VFETribals
@@ -9,6 +10,11 @@ namespace VFETribals
         public int availableCornerstonePoints;
 
         public TechLevel? playerTechLevel;
+
+        public string ethos;
+        public bool ethosLocked;
+
+        public List<CornerstoneDef> cornerstones;
 
         public static GameComponent_Tribals Instance;
 
@@ -33,12 +39,26 @@ namespace VFETribals
             availableCornerstonePoints += offset;
         }
 
-        public override void FinalizeInit()
+        public override void GameComponentTick()
         {
-            base.FinalizeInit();
+            base.GameComponentTick();
             if (playerTechLevel.HasValue)
             {
-                Faction.OfPlayer.def.techLevel = playerTechLevel.Value;
+                if (Faction.OfPlayer.def.techLevel > playerTechLevel.Value)
+                {
+                    var diff = (int)(Faction.OfPlayer.def.techLevel - playerTechLevel.Value);
+                    for (var i = 0; i < diff; i++)
+                    {
+                        var newTechLevel = (TechLevel)((int)playerTechLevel.Value + i);
+                        var eraAdvancementDef = DefDatabase<EraAdvancementDef>.AllDefsListForReading
+                            .FirstOrDefault(x => x.newTechLevel  == newTechLevel);
+                        AdvanceToEra(eraAdvancementDef);
+                    }
+                }
+            }
+            else
+            {
+                playerTechLevel = Faction.OfPlayer.def.techLevel;
             }
         }
 
@@ -48,10 +68,23 @@ namespace VFETribals
             playerTechLevel = Faction.OfPlayer.def.techLevel;
         }
 
+        public string GetNewEthos()
+        {
+            return "";
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref availableCornerstonePoints, "availableCornerstonePoints");
+            Scribe_Values.Look(ref playerTechLevel, "playerTechLevel");
+            Scribe_Values.Look(ref ethos, "ethos");
+            Scribe_Values.Look(ref ethosLocked, "ethosLocked");
+            Scribe_Collections.Look(ref cornerstones, "cornerstones", LookMode.Def);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                cornerstones ??= new List<CornerstoneDef>();
+            }
         }
     }
 }

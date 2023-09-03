@@ -64,9 +64,12 @@
   <ItemGroup>
     <Compile Include="Alert_AvailableCornerstonePoints.cs" />
     <Compile Include="CompGatherSpot_CompGetGizmosExtra_Patch.cs" />
+    <Compile Include="CornerstoneDef.cs" />
     <Compile Include="EraAdvancementDef.cs" />
+    <Compile Include="FactionUIUtility_DoWindowContents_Patch.cs" />
     <Compile Include="GameComponent_Tribals.cs" />
     <Compile Include="HotSwappableAttribute.cs" />
+    <Compile Include="ModCompatibility.cs" />
     <Compile Include="VFETribalsMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Window_CustomizeCornerStones.cs" />

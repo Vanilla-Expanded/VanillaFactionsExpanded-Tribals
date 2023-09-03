@@ -3,5 +3,17 @@
 
 	<VFET.AvailableCornerstonePoint>Available cornerstone point</VFET.AvailableCornerstonePoint>
 	<VFET.AvailableCornerstonePointDesc>You can spend a cornerstone point to gain a permanent, colony-wide buff that will help you shape your civilization.</VFET.AvailableCornerstonePointDesc>
-	
+	<VFET.Cornerstones>Cornerstones</VFET.Cornerstones>
+	<VFET.CustomizeCornerstones>Customize cornerstones</VFET.CustomizeCornerstones>
+	<VFET.Ethos>Ethos</VFET.Ethos>
+	<VFET.EthosUnlocked>Lock or unlock the faction's ethos. When locked, the ethos text will not auto-regenerate when you unlock a new cornerstone.
+
+Ethos lock is currently off. The ethos text can auto-regenerate.</VFET.EthosUnlocked>
+
+	<VFET.EthosLocked>Lock or unlock the faction's ethos. When locked, the ethos text will not auto-regenerate when you unlock a new cornerstone.
+
+Ethos lock is currently on. The ethos text will not auto-regenerate.</VFET.EthosLocked>
+	<VFET.CornerstonesExplanation>Gain cornerstone points by advancing to next tech levels</VFET.CornerstonesExplanation>
+	<VFET.EthosTooltip>The core ethos of your faction. This text has no gameplay impact, but associated cornerstones do.</VFET.EthosTooltip>
+	<VFET.EditEthos>Edit ethos</VFET.EditEthos>
 </LanguageData>
