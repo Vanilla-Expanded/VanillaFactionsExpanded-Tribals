@@ -11,4 +11,14 @@
 	</statOffsets>
   </VFETribals.CornerstoneDef>
   
+  <VFETribals.CornerstoneDef>
+	<defName>VFET_WhisperersOfMind</defName>
+	<label>Whisperers of the Mind</label>
+	<description>Psychic sensitivity is increased by 10%.</description>
+	<blurb>{0}'s inhabitants believe in unlocking the mysteries of the mind, making them susceptible to psychic forces.</blurb>
+	<statFactors>
+		<PsychicSensitivity>1.1</PsychicSensitivity>
+	</statFactors>
+  </VFETribals.CornerstoneDef>
+  
 </Defs>
