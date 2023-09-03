@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Text;
 using Verse;
 using Verse.Grammar;
 
@@ -84,9 +85,42 @@ namespace VFETribals
             var ethos = "";
             foreach (var def in cornerstones)
             {
-                ethos += def.blurb.Formatted(Faction.OfPlayer.NameColored).Resolve() + " ";
+                ethos += def.blurb.Formatted(GetPlayerFactionName()).Resolve() + " ";
             }
             return ethos;
+        }
+
+        public string GetPlayerFactionName()
+        {
+            if (Faction.OfPlayer.HasName)
+            {
+                return Faction.OfPlayer.name.ApplyTag(Faction.OfPlayer).Resolve();
+            }
+            return Faction.OfPlayer.def.LabelCap.ToString().ApplyTag(Faction.OfPlayer).Resolve();
+        }
+
+        public override void FinalizeInit()
+        {
+            base.FinalizeInit();
+            if (Faction.OfPlayer.def.techLevel > TechLevel.Animal)
+            {
+                foreach (var def in DefDatabase<TribalResearchProjectDef>.AllDefsListForReading)
+                {
+                    if (!def.IsFinished)
+                    {
+                        Find.ResearchManager.FinishProject(def, doCompletionLetter: false);
+                    }
+                }
+            }
+
+            if (VFET_DefOf.VFET_Culture.IsFinished is false)
+            {
+                if (classicIdeologyMode.HasValue is false)
+                {
+                    classicIdeologyMode = Find.IdeoManager.classicMode;
+                }
+                Find.IdeoManager.classicMode = true;
+            }
         }
 
         public override void ExposeData()
@@ -96,6 +130,7 @@ namespace VFETribals
             Scribe_Values.Look(ref playerTechLevel, "playerTechLevel");
             Scribe_Values.Look(ref ethos, "ethos");
             Scribe_Values.Look(ref ethosLocked, "ethosLocked");
+            Scribe_Values.Look(ref classicIdeologyMode, "classicIdeologyMode");
             Scribe_Collections.Look(ref cornerstones, "cornerstones", LookMode.Def);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {

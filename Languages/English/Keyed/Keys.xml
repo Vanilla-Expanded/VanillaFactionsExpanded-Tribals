@@ -19,4 +19,6 @@ Ethos lock is currently on. The ethos text will not auto-regenerate.</VFET.Ethos
 	<VFET.EditEthos>Edit ethos</VFET.EditEthos>
 	<VFET.UnlockCornerstone>Unlock cornerstone</VFET.UnlockCornerstone>
 	<VFET.StatsReport_Cornerstones>Relevant cornerstones</VFET.StatsReport_Cornerstones>
+	<VFET.WorkDisabledByMissingResearch>Research {0} to unlock it</VFET.WorkDisabledByMissingResearch>
+
 </LanguageData>

@@ -62,20 +62,29 @@
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alert_AvailableCornerstonePoints.cs" />
-    <Compile Include="CompGatherSpot_CompGetGizmosExtra_Patch.cs" />
-    <Compile Include="CornerstoneDef.cs" />
-    <Compile Include="Dialog_EditEthos.cs" />
-    <Compile Include="EraAdvancementDef.cs" />
-    <Compile Include="FactionUIUtility_DoWindowContents_Patch.cs" />
+    <Compile Include="HarmonyPatches\Designator_GizmoOnGUI_Patch.cs" />
+    <Compile Include="HarmonyPatches\PageUtility_StitchedPages_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_CombinedDisabledWorkTags_Patch.cs" />
+    <Compile Include="HarmonyPatches\ResearchManager_FinishProject_Patch.cs" />
+    <Compile Include="UI\Alert_AvailableCornerstonePoints.cs" />
+    <Compile Include="HarmonyPatches\CompGatherSpot_CompGetGizmosExtra_Patch.cs" />
+    <Compile Include="Defs\CornerstoneDef.cs" />
+    <Compile Include="UI\Dialog_EditEthos.cs" />
+    <Compile Include="Defs\EraAdvancementDef.cs" />
+    <Compile Include="HarmonyPatches\FactionUIUtility_DoWindowContents_Patch.cs" />
     <Compile Include="GameComponent_Tribals.cs" />
     <Compile Include="HotSwappableAttribute.cs" />
     <Compile Include="ModCompatibility.cs" />
-    <Compile Include="StatWorker_GetExplanationUnfinalized_Patch.cs" />
-    <Compile Include="StatWorker_GetValueUnfinalized_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_GetDisabledWorkTypes_FillList_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_GetReasonsForDisabledWorkType_Patch.cs" />
+    <Compile Include="HarmonyPatches\StatWorker_GetExplanationUnfinalized_Patch.cs" />
+    <Compile Include="HarmonyPatches\StatWorker_GetValueUnfinalized_Patch.cs" />
+    <Compile Include="Defs\TribalResearchProjectDef.cs" />
+    <Compile Include="UI\VFET_DefOf.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="VFETribalsMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Window_CustomizeCornerstones.cs" />
+    <Compile Include="UI\Window_CustomizeCornerstones.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

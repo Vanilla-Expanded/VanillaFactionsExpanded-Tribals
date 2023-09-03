@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Fire</defName>
+    <label>fire</label>
+    <description>Unlock the capability to utilize and manage fire for various purposes. Unlocks firefighting job.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+	<unlocksWorkTypes>
+		<li>Firefighter</li>
+	</unlocksWorkTypes>
+	<unlocksWorkTags>
+		<li>Firefighting</li>
+	</unlocksWorkTags>
+  </VFETribals.TribalResearchProjectDef>
+
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Agriculture</defName>
+    <label>agriculture</label>
+    <description>Learn to grow various staple crops. Unlocks growing job.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+	<unlocksWorkTypes>
+		<li>Growing</li>
+	</unlocksWorkTypes>
+	<unlocksDesignators>
+		<li>Designator_ZoneAdd_Growing</li>
+	</unlocksDesignators>
+  </VFETribals.TribalResearchProjectDef>
+
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Culture</defName>
+    <label>culture</label>
+    <description>Unlock the ability to conduct research, as well as develop ideological thoughts. Unlocks intellectual job.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+	<unlocksWorkTags>
+		<li>Intellectual</li>
+	</unlocksWorkTags>
+  </VFETribals.TribalResearchProjectDef>
+
+</Defs>
