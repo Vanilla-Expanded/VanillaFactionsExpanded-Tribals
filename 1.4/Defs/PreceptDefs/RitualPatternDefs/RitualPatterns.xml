@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RitualPatternDef>
+		<defName>VFET_TribalGathering_Pattern</defName>
+		<descOverride>todo.</descOverride>
+		<canStartAnytime>true</canStartAnytime>
+		<ritualObligationTargetFilter>GatheringSpot</ritualObligationTargetFilter>
+		<ritualBehavior>VFET_TribalGathering_Behaviour</ritualBehavior>
+		<maxTechLevel>Neolithic</maxTechLevel>
+		<ritualOutcomeEffect>VFET_TribalGathering_Outcome</ritualOutcomeEffect>
+		<playsIdeoMusic>false</playsIdeoMusic>
+	</RitualPatternDef>
+</Defs>

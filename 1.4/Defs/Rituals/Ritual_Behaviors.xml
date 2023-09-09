@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+  <RitualBehaviorDef>
+    <defName>VFET_TribalGathering_Behaviour</defName>
+    <durationTicks>6250</durationTicks>
+    <roles>
+      <li Class="RitualRoleTag">
+        <label>organizer</label>
+        <tag>Organizer</tag>
+        <id>organizer</id>      
+        <required>True</required>
+        <substitutable>True</substitutable>
+        <maxCount>1</maxCount>
+        <countsAsParticipant>true</countsAsParticipant>
+        <allowChild>false</allowChild>
+        <mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+      </li>
+    </roles>
+    <spectatorsLabel>Participants</spectatorsLabel>
+    <spectatorGerund>participate</spectatorGerund>
+    <stages>
+      <li>
+        <defaultDuty>Spectate</defaultDuty>
+        <essential>True</essential>
+        <endTriggers>
+          <li Class="StageEndTrigger_DurationPercentage">
+            <percentage>0.3</percentage>
+          </li>
+        </endTriggers>
+        <postAction Class="RitualStageAction_Message">
+            <text>{0}: The introduction is over and the tirbal gathering is beginning.</text>
+            <messageTypeDef>NeutralEvent</messageTypeDef>
+        </postAction>
+        <roleBehaviors>
+          <li>
+            <roleId>organizer</roleId>
+            <dutyDef>SpeakOnCellFacingSpectators</dutyDef>
+            <speakerInteraction>Speech_DateRitual</speakerInteraction>
+            
+          </li>
+        </roleBehaviors>
+      </li>
+      <li>
+        <defaultDuty>VFET_SpectateSociallyActive</defaultDuty>
+        <endTriggers>
+          <li Class="StageEndTrigger_DurationPercentage">
+            <percentage>0.7</percentage>
+          </li>
+        </endTriggers>
+      </li>
+    </stages>
+  </RitualBehaviorDef>
+
+
+  
+ 
+
+</Defs>

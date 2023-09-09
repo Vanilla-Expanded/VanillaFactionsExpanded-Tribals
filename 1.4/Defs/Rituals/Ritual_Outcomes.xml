@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+  <RitualOutcomeEffectDef>
+    <defName>VFET_TribalGathering_Outcome</defName>
+    <description>Depending on ritual quality, blah.</description>
+    <workerClass>RitualOutcomeEffectWorker_FromQuality</workerClass>
+    <comps>
+     
+      <li Class="RitualOutcomeComp_RitualSeatPresent">
+        <qualityOffset>0.1</qualityOffset>
+      </li>
+     
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(1,  0.0)</li>
+            <li>(5,  0.15)</li>
+            <li>(10, 0.25)</li>
+          </points>
+        </curve>
+      </li>
+	  <li Class="VFETribals.RitualOutcomeComp_TotalPawnSkill">
+        <label>total intellectual skill</label>
+		<skillDef>Intellectual</skillDef>
+        <curve>
+          <points>
+            <li>(0,  0.0)</li>
+            <li>(50,  0.5)</li>
+            <li>(100, 1)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="RitualOutcomeComp_RitualTargetDefs">
+		<defs><li>Campfire</li></defs>
+        <label>started at campfire</label>
+        <qualityOffset>0.1</qualityOffset>
+        <expectedThingLabelTip>a campfire</expectedThingLabelTip>
+      </li>
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Ineffective</label>
+        <chance>0.05</chance>
+        <memory>TerribleFestival</memory>
+        <description>The {0} was terrible! Participants endured hours of jaw-clenching small talk while waiting for it to end.</description>
+        <positivityIndex>-2</positivityIndex>
+      </li>
+      <li>
+        <label>Uninspiring</label>
+        <chance>0.25</chance>
+        <memory>BoringFestival</memory>
+        <description>The {0} was boring. Everyone felt too awkward to open up and laugh.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Encouraging</label>
+        <chance>0.6</chance>
+        <memory>FunFestival</memory>
+        <description>The {0} was fun. Everyone appreciated the chance to relax and have fun together.</description>
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Inspiring</label>
+        <chance>0.1</chance>
+        <memory>UnforgettableFestival</memory>
+        <description>The {0} was unforgettable! Everyone learned about each other and felt like a family.</description>
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+
+ 
+
+</Defs>

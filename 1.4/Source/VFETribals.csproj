@@ -62,7 +62,9 @@
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\JobGivers\JobGiver_StandAndBeSociallyActive.cs" />
     <Compile Include="HarmonyPatches\Page_ChooseIdeoPreset_DoNext_Patch.cs" />
+    <Compile Include="RitualOutcomeComps\RitualOutcomeComp_TotalPawnSkill.cs" />
     <Compile Include="UI\ChoiceLetter_ConfigureIdeo.cs" />
     <Compile Include="HarmonyPatches\Designator_GizmoOnGUI_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_ChooseIdeoPreset_PostOpen_Patch.cs" />
