@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SitePartDef>
+    <defName>VFET_WildMenSite</defName>
+    <label>wild men group</label>
+    <description>todo.</description>
+    <siteTexture>UI/QuestSites/QuestSite_WildMenGroup</siteTexture>
+    <expandingIconTexture>UI/QuestSites/QuestSite_WildMenGroup</expandingIconTexture>
+    <applyFactionColorToSiteTexture>false</applyFactionColorToSiteTexture>
+    <showFactionInInspectString>false</showFactionInInspectString>
+    <requiresFaction>false</requiresFaction>
+    <approachOrderString>Visit {0}</approachOrderString>
+    <approachingReportString>Visiting {0}</approachingReportString>
+    <arrivedLetter>todo.</arrivedLetter>
+    <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <minThreatPoints>0</minThreatPoints>
+    <tags>
+      <li>VFET_WildMenSite</li>
+    </tags>
+    <excludesTags>
+      <li>MechCluster</li>
+      <li>SleepingMechanoids</li>
+      <li>Manhunters</li>
+      <li>MineralScannerPreciousLumpThreat</li>
+      <li>ItemStashQuestThreat</li>
+      <li>DownedRefugeeQuestThreat</li>
+      <li>PrisonerRescueQuestThreat</li>
+      <li>QuestActiveThreatDefense</li>
+      <li>QuestActiveThreatDefenseNoHidden</li>
+    </excludesTags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>VFET_WildMenSite</defName>
+    <linkWithSite>VFET_WildMenSite</linkWithSite>
+    <order>9999</order>
+    <genStep Class="VFETribals.GenStep_WildMen"></genStep>
+  </GenStepDef>
+  
+</Defs>
