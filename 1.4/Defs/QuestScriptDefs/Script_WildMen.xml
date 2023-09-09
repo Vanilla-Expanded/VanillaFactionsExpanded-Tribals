@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <QuestScriptDef>
+    <defName>VFET_OpportunitySite_WildMen</defName>
+    <rootSelectionWeight>1.0</rootSelectionWeight>
+    <autoAccept>true</autoAccept>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->The [wildmen] [tribe]</li>
+        <li>questName->Nearby [wildmen] [tribe]</li>
+		<li>wildmen->Wild men</li>
+		<li>wildmen->Wildling</li>
+		<li>wildmen->Savage</li>
+		<li>wildmen->Wandering</li>
+		<li>wildmen->Rising</li>
+		<li>wildmen->New</li>
+		<li>tribe->Tribe</li>
+		<li>tribe->Gathering</li>
+		<li>tribe->Group</li>
+		<li>tribe->Circle</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription-> [asker_nameFull] of [asker_faction_name], found out about an existence of a small tribe of wild men near [map_definite]. Wild men most likely mean us no harm, and are gathering together hoping to that the numbers will help them survive.
+\nWe may decide to venture to the gathering in order to crush the wild men. Alternatively, we may leave them be. In time, these wild men may find their way to us - depending on their numbers, they may choose to join us, or attack us instead. [asker_nameFull] has a feeling that the small tribe consists of [ListofPawns].</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_GetMap" />
+
+        <li Class="QuestNode_GetPawn">
+          <storeAs>asker</storeAs>
+          <mustBeFreeColonist>true</mustBeFreeColonist>
+        </li>
+		
+		<li Class="VFETribals.QuestNode_Root_WildMen"></li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+</Defs>

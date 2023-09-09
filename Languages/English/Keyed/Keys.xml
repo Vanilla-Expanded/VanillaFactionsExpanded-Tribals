@@ -25,4 +25,11 @@ Ethos lock is currently on. The ethos text will not auto-regenerate.</VFET.Ethos
 Choosing classic will allow you to play without the ideology system. All Ideology expansion content remains active.\n\n
 Choosing fluid will allow you to start with a basic ideology and develop it over time.\n\n
 Choosing fixed allows you to customize the ideology and every aspect of it. This may take some time.</VFET.FormIdeologyDesc>
+	<VFET.WildMenJoin>Due to the small number of wild men, they have decided to join you.</VFET.WildMenJoin>
+	<VFET.WildMenRetreat>Due to the uncertainty of being able to best you, wild men have decided to retreat.</VFET.WildMenRetreat>
+	<VFET.WildMenJoinTitle>Wild men ask to join</VFET.WildMenJoinTitle>
+	<VFET.WildMenJoinDesc>Wild men from the nearby tribe found their way to {0}. After seeing your numbers, they are requesting to join you. They believe that together, you stand a better chance against the elements.\n\nYou can refuse them, but they may retaliate as a result.</VFET.WildMenJoinDesc>
+	<VFET.WildMenRaid>Wild men raid</VFET.WildMenRaid>
+	<VFET.WildMenRaidDesc>Wild men from the nearby tribe found their way to {0}. After seeing your numbers, they have decided to raid you. You might be able to capture and recruit any survivors.</VFET.WildMenRaidDesc>
+	<VFET.Reject>Reject</VFET.Reject>
 </LanguageData>
