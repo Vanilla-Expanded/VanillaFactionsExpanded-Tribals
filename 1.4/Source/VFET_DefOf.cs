@@ -12,5 +12,6 @@ namespace VFETribals
         public static LetterDef VFET_ConfigureIdeo, VFET_WildMenJoin;
         public static FactionDef VFET_WildMenGroup;
         public static SitePartDef VFET_WildMenSite;
+        public static JobDef VFET_StandAndBeSociallyActive;
     }
 }

@@ -69,6 +69,8 @@
     <Compile Include="Events\QuestNode_Root_WildMen.cs" />
     <Compile Include="HarmonyPatches\StorytellerComp_IncidentChanceFinal_Patch.cs" />
     <Compile Include="Events\QuestPart_WildmenPostExpire.cs" />
+    <Compile Include="JobGiver_StandAndBeSociallyActive.cs" />
+    <Compile Include="RitualOutcomeComp_TotalPawnSkill.cs" />
     <Compile Include="UI\ChoiceLetter_ConfigureIdeo.cs" />
     <Compile Include="HarmonyPatches\Designator_GizmoOnGUI_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_ChooseIdeoPreset_PostOpen_Patch.cs" />
