@@ -4,10 +4,12 @@
 		<defName>VFET_TribalGathering_Pattern</defName>
 		<descOverride>todo.</descOverride>
 		<canStartAnytime>true</canStartAnytime>
+		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
 		<ritualObligationTargetFilter>GatheringSpot</ritualObligationTargetFilter>
 		<ritualBehavior>VFET_TribalGathering_Behaviour</ritualBehavior>
 		<maxTechLevel>Neolithic</maxTechLevel>
 		<ritualOutcomeEffect>VFET_TribalGathering_Outcome</ritualOutcomeEffect>
 		<playsIdeoMusic>false</playsIdeoMusic>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
 	</RitualPatternDef>
 </Defs>
