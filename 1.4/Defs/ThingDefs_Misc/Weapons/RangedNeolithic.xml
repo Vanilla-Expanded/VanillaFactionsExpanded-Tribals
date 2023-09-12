@@ -41,7 +41,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Pilum_Thrown</defaultProjectile>
+        <defaultProjectile>VFET_ThrowspikesThrown</defaultProjectile>
         <warmupTime>2.8</warmupTime>
         <range>16.9</range>
         <soundCast>Interact_BeatFire</soundCast>
