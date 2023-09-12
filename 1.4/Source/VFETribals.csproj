@@ -73,11 +73,9 @@
     <Compile Include="HarmonyPatches\StorytellerComp_IncidentChanceFinal_Patch.cs" />
     <Compile Include="Events\QuestPart_WildmenPostExpire.cs" />
     <Compile Include="AI\JobGivers\JobGiver_StandAndBeSociallyActive.cs" />
-
     <Compile Include="HarmonyPatches\Widgets_DefIcon_Patch.cs" />
-
+    <Compile Include="InteractionWorkers\InteractionWorker_TribalGathering.cs" />
     <Compile Include="RitualBehaviourWorkers\RitualBehaviourWorker_TribalGathering.cs" />
-
     <Compile Include="RitualOutcomeComps\RitualOutcomeComp_TotalPawnSkill.cs" />
     <Compile Include="RitualOutcomeEffectWorkers\RitualOutcomeEffectWorker_TribalGathering.cs" />
     <Compile Include="UI\ChoiceLetter_ConfigureIdeo.cs" />
