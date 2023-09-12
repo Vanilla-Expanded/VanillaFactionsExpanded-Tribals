@@ -45,6 +45,7 @@
       <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
     </placeWorkers>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+	<designationCategory>Temperature</designationCategory>
     <comps>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>10.0</fuelConsumptionRate>
@@ -102,6 +103,9 @@
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
     </building>
+    <researchPrerequisites>
+      <li>VFET_Fire</li>
+    </researchPrerequisites>
   </ThingDef>
 
 </Defs>
