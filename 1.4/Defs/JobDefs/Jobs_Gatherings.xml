@@ -5,7 +5,7 @@
 
   <JobDef>
     <defName>VFET_StandAndBeSociallyActive</defName>
-    <driverClass>JobDriver_GotoAndStandSociallyActive</driverClass>
+    <driverClass>VFETribals.JobDriver_StandSociallyActive</driverClass>
     <reportString>relaxing socially.</reportString>
   </JobDef>
 

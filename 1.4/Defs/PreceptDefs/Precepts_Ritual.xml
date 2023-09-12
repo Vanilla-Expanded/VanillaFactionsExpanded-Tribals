@@ -7,7 +7,7 @@
 		<iconPath>UI/Icons/Rituals/Ritual_TribalGathering</iconPath>
 		<preceptClass>Precept_Ritual</preceptClass>
 		<ritualPatternBase>VFET_TribalGathering_Pattern</ritualPatternBase>
-		
+		<useCooldownFromAbilityGroupDef>VFET_TribalGathering</useCooldownFromAbilityGroupDef>
 		<visible>false</visible>
 		<classic>true</classic>
 		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>

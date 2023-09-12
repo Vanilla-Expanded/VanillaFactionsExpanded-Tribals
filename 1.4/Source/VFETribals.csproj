@@ -62,6 +62,7 @@
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\JobDrivers\JobDriver_StandSociallyActive.cs" />
     <Compile Include="Events\GenStep_WildMen.cs" />
     <Compile Include="HarmonyPatches\FakeDef.cs" />
     <Compile Include="HarmonyPatches\Page_ChooseIdeoPreset_DoNext_Patch.cs" />
@@ -72,8 +73,11 @@
     <Compile Include="HarmonyPatches\StorytellerComp_IncidentChanceFinal_Patch.cs" />
     <Compile Include="Events\QuestPart_WildmenPostExpire.cs" />
     <Compile Include="AI\JobGivers\JobGiver_StandAndBeSociallyActive.cs" />
+
     <Compile Include="HarmonyPatches\Widgets_DefIcon_Patch.cs" />
-    <Compile Include="ReflectionCache\ReflectionCache.cs" />
+
+    <Compile Include="RitualBehaviourWorkers\RitualBehaviourWorker_TribalGathering.cs" />
+
     <Compile Include="RitualOutcomeComps\RitualOutcomeComp_TotalPawnSkill.cs" />
     <Compile Include="RitualOutcomeEffectWorkers\RitualOutcomeEffectWorker_TribalGathering.cs" />
     <Compile Include="UI\ChoiceLetter_ConfigureIdeo.cs" />

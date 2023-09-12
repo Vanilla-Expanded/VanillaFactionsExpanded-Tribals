@@ -32,5 +32,15 @@ Choosing fixed allows you to customize the ideology and every aspect of it. This
 	<VFET.WildMenRaid>Wild men raid</VFET.WildMenRaid>
 	<VFET.WildMenRaidDesc>Wild men from the nearby tribe found their way to {0}. After seeing your numbers, they have decided to raid you. You might be able to capture and recruit any survivors.</VFET.WildMenRaidDesc>
 	<VFET.Reject>Reject</VFET.Reject>
+
 	<VFET.WorkTypeName>{0} work type</VFET.WorkTypeName>
+
+	
+	<VFET_WildmanLetterLabel>Wild man joins</VFET_WildmanLetterLabel>
+	<VFET_WildmanLetter>A wild man wanders in and decides to join your colony</VFET_WildmanLetter>
+	<VFET_AnimalsLetterLabel>Farm animals wander in</VFET_AnimalsLetterLabel>
+	<VFET_AnimalsLetter>A group of farm animals has been attracted and will join the colony</VFET_AnimalsLetter>
+	<VFET_DiscoveryLabel>Discovered {0}!</VFET_DiscoveryLabel>
+	<VFET_Discovery>A new research project has been discovered in a tribal gathering: {0}!\n\n{1}</VFET_Discovery>
+
 </LanguageData>

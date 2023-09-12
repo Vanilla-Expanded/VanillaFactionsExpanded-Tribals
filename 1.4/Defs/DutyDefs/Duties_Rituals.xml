@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  
-  
-  <DutyDef>
-    <defName>VFET_SpectateSociallyActive</defName>
-    <hook>HighPriority</hook>
-    <thinkNode Class="ThinkNode_Priority">
-      <subNodes>
-        <li Class="VFETribals.JobGiver_StandAndBeSociallyActive">
-          
-        </li>
-      </subNodes>
-    </thinkNode>
-  </DutyDef>
-
- 
-  
+	<DutyDef>
+		<defName>VFET_SpectateSociallyActive</defName>
+		<hook>HighPriority</hook>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="ThinkNode_ConditionalInGatheringArea">
+					<subNodes>
+						<!-- Stand where you are and be socially active -->
+						<li Class="ThinkNode_ConditionalRandom">
+							<chance>0.99</chance>
+							<subNodes>
+								<li Class="VFETribals.JobGiver_StandAndBeSociallyActive">
+									
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
 </Defs>
