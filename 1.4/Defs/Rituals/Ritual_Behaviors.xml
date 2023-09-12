@@ -38,8 +38,8 @@
         <roleBehaviors>
           <li>
             <roleId>organizer</roleId>
-            <dutyDef>SpeakOnCellFacingSpectators</dutyDef>
-            <speakerInteraction>Speech_DateRitual</speakerInteraction>
+            <dutyDef>VFET_SpeakOnCellFacingSpectators</dutyDef>
+            <speakerInteraction>VFET_TribalGatheringInteraction</speakerInteraction>
             
           </li>
         </roleBehaviors>

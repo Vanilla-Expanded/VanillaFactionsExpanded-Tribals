@@ -5,7 +5,7 @@
 		<descOverride>todo.</descOverride>
 	
 		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
-		<ritualObligationTargetFilter>GatheringSpot</ritualObligationTargetFilter>
+		<ritualObligationTargetFilter>VFET_GatheringSpot</ritualObligationTargetFilter>
 		<ritualBehavior>VFET_TribalGathering_Behaviour</ritualBehavior>
 		<maxTechLevel>Neolithic</maxTechLevel>
 		<ritualOutcomeEffect>VFET_TribalGathering_Outcome</ritualOutcomeEffect>

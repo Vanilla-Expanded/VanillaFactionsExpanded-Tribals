@@ -21,4 +21,31 @@
 			</subNodes>
 		</thinkNode>
 	</DutyDef>
+	<DutyDef>
+		<defName>VFET_SpeakOnCellFacingSpectators</defName>
+		<hook>HighPriority</hook>
+		<socialModeMax>Off</socialModeMax>
+		<ritualSpectateTarget>true</ritualSpectateTarget>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<!-- Goto my spot -->
+				<li Class="JobGiver_GotoTravelDestination">
+					<exactCell>true</exactCell>
+					<locomotionUrgency>Jog</locomotionUrgency>
+					<ritualTagOnArrival>Arrived</ritualTagOnArrival>
+				</li>
+				<!-- Arrived -->
+				<li Class="ThinkNode_ConditionalAtDutyLocation">
+					<subNodes>
+						<li Class="JobGiver_GiveSpeechFacingTarget">
+							<showSpeechBubbles>false</showSpeechBubbles>
+							<faceSpectatorsIfPossible>true</faceSpectatorsIfPossible>
+							<soundDefMale>VFET_RitualSounds_TribalGathering</soundDefMale>
+							<soundDefFemale>VFET_RitualSounds_TribalGathering</soundDefFemale>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
 </Defs>

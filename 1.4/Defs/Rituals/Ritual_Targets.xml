@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+  <RitualObligationTargetFilterDef>
+    <defName>VFET_GatheringSpot</defName>
+    <workerClass>RitualObligationTargetWorker_AnyGatherSpot</workerClass>
+  </RitualObligationTargetFilterDef>
+
+  
+
+</Defs>
