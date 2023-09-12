@@ -6,7 +6,9 @@
   <RitualOutcomeEffectDef>
     <defName>VFET_TribalGathering_Outcome</defName>
     <description>Depending on ritual quality, blah.</description>
-    <workerClass>RitualOutcomeEffectWorker_FromQuality</workerClass>
+    <workerClass>VFETribals.RitualOutcomeEffectWorker_TribalGathering</workerClass>
+	<givesDevelopmentPoints>false</givesDevelopmentPoints>
+	<warnOnLowQuality>false</warnOnLowQuality>
     <comps>
      
       <li Class="RitualOutcomeComp_RitualSeatPresent">
