@@ -63,13 +63,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Events\GenStep_WildMen.cs" />
+    <Compile Include="HarmonyPatches\FakeDef.cs" />
     <Compile Include="HarmonyPatches\Page_ChooseIdeoPreset_DoNext_Patch.cs" />
     <Compile Include="HarmonyPatches\MapGenerator_GenerateMap_Patch.cs" />
     <Compile Include="Events\LordJob_Flee.cs" />
     <Compile Include="Events\QuestNode_Root_WildMen.cs" />
+    <Compile Include="HarmonyPatches\ResearchProjectDef_UnlockedDefs_Patch.cs" />
     <Compile Include="HarmonyPatches\StorytellerComp_IncidentChanceFinal_Patch.cs" />
     <Compile Include="Events\QuestPart_WildmenPostExpire.cs" />
     <Compile Include="AI\JobGivers\JobGiver_StandAndBeSociallyActive.cs" />
+    <Compile Include="HarmonyPatches\Widgets_DefIcon_Patch.cs" />
     <Compile Include="ReflectionCache\ReflectionCache.cs" />
     <Compile Include="RitualOutcomeComps\RitualOutcomeComp_TotalPawnSkill.cs" />
     <Compile Include="RitualOutcomeEffectWorkers\RitualOutcomeEffectWorker_TribalGathering.cs" />
@@ -79,7 +82,6 @@
     <Compile Include="HarmonyPatches\Pawn_CombinedDisabledWorkTags_Patch.cs" />
     <Compile Include="HarmonyPatches\ResearchManager_FinishProject_Patch.cs" />
     <Compile Include="UI\Alert_AvailableCornerstonePoints.cs" />
-    <Compile Include="HarmonyPatches\CompGatherSpot_CompGetGizmosExtra_Patch.cs" />
     <Compile Include="Defs\CornerstoneDef.cs" />
     <Compile Include="UI\ChoiceLetter_WildMenJoin.cs" />
     <Compile Include="UI\Dialog_EditEthos.cs" />

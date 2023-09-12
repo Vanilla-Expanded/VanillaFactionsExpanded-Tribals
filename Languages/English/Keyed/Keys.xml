@@ -32,4 +32,5 @@ Choosing fixed allows you to customize the ideology and every aspect of it. This
 	<VFET.WildMenRaid>Wild men raid</VFET.WildMenRaid>
 	<VFET.WildMenRaidDesc>Wild men from the nearby tribe found their way to {0}. After seeing your numbers, they have decided to raid you. You might be able to capture and recruit any survivors.</VFET.WildMenRaidDesc>
 	<VFET.Reject>Reject</VFET.Reject>
+	<VFET.WorkTypeName>{0} work type</VFET.WorkTypeName>
 </LanguageData>
