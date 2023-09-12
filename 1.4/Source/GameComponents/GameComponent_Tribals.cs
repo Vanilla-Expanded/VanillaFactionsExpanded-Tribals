@@ -13,11 +13,14 @@ namespace VFETribals
 
         public TechLevel? playerTechLevel;
 
-        public List<LargeFire> largeFires = new List<LargeFire>();
         public string ethos;
         public bool ethosLocked;
 
         public List<CornerstoneDef> cornerstones = new List<CornerstoneDef>();
+
+        public int largeFireActiveTicks;
+        public int lastLargeFireUpdate;
+        public int lastTickResearchFinished;
 
         public static GameComponent_Tribals Instance;
 
@@ -29,6 +32,28 @@ namespace VFETribals
         public GameComponent_Tribals(Game game)
         {
             Instance = this;
+        }
+
+        public void IncrementLargeFireCounter(LargeFire largeFire)
+        {
+            if (Find.TickManager.TicksGame != lastLargeFireUpdate)
+            {
+                largeFireActiveTicks++;
+                lastLargeFireUpdate = Find.TickManager.TicksGame;
+                if (largeFireActiveTicks >= GenDate.TicksPerDay * 10)
+                {
+                    SpawnWildMan(largeFire.Map);
+                    ResetLargeFireCounter();
+                }
+            }
+        }
+
+        public void SpawnWildMan(Map map)
+        {
+            VFET_DefOf.WildManWandersIn.Worker.TryExecute(new IncidentParms
+            {
+                target = map,
+            });
         }
 
         public void AdvanceToEra(EraAdvancementDef def)
@@ -73,6 +98,16 @@ namespace VFETribals
             {
                 playerTechLevel = Faction.OfPlayer.def.techLevel;
             }
+
+            if (largeFireActiveTicks != 0 && lastLargeFireUpdate != Find.TickManager.TicksGame)
+            {
+                ResetLargeFireCounter();
+            }
+        }
+
+        private void ResetLargeFireCounter()
+        {
+            lastLargeFireUpdate = largeFireActiveTicks = 0;
         }
 
         public override void StartedNewGame()
@@ -127,6 +162,9 @@ namespace VFETribals
             Scribe_Values.Look(ref playerTechLevel, "playerTechLevel");
             Scribe_Values.Look(ref ethos, "ethos");
             Scribe_Values.Look(ref ethosLocked, "ethosLocked");
+            Scribe_Values.Look(ref lastLargeFireUpdate, "lastLargeFireUpdate");
+            Scribe_Values.Look(ref largeFireActiveTicks, "largeFireActiveTicks");
+            Scribe_Values.Look(ref lastTickResearchFinished, "lastTickResearchFinished");
             Scribe_Collections.Look(ref cornerstones, "cornerstones", LookMode.Def);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {

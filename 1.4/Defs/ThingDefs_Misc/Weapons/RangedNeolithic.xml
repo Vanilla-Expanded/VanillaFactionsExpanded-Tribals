@@ -62,6 +62,7 @@
   <ThingDef ParentName="BaseProjectileNeolithic">
     <defName>VFET_ThrowspikesThrown</defName>
     <label>throwspikes</label>
+	<thingClass>VFETribals.ThrowspikesThrown</thingClass>
     <graphicData>
       <texPath>Projectile/Projectile_Throwspikes</texPath>
       <graphicClass>Graphic_Single</graphicClass>

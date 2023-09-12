@@ -15,7 +15,7 @@ namespace VFETribals
             this.FailOnDespawnedOrNull(TargetIndex.A);
             this.FailOn(() => FailCondition());
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
-            yield return Toils_General.Wait(60).FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
+            yield return Toils_General.Wait(150).FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
             var finalize = new Toil
             {
                 initAction = delegate

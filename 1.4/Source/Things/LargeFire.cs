@@ -1,28 +1,16 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
 namespace VFETribals
 {
-    //When it’s off, it doesn’t burn fuel.It provides a lot of light and heat, but it also sends sparks in random directions,
-    //which may set flammable objects on fire.
-    //The sparks get ejected once every 20~60 ticks and travel up to 2.9 cells away from the fire.
-    //If they land on something flammable, they set it on fire.
-    //Produces large amounts of blindsmoke when it’s burning.
-    //If it has been burning non-stop out in the open (not indoors) for 10 days, an untamed wild man wanders in.
-    //If at any point it was turned off, the counter resets.The counter is global, meaning 10 large fires won’t summon 10 wild men.
-    //Only 1 will be summoned.
-    //While it’s burning, the likelihood of getting a raid is increased by 10%.
-
-    //Large fire - Has a gizmo to turn it on and off, which is like flicking and a pawn will do the job to turn it on and off.
-    //Emits large amounts of blindsmoke and sparks that set nearby things on fire. 
-    //If it burns uninterrupted for 10 days, a wild man wanders in. 
-    //Increases likelihood of getting raids by 10% (non-stacking, so 10 large campfires only increase likelihood by 10% total)
-
     public class LargeFire : Building_WorkTable
     {
         public bool lightOn;
+
+        public int nextSparkTick;
 
         public static HashSet<LargeFire> largeFires = new HashSet<LargeFire>();
 
@@ -46,9 +34,48 @@ namespace VFETribals
         public override void Tick()
         {
             base.Tick();
+            if (refuelableComp.HasFuel is false)
+            {
+                this.lightOn = false;
+            }
             if (this.lightOn)
             {
                 refuelableComp.Notify_UsedThisTick();
+                if (nextSparkTick <= 0)
+                {
+                    SetNextSparkTick();
+                }
+                else if (Find.TickManager.TicksGame >= nextSparkTick)
+                {
+                    SpawnSpark(); 
+                    SetNextSparkTick();
+                }
+                GasUtility.AddGas(this.OccupiedRect().RandomCell, Map, GasType.BlindSmoke, 1);
+                if (Position.Roofed(Map) is false)
+                {
+                    GameComponent_Tribals.Instance.IncrementLargeFireCounter(this);
+                }
+            }
+
+            void SetNextSparkTick()
+            {
+                nextSparkTick = Find.TickManager.TicksGame + Rand.RangeInclusive(20, 60);
+            }
+        }
+
+        protected void SpawnSpark()
+        {
+            IntVec3 position = GenRadial.RadialCellsAround(Position, 2.9f, true)
+                .Where(x => x != base.Position).RandomElement();
+            if (!position.InBounds(base.Map))
+            {
+                return;
+            }
+            CellRect startRect = CellRect.SingleCell(base.Position);
+            CellRect endRect = CellRect.SingleCell(position);
+            if (GenSight.LineOfSight(base.Position, position, base.Map, startRect, endRect))
+            {
+                ((Spark)GenSpawn.Spawn(ThingDefOf.Spark, base.Position, base.Map)).Launch(this, position, position, ProjectileHitFlags.All);
             }
         }
 
@@ -170,6 +197,7 @@ namespace VFETribals
         {
             base.ExposeData();
             Scribe_Values.Look(ref lightOn, "lightOn");
+            Scribe_Values.Look(ref nextSparkTick, "nextSparkTick");
         }
     }
 }

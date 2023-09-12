@@ -27,6 +27,21 @@ namespace VFETribals
                         "VFET.FormIdeologyDesc".Translate(), VFET_DefOf.VFET_ConfigureIdeo));
                 }
             }
+
+            if (Find.Storyteller?.def == VFET_DefOf.VFET_TalonTribal)
+            {
+                if (GameComponent_Tribals.Instance.lastTickResearchFinished > 0 && GenDate.TicksPerDay * 4 >= 
+                    Find.TickManager.TicksGame - GameComponent_Tribals.Instance.lastTickResearchFinished)
+                {
+                    var map = Find.AnyPlayerHomeMap; 
+                    if (map != null)
+                    {
+                        var parms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.RaidEnemy.category, map);
+                        IncidentDefOf.RaidEnemy.Worker.TryExecute(parms);
+                    }
+                }
+            }
+            GameComponent_Tribals.Instance.lastTickResearchFinished = Find.TickManager.TicksGame;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using Verse;
 
 namespace VFETribals
 {
@@ -8,10 +9,16 @@ namespace VFETribals
     {
         public static void Postfix(IncidentDef def, ref float __result)
         {
-            if (typeof(IncidentWorker_RaidEnemy).IsAssignableFrom(def.workerClass) 
-                && Faction.OfPlayer.def.techLevel == TechLevel.Animal)
+            if (typeof(IncidentWorker_RaidEnemy).IsAssignableFrom(def.workerClass))
             {
-                __result *= 0.25f;
+                if (Faction.OfPlayer.def.techLevel == TechLevel.Animal)
+                {
+                    __result *= 0.25f;
+                }
+                if (GameComponent_Tribals.Instance.lastLargeFireUpdate + 150 >= Find.TickManager.TicksGame)
+                {
+                    __result *= 1.1f;
+                }
             }
         }
     }
