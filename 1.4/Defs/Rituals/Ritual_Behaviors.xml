@@ -40,7 +40,10 @@
             <roleId>organizer</roleId>
             <dutyDef>VFET_SpeakOnCellFacingSpectators</dutyDef>
             <speakerInteraction>VFET_TribalGatheringInteraction</speakerInteraction>
-            
+            <customPositions>
+              
+              <li Class="RitualPosition_BesideThing" />
+            </customPositions>
           </li>
         </roleBehaviors>
       </li>
