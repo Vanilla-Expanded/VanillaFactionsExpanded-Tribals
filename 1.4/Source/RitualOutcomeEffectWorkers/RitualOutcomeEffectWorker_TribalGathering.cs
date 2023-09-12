@@ -101,6 +101,10 @@ namespace VFETribals
                     }
                     
                     Find.ResearchManager.progress[activeResearches[i]] += pointsToAllocate;
+                    if (activeResearches[i].IsFinished)
+                    {
+                        Find.ResearchManager.FinishProject(activeResearches[i], doCompletionDialog: true, null);
+                    }
                 }
             }
             

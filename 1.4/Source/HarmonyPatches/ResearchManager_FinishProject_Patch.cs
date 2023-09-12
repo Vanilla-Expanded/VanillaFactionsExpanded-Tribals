@@ -12,7 +12,7 @@ namespace VFETribals
         {
             if (proj is TribalResearchProjectDef project)
             {
-                if (project.unlocksWorkTypes != null)
+                if (project.unlocksWorkTypes != null || project.unlocksWorkTags != WorkTags.None)
                 {
                     foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive)
                     {
