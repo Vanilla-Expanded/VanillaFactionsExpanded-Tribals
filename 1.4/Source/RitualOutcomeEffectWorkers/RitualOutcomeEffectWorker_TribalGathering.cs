@@ -55,16 +55,16 @@ namespace VFETribals
             switch (outcome.positivityIndex)
             {
                 case -2:
-                    totalResearchPoints = 20 * totalPresence.Count;
+                    totalResearchPoints = 2 * totalPresence.Count;
                     break;
                 case -1:
-                    totalResearchPoints = 40 * totalPresence.Count;
+                    totalResearchPoints = 4 * totalPresence.Count;
                     break;
                 case 1:
-                    totalResearchPoints = 80 * totalPresence.Count;
+                    totalResearchPoints = 8 * totalPresence.Count;
                     break;
                 case 2:
-                    totalResearchPoints = 120 * totalPresence.Count;
+                    totalResearchPoints = 12 * totalPresence.Count;
                     break;
             }
           
