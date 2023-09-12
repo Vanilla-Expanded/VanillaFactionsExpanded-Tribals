@@ -16,5 +16,7 @@ namespace VFETribals
 
         public static SoundDef VFET_RitualSustainer_TribalGathering;
         public static SoundDef VFET_RitualSounds_TribalGathering;
+        public static DesignationDef VFET_LightLargeFire, VFET_ExtinguishLargeFire;
+        public static JobDef VFET_LightLargeFireJob, VFET_ExtinguishLargeFireJob;
     }
 }

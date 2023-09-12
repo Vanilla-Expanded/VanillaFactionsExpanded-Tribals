@@ -42,5 +42,8 @@ Choosing fixed allows you to customize the ideology and every aspect of it. This
 	<VFET_AnimalsLetter>A group of farm animals has been attracted and will join the colony</VFET_AnimalsLetter>
 	<VFET_DiscoveryLabel>Discovered {0}!</VFET_DiscoveryLabel>
 	<VFET_Discovery>A new research project has been discovered in a tribal gathering: {0}!\n\n{1}</VFET_Discovery>
-
+	<VFET.AnimalTrapSprung>Animal trap has sprung on {0}</VFET.AnimalTrapSprung>
+	<VFET.LightLargeFire>Light large fire</VFET.LightLargeFire>
+	<VFET.ExtinguishLargeFire>Extinguish large fire</VFET.ExtinguishLargeFire>
+	<VFET.LightLargeFireDesc>When burning, large fire emits blindsmoke and has a chance to encourage wild men from the local area to wander in. It's very unstable and may set things around it on fire.</VFET.LightLargeFireDesc>
 </LanguageData>

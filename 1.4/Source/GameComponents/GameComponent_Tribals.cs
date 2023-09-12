@@ -13,6 +13,7 @@ namespace VFETribals
 
         public TechLevel? playerTechLevel;
 
+        public List<LargeFire> largeFires = new List<LargeFire>();
         public string ethos;
         public bool ethosLocked;
 

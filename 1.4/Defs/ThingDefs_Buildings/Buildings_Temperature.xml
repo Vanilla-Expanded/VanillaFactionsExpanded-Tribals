@@ -5,7 +5,7 @@
     <defName>VFET_LargeFire</defName>
     <label>large fire</label>
     <description>Produces large amounts of heat and smoke, and burns out after a quadrum. The light from a large fire is visible from afar. As long as it’s burning outdoors, there is a higher chance of wild men wandering in, as well as raids. As with all heat sources, it must be placed indoors so it has a closed space to heat. Refuelable. Due to the size and instability of it, it may eject sparks around itself that may start a fire.</description>    
-    <thingClass>Building_WorkTable</thingClass>
+    <thingClass>VFETribals.LargeFire</thingClass>
     <category>Building</category>
     <graphicData>
       <texPath>Things/Building/Misc/Campfire</texPath>
@@ -59,15 +59,17 @@
         <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
       </li>
       <li Class="CompProperties_Glower">
+		<compClass>VFETribals.CompGlower_LargeFire</compClass>
         <glowRadius>18.17</glowRadius>
         <glowColor>(252,187,113,0)</glowColor>
       </li>
       <li Class="CompProperties_HeatPusher">
-        <compClass>CompHeatPusherPowered</compClass>
+        <compClass>VFETribals.CompHeatPusher_LargeFire</compClass>
         <heatPerSecond>42</heatPerSecond>
         <heatPushMaxTemperature>40</heatPushMaxTemperature>
       </li>
       <li Class="CompProperties_FireOverlay">
+		<compClass>VFETribals.CompFireOverlay_LargeFire</compClass>
         <fireSize>2</fireSize>
       </li>
       <li>

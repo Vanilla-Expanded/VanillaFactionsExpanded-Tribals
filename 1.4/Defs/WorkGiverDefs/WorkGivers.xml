@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <WorkGiverDef>
+    <defName>VFET_LightLargeFire</defName>
+    <label>light large fire</label>
+    <giverClass>VFETribals.WorkGiver_LightLargeFire</giverClass>
+    <workType>BasicWorker</workType>
+    <verb>light large fire</verb>
+    <gerund>lighting large fire</gerund>
+    <canBeDoneWhileDrafted>true</canBeDoneWhileDrafted>
+    <priorityInType>500</priorityInType>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>VFET_ExtinguishLargeFire</defName>
+    <label>extinguish large fire</label>
+    <giverClass>VFETribals.WorkGiver_ExtinguishLargeFire</giverClass>
+    <workType>BasicWorker</workType>
+    <verb>extinguish large fire</verb>
+    <gerund>extinguishing large fire</gerund>
+    <canBeDoneWhileDrafted>true</canBeDoneWhileDrafted>
+    <priorityInType>500</priorityInType>
+  </WorkGiverDef>
+  
+	
+</Defs>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+  <DesignationDef>
+    <defName>VFET_LightLargeFire</defName>
+    <texturePath>UI/Icons/LightLargeFire</texturePath>
+    <targetType>Thing</targetType>
+    <designateCancelable>false</designateCancelable>
+  </DesignationDef>
+  
+  <DesignationDef>
+    <defName>VFET_ExtinguishLargeFire</defName>
+    <texturePath>UI/Icons/ExtinguishLargeFire</texturePath>
+    <targetType>Thing</targetType>
+    <designateCancelable>false</designateCancelable>
+  </DesignationDef>
+  
+</Defs>

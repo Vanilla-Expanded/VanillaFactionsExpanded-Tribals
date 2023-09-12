@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI\JobDrivers\JobDriver_StandSociallyActive.cs" />
+    <Compile Include="AI\JobDriver_LargeFireControlBase.cs" />
+    <Compile Include="AI\WorkGiver_ManageLargeFire.cs" />
+    <Compile Include="Things\Building_AnimalTrap.cs" />
     <Compile Include="Events\GenStep_WildMen.cs" />
     <Compile Include="HarmonyPatches\DesignationManager_AddDesignation_Patch.cs" />
     <Compile Include="HarmonyPatches\Designator_CreateReverseDesignationGizmo_Patch.cs" />
@@ -82,6 +85,10 @@
     <Compile Include="RitualBehaviourWorkers\RitualBehaviourWorker_TribalGathering.cs" />
     <Compile Include="RitualOutcomeComps\RitualOutcomeComp_TotalPawnSkill.cs" />
     <Compile Include="RitualOutcomeEffectWorkers\RitualOutcomeEffectWorker_TribalGathering.cs" />
+    <Compile Include="Things\CompFireOverlay_LargeFire.cs" />
+    <Compile Include="Things\CompGlower_LargeFire.cs" />
+    <Compile Include="Things\CompHeatPusher_LargeFire.cs" />
+    <Compile Include="Things\LargeFire.cs" />
     <Compile Include="UI\ChoiceLetter_ConfigureIdeo.cs" />
     <Compile Include="HarmonyPatches\Designator_GizmoOnGUI_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_ChooseIdeoPreset_PostOpen_Patch.cs" />
@@ -110,5 +117,6 @@
     <Compile Include="UI\Window_CustomizeCornerstones.cs" />
     <Compile Include="DefOfs\VFET_DefOf.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

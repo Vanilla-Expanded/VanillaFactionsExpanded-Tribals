@@ -5,7 +5,7 @@
     <defName>VFET_AnimalTrap</defName>
     <label>animal trap</label>
     <description>A large, sharp spike under tension, connected to a touch-activated trigger. If an animal touches the trigger, the spike springs forth and strikes it. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals do not sense these when calm, but they are quite obvious to humans and will be avoided by them.</description>
-    <thingClass>Building_TrapDamager</thingClass>
+    <thingClass>VFETribals.Building_AnimalTrap</thingClass>
     <graphicData>
       <texPath>Things/Building/Furniture/AnimalTrap/AnimalTrap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
