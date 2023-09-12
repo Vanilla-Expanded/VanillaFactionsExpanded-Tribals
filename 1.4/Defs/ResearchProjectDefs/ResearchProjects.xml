@@ -13,6 +13,9 @@
 	<unlocksWorkTypes>
 		<li>Firefighter</li>
 	</unlocksWorkTypes>
+    <tags>
+      <li>WildMenStart</li>
+    </tags>
 	<unlocksWorkTags>
 		<li>Firefighting</li>
 	</unlocksWorkTags>
@@ -121,9 +124,6 @@
     <techLevel>Animal</techLevel>
     <researchViewX>2.00</researchViewX>
     <researchViewY>1.40</researchViewY>
-	<unlocksWorkTypes>
-		<li>Construction</li>
-	</unlocksWorkTypes>
 	<unlocksDesignators>
 		<li>Designator_Deconstruct</li>
 		<li>Designator_AreaBuildRoof</li>
