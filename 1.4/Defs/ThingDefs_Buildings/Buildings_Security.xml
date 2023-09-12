@@ -50,6 +50,9 @@
     <placeWorkers>
       <li>PlaceWorker_NeverAdjacentTrap</li>
     </placeWorkers>
+    <researchPrerequisites>
+      <li>VFET_Hunting</li>
+    </researchPrerequisites>
   </ThingDef>
 
 </Defs>
