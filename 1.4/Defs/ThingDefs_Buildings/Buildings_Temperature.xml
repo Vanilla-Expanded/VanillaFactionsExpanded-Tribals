@@ -78,7 +78,7 @@
         <focusTypes><li>Flame</li></focusTypes>
         <offsets>
           <li Class="FocusStrengthOffset_Lit">
-            <offset>0.12</offset>
+            <offset>0.16</offset>
           </li>
           <li Class="FocusStrengthOffset_BuildingDefsLit">
             <defs>
