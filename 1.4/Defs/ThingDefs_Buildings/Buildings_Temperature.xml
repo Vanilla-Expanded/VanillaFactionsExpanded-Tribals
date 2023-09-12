@@ -51,6 +51,7 @@
         <fuelConsumptionRate>10.0</fuelConsumptionRate>
         <fuelCapacity>150.0</fuelCapacity>
         <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+        <externalTicking>true</externalTicking>
         <fuelFilter>
           <thingDefs>
             <li>WoodLog</li>

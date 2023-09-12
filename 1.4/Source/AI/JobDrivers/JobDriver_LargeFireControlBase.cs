@@ -36,13 +36,7 @@ namespace VFETribals
     {
         public override void DoWork()
         {
-            LargeFire.lightOn = true;
-            var des = base.Map.designationManager.DesignationOn(base.TargetThingA, VFET_DefOf.VFET_LightLargeFire);
-            if (des != null)
-            {
-                base.Map.designationManager.RemoveDesignation(des);
-            }
-
+            LargeFire.Light();
         }
 
         public override bool FailCondition()
@@ -55,12 +49,7 @@ namespace VFETribals
     {
         public override void DoWork()
         {
-            LargeFire.lightOn = false;
-            var des = base.Map.designationManager.DesignationOn(base.TargetThingA, VFET_DefOf.VFET_ExtinguishLargeFire);
-            if (des != null)
-            {
-                base.Map.designationManager.RemoveDesignation(des);
-            }
+            LargeFire.Extinguish();
         }
 
         public override bool FailCondition()

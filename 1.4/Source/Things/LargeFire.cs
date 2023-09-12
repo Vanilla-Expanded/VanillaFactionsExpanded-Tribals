@@ -5,8 +5,6 @@ using Verse;
 
 namespace VFETribals
 {
-    //Large campfire burns wood at the same rate as a normal campfire(10 wood per day).
-    //A large campfire that can be turned on and off via a gizmo.
     //When it’s off, it doesn’t burn fuel.It provides a lot of light and heat, but it also sends sparks in random directions,
     //which may set flammable objects on fire.
     //The sparks get ejected once every 20~60 ticks and travel up to 2.9 cells away from the fire.
@@ -48,7 +46,49 @@ namespace VFETribals
         public override void Tick()
         {
             base.Tick();
+            if (this.lightOn)
+            {
+                refuelableComp.Notify_UsedThisTick();
+            }
         }
+
+        public void Light()
+        {
+            this.lightOn = true;
+            var des = Map.designationManager.DesignationOn(this, VFET_DefOf.VFET_LightLargeFire);
+            if (des != null)
+            {
+                Map.designationManager.RemoveDesignation(des);
+            }
+            RefreshGlow();
+        }
+
+        public void Extinguish()
+        {
+            this.lightOn = false;
+            var des = Map.designationManager.DesignationOn(this, VFET_DefOf.VFET_ExtinguishLargeFire);
+            if (des != null)
+            {
+                Map.designationManager.RemoveDesignation(des);
+            }
+            RefreshGlow();
+        }
+
+        private void RefreshGlow()
+        {
+            CellRect cellRect = this.OccupiedRect();
+            for (int i = cellRect.minZ; i <= cellRect.maxZ; i++)
+            {
+                for (int j = cellRect.minX; j <= cellRect.maxX; j++)
+                {
+                    IntVec3 intVec = new IntVec3(j, 0, i);
+                    Map.mapDrawer.MapMeshDirty(intVec, MapMeshFlag.Buildings);
+                    Map.glowGrid.MarkGlowGridDirty(intVec);
+                }
+            }
+            this.GetComp<CompGlower_LargeFire>().UpdateLit(Map);
+        }
+
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var g in base.GetGizmos())
