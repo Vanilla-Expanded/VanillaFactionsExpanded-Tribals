@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>VFET_Throwspikes</defName>
+    <label>throwspikes</label>
+    <description>Throwspikes are short sticks sharpened on both sides. They take a while to throw, but can do reasonable damage when they hit. This weapon represents a bundle of throwspikes and can be thrown over and over.</description>
+    <graphicData>
+      <texPath>Equipment/WeaponRanged/Throwspikes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <costList>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <relicChance>0</relicChance>
+    <statBases>
+      <WorkToMake>1800</WorkToMake>
+      <Mass>2.2</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.71</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>NeolithicRangedHeavy</li>
+      <li>NoRelic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>VFET_Weapons</researchPrerequisite>
+      <displayPriority>501</displayPriority>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Pilum_Thrown</defaultProjectile>
+        <warmupTime>2.8</warmupTime>
+        <range>16.9</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>VFET_ThrowspikesThrown</defName>
+    <label>throwspikes</label>
+    <graphicData>
+      <texPath>Projectile/Projectile_Throwspikes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <stoppingPower>0.5</stoppingPower>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
+      <speed>21</speed>
+    </projectile>
+  </ThingDef>
+  
+</Defs>
