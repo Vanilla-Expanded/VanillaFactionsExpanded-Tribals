@@ -27,40 +27,43 @@ namespace VFETribals
         }
         public static void AddUnlockedDefs(ResearchProjectDef __instance)
         {
-            if (__instance is TribalResearchProjectDef tribalResearch)
+            LongEventHandler.ExecuteWhenFinished(delegate
             {
-                if (tribalResearch.unlocksDesignators != null)
+                if (__instance is TribalResearchProjectDef tribalResearch)
                 {
-                    foreach (var type in tribalResearch.unlocksDesignators)
+                    if (tribalResearch.unlocksDesignators != null)
                     {
-                        Designator designator = DesignatorUtility.StandaloneDesignators.TryGetValue(type);
-                        if (designator == null)
+                        foreach (var type in tribalResearch.unlocksDesignators)
                         {
-                            designator = Activator.CreateInstance(type) as Designator;
+                            Designator designator = DesignatorUtility.StandaloneDesignators.TryGetValue(type);
+                            if (designator == null)
+                            {
+                                designator = Activator.CreateInstance(type) as Designator;
+                            }
+                            __instance.cachedUnlockedDefs.Add(new FakeDef
+                            {
+                                defName = type.Name,
+                                label = designator.LabelCap,
+                                description = designator.Desc,
+                                icon = designator.icon as Texture2D
+                            });
                         }
-                        __instance.cachedUnlockedDefs.Add(new FakeDef
-                        {
-                            defName = type.Name,
-                            label = designator.LabelCap,
-                            description = designator.Desc,
-                            icon = designator.icon as Texture2D
-                        });
                     }
-                }
 
-                if (tribalResearch.unlocksWorkTypes != null)
-                {
-                    foreach (var def in tribalResearch.unlocksWorkTypes)
+                    if (tribalResearch.unlocksWorkTypes != null)
                     {
-                        __instance.cachedUnlockedDefs.Add(new FakeDef
+                        foreach (var def in tribalResearch.unlocksWorkTypes)
                         {
-                            defName = def.defName,
-                            label = "VFET.WorkTypeName".Translate(def.pawnLabel),
-                            description = def.description
-                        });
+                            __instance.cachedUnlockedDefs.Add(new FakeDef
+                            {
+                                defName = def.defName,
+                                label = "VFET.WorkTypeName".Translate(def.pawnLabel),
+                                description = def.description
+                            });
+                        }
                     }
                 }
-            }
+            });
         }
     }
 }

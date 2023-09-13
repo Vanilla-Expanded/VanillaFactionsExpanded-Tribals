@@ -21,5 +21,6 @@ namespace VFETribals
         public static IncidentDef WildManWandersIn;
         public static ThingDef VFET_Stake;
         public static StorytellerDef VFET_TalonTribal;
+        public static PreceptDef VFET_TribalGathering;
     }
 }
