@@ -47,29 +47,29 @@
       <li>
         <label>Ineffective</label>
         <chance>0.05</chance>
-        <memory>TerribleFestival</memory>
-        <description>The {0} was terrible! Participants endured hours of jaw-clenching small talk while waiting for it to end.</description>
+        <memory>VFET_Ineffective</memory>
+        <description>The {0} was ineffective! We tried to discuss some new developments in the tribe, but it devolved into petty bickering about food and shelter...\n\n2 points of research per participant will be distributed among the available research projects.</description>
         <positivityIndex>-2</positivityIndex>
       </li>
       <li>
         <label>Uninspiring</label>
         <chance>0.25</chance>
-        <memory>BoringFestival</memory>
-        <description>The {0} was boring. Everyone felt too awkward to open up and laugh.</description>
+        <memory>VFET_Uninspiring</memory>
+        <description>The {0} was uninspiring. There were some new ideas floating around, but not much of substance. At least it was kinda entertaining.\n\n4 points of research per participant will be distributed among the available research projects.</description>
         <positivityIndex>-1</positivityIndex>
       </li>
       <li>
         <label>Encouraging</label>
         <chance>0.6</chance>
-        <memory>FunFestival</memory>
-        <description>The {0} was fun. Everyone appreciated the chance to relax and have fun together.</description>
+        <memory>VFET_Encouraging</memory>
+        <description>The {0} was encouraging. Some of the ideas discussed were pretty great! We are probably unto something here.\n\n8 points of research per participant will be distributed among the available research projects.</description>
         <positivityIndex>1</positivityIndex>
       </li>
       <li>
         <label>Inspiring</label>
         <chance>0.1</chance>
-        <memory>UnforgettableFestival</memory>
-        <description>The {0} was unforgettable! Everyone learned about each other and felt like a family.</description>
+        <memory>VFET_Inspiring</memory>
+        <description>The {0} was inspiring! The tribe is close to a breakthrough!\n\n12 points of research per participant will be distributed among the available research projects.</description>
         <positivityIndex>2</positivityIndex>
       </li>
     </outcomeChances>
