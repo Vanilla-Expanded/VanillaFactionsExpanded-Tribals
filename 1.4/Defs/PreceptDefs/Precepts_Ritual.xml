@@ -17,4 +17,21 @@
 		<useRepeatPenalty>false</useRepeatPenalty>
 		<showRitualFloatMenuOption>false</showRitualFloatMenuOption>
 	</PreceptDef>
+	
+	<PreceptDef>
+		<defName>VFET_AdvanceToNeolithic</defName>
+		<label>advance to neolithic</label>
+		<issue>Ritual</issue>
+		<iconPath>UI/Icons/Rituals/Ritual_FormTribe</iconPath>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<ritualPatternBase>VFET_AdvanceToNeolithic_Pattern</ritualPatternBase>
+		<visible>false</visible>
+		<classic>true</classic>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<usesIdeoVisualEffects>false</usesIdeoVisualEffects>
+		<mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
+		<useRepeatPenalty>false</useRepeatPenalty>
+		<showRitualFloatMenuOption>false</showRitualFloatMenuOption>
+	</PreceptDef>
 </Defs>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RitualPatternDef>
+		<defName>VFET_TribalGathering_Pattern</defName>
+		<descOverride>todo.</descOverride>
+		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+		<ritualObligationTargetFilter>VFET_GatheringSpot</ritualObligationTargetFilter>
+		<ritualBehavior>VFET_TribalGathering_Behaviour</ritualBehavior>
+		<maxTechLevel>Neolithic</maxTechLevel>
+		<ritualOutcomeEffect>VFET_TribalGathering_Outcome</ritualOutcomeEffect>
+		<playsIdeoMusic>false</playsIdeoMusic>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+	</RitualPatternDef>
+	<RitualPatternDef>
+		<defName>VFET_AdvanceToNeolithic_Pattern</defName>
+		<descOverride>Upon completing all pre-neolithic research projects, advance to neolithic tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</descOverride>
+		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+		<ritualObligationTargetFilter>VFET_GatheringSpot</ritualObligationTargetFilter>
+		<ritualBehavior>VFET_AdvanceToNeolithic_Behaviour</ritualBehavior>
+		<maxTechLevel>Animal</maxTechLevel>
+		<ritualOutcomeEffect>VFET_AdvanceToNeolithic_Outcome</ritualOutcomeEffect>
+		<playsIdeoMusic>false</playsIdeoMusic>
+		<ritualObligationTriggers>
+			<li Class="VFETribals.RitualObligationTrigger_AllResearchFinishedAnimalProperties">
+				
+			</li>
+		</ritualObligationTriggers>
+	</RitualPatternDef>
+</Defs>

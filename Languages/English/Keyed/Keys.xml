@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
 	<VFET.AvailableCornerstonePoint>Available cornerstone point</VFET.AvailableCornerstonePoint>
 	<VFET.AvailableCornerstonePoints>Available cornerstone points: {0}</VFET.AvailableCornerstonePoints>
 	<VFET.AvailableCornerstonePointDesc>You can spend a cornerstone point to gain a permanent, colony-wide buff that will help you shape your civilization.</VFET.AvailableCornerstonePointDesc>
@@ -10,7 +9,6 @@
 	<VFET.EthosUnlocked>Lock or unlock the faction's ethos. When locked, the ethos text will not auto-regenerate when you unlock a new cornerstone.
 
 Ethos lock is currently off. The ethos text can auto-regenerate.</VFET.EthosUnlocked>
-
 	<VFET.EthosLocked>Lock or unlock the faction's ethos. When locked, the ethos text will not auto-regenerate when you unlock a new cornerstone.
 
 Ethos lock is currently on. The ethos text will not auto-regenerate.</VFET.EthosLocked>
@@ -32,10 +30,7 @@ Choosing fixed allows you to customize the ideology and every aspect of it. This
 	<VFET.WildMenRaid>Wild men raid</VFET.WildMenRaid>
 	<VFET.WildMenRaidDesc>Wild men from the nearby tribe found their way to {0}. After seeing your numbers, they have decided to raid you. You might be able to capture and recruit any survivors.</VFET.WildMenRaidDesc>
 	<VFET.Reject>Reject</VFET.Reject>
-
 	<VFET.WorkTypeName>{0} work type</VFET.WorkTypeName>
-
-	
 	<VFET_WildmanLetterLabel>Wild man joins</VFET_WildmanLetterLabel>
 	<VFET_WildmanLetter>A wild man wanders in and decides to join your colony</VFET_WildmanLetter>
 	<VFET_AnimalsLetterLabel>Farm animals wander in</VFET_AnimalsLetterLabel>
@@ -46,4 +41,10 @@ Choosing fixed allows you to customize the ideology and every aspect of it. This
 	<VFET.LightLargeFire>Light large fire</VFET.LightLargeFire>
 	<VFET.ExtinguishLargeFire>Extinguish large fire</VFET.ExtinguishLargeFire>
 	<VFET.LightLargeFireDesc>When burning, large fire emits blindsmoke and has a chance to encourage wild men from the local area to wander in. It's very unstable and may set things around it on fire.</VFET.LightLargeFireDesc>
+	<VFET.ResearchLeft_Neolithic>Some Animal tech research must still be completed.</VFET.ResearchLeft_Neolithic>
+	
+	<!--These are needed for Ideology compat -->
+	
+	<Optional>optional</Optional>
+	<RitualTargetGatherSpotInfo>Any gathering spot, like a table</RitualTargetGatherSpotInfo>
 </LanguageData>

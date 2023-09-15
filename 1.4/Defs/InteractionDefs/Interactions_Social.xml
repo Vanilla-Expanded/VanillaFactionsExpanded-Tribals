@@ -5,7 +5,7 @@
 
   <InteractionDef>
     <defName>VFET_TribalGatheringInteraction</defName>
-    <label>think hard</label>
+    <label>sahring ideas</label>
     <workerClass>VFETribals.InteractionWorker_TribalGathering</workerClass>
     <symbol>Things/Mote/SpeechSymbols/GatheringSocialInteraction</symbol>
     <initiatorThought>Chitchat</initiatorThought>
