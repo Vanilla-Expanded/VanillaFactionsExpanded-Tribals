@@ -18,6 +18,13 @@
         <li>context_sentence->This [depiction] refers to [tale_noun] on [DATE].</li>
         <li>context_sentence->This [depiction] relates to [tale_noun] on [DATE].</li>
         <li>context_sentence->This [depiction] tells the story of [tale_noun] on [DATE].</li>
+		
+        <li>physical_description_root->This [painting] [depicts] [image]. [desc_sentence_group]</li>
+        <li>physical_description_root->This [painting] bears a [depiction] of [image]. [desc_sentence_group]</li>
+        <li>physical_description_root->On this [painting] is a [depiction] of [image]. [desc_sentence_group]</li>
+        <li>painting->painting</li>
+        <li>painting->work</li>
+        <li>painting->piece</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
