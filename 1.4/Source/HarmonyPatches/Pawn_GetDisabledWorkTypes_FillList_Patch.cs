@@ -25,7 +25,7 @@ namespace VFETribals
             {
                 foreach (var def in DefDatabase<WorkTypeDef>.AllDefs)
                 {
-                    if (list.Contains(def) is false && def.IsUnlocked() is false)
+                    if (list.Contains(def) is false && def.IsUnlocked(out _) is false)
                     {
                         list.Add(def);
                     }

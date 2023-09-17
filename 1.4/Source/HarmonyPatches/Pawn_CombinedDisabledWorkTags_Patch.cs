@@ -13,9 +13,9 @@ namespace VFETribals
         {
             if (__instance.Faction == Faction.OfPlayerSilentFail)
             {
-                foreach (var workTag in Enum.GetValues(typeof(WorkTags)).Cast<WorkTags>())
+                foreach (var workTag in Utils.workTags)
                 {
-                    if (!workTag.IsUnlocked())
+                    if (!workTag.IsUnlocked(out _))
                     {
                         __result |= workTag;
                     }

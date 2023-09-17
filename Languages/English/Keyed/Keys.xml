@@ -47,4 +47,6 @@ Choosing fixed allows you to customize the ideology and every aspect of it. This
 	
 	<Optional>optional</Optional>
 	<RitualTargetGatherSpotInfo>Any gathering spot, like a table</RitualTargetGatherSpotInfo>
+	
+	<VFET.MustPlaceOnFloorOrStonyTerrain>Must be placed on a floor or stony terrain.</VFET.MustPlaceOnFloorOrStonyTerrain>
 </LanguageData>

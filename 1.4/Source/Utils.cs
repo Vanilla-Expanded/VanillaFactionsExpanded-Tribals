@@ -4,6 +4,7 @@ using RimWorld.QuestGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using Verse;
 
 namespace VFETribals
@@ -11,14 +12,13 @@ namespace VFETribals
     [StaticConstructorOnStartup]
     public static class Utils
     {
+        public static List<WorkTags> workTags = Enum.GetValues(typeof(WorkTags)).Cast<WorkTags>().ToList();
+        public static List<TribalResearchProjectDef> researchProjectsWithUnlockWorkTags = DefDatabase<TribalResearchProjectDef>
+            .AllDefsListForReading.Where(x => x.unlocksWorkTags != WorkTags.None).ToList();
         public static List<TribalResearchProjectDef> researchProjectsWithDesignators = DefDatabase<TribalResearchProjectDef>
             .AllDefsListForReading.Where(x => x.unlocksDesignators != null).ToList();
 
-        public static bool IsUnlocked(this WorkTypeDef workTypeDef)
-        {
-            return IsUnlocked(workTypeDef, out _);
-        }
-
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsUnlocked(this WorkTypeDef workTypeDef, out TribalResearchProjectDef research)
         {
             foreach (var tribalResearch in DefDatabase<TribalResearchProjectDef>.AllDefs)
@@ -36,14 +36,10 @@ namespace VFETribals
             return true;
         }
 
-        public static bool IsUnlocked(this WorkTags workTags)
-        {
-            return IsUnlocked(workTags, out _);
-        }
-
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsUnlocked(this WorkTags workTags, out TribalResearchProjectDef research)
         {
-            foreach (var tribalResearch in DefDatabase<TribalResearchProjectDef>.AllDefs)
+            foreach (var tribalResearch in researchProjectsWithUnlockWorkTags)
             {
                 if (tribalResearch.unlocksWorkTags.HasFlag(workTags))
                 {

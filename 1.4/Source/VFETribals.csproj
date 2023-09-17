@@ -67,6 +67,7 @@
     <Compile Include="AI\JobGivers\WorkGiver_ManageLargeFire.cs" />
     <Compile Include="HarmonyPatches\Thing_GetGizmos_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
+    <Compile Include="PlaceWorker_OnFloorsOrStoneTerrains.cs" />
     <Compile Include="RitualObligationTriggers\Properties\RitualObligationTrigger_AllResearchFinishedAnimalProperties.cs" />
     <Compile Include="RitualObligationTriggers\RitualObligationTrigger_AllResearchFinishedAnimal.cs" />
     <Compile Include="RitualOutcomeEffectWorkers\RitualOutcomeEffectWorker_AdvanceToNeolithic.cs" />

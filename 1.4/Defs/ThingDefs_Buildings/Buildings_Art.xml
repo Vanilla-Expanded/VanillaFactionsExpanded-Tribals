@@ -8,6 +8,7 @@
     <graphicData>
       <graphicClass>Graphic_Random</graphicClass>
       <texPath>Things/Building/CaveFloorPainting</texPath>
+      <shaderType>Transparent</shaderType>
     </graphicData>
     <fillPercent>0</fillPercent>
     <rotatable>false</rotatable>
@@ -82,7 +83,9 @@
     </comps>
     <placeWorkers>
       <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+      <li>VFETribals.PlaceWorker_OnFloorsOrStoneTerrains</li>
     </placeWorkers>
+    <terrainAffordanceNeeded></terrainAffordanceNeeded> <!-- handled by the placeworker -->
     <inspectorTabs>
       <li>ITab_Art</li>
     </inspectorTabs>
@@ -100,6 +103,16 @@
       <li>FloorCoverings</li>
     </blocksAltitudes>
     <blockPlants>true</blockPlants>
+	<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+			<constructionSkillRequirement>
+				<workType>Art</workType>
+				<skill>Artistic</skill>
+				<level>6</level>
+				<reportStringOverride>painting floor.</reportStringOverride>
+			</constructionSkillRequirement>
+		</li>
+	</modExtensions>
   </ThingDef>
 
 </Defs>
