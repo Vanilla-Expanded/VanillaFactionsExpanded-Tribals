@@ -37,7 +37,7 @@ namespace VFETribals
         public static EraAdvancementDef VFET_FormCollective;
         public static EraAdvancementDef VFET_FormNexus;
 
-
+        public static ThingDef VFET_FloorPainting;
 
     }
 }

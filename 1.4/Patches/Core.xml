@@ -7,6 +7,20 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
+					<xpath>Defs/StatDef[defName="Beauty"]/parts</xpath>
+					<value>
+						<li Class="VFETribals.StatPart_FloorPainting_TechLevel">
+							<animal>1</animal>
+							<neolithic>1</neolithic>
+							<medieval>2</medieval>
+							<industrial>8</industrial>
+							<spacer>16</spacer>
+							<ultra>32</ultra>
+						</li>
+					</value>
+					
+				</li>
+				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="Campfire" or defName="TorchLamp"]</xpath>
 					<value>
 						<researchPrerequisites>

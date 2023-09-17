@@ -16,7 +16,7 @@
       <MaxHitPoints>50</MaxHitPoints>
       <Mass>0.1</Mass>
       <Beauty>15</Beauty>
-      <WorkToMake>30000</WorkToMake>
+      <WorkToBuild>30000</WorkToBuild>
       <Flammability>0</Flammability>
       <MeditationFocusStrength>0.0</MeditationFocusStrength>
     </statBases>
@@ -98,6 +98,10 @@
     <building>
       <paintable>false</paintable>
 	  <isEdifice>false</isEdifice>
+      <blueprintGraphicData>
+		<texPath>Things/Building/Misc/PartySpot</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+      </blueprintGraphicData>
     </building>
 	<blocksAltitudes>
       <li>FloorCoverings</li>

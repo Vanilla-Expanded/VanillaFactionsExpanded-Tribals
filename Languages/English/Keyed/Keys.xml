@@ -49,4 +49,6 @@ Choosing fixed allows you to customize the ideology and every aspect of it. This
 	<RitualTargetGatherSpotInfo>Any gathering spot, like a table</RitualTargetGatherSpotInfo>
 	
 	<VFET.MustPlaceOnFloorOrStonyTerrain>Must be placed on a floor or stony terrain.</VFET.MustPlaceOnFloorOrStonyTerrain>
+	<VFET.StatsReport_BeautyMultiplier>Beauty multiplier for colony {0} tech level</VFET.StatsReport_BeautyMultiplier>
+
 </LanguageData>

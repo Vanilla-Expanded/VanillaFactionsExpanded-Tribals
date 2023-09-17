@@ -71,6 +71,7 @@
     <Compile Include="RitualObligationTriggers\Properties\RitualObligationTrigger_AllResearchFinishedAnimalProperties.cs" />
     <Compile Include="RitualObligationTriggers\RitualObligationTrigger_AllResearchFinishedAnimal.cs" />
     <Compile Include="RitualOutcomeEffectWorkers\RitualOutcomeEffectWorker_AdvanceToNeolithic.cs" />
+    <Compile Include="StatPart_FloorPainting_TechLevel.cs" />
     <Compile Include="Things\ThrowspikesThrown.cs" />
     <Compile Include="Things\Building_AnimalTrap.cs" />
     <Compile Include="Events\GenStep_WildMen.cs" />
