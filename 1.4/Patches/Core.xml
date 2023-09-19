@@ -45,7 +45,15 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="Wall" or defName="Door" or defName="Column" or defName="WoodPlankFloor" or @Name="FlagstoneBase" or defName="StrawMatting" or defName="Barricade" or defName="Sandbags"]</xpath>
+					<xpath>Defs/ThingDef[defName="Wall" or defName="Door" or defName="Column" or defName="Barricade" or defName="Sandbags" or defName="FueledStove"]</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFET_Construction</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/TerrainDef[defName="Bridge" or defName="WoodPlankFloor" or @Name="FlagstoneBase" or defName="StrawMatting"]</xpath>
 					<value>
 						<researchPrerequisites>
 							<li>VFET_Construction</li>
