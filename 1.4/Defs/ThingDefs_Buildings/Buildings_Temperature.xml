@@ -8,7 +8,7 @@
     <thingClass>VFETribals.LargeFire</thingClass>
     <category>Building</category>
     <graphicData>
-      <texPath>Things/Building/Misc/Campfire</texPath>
+      <texPath>Things/Building/Furniture/LargeFire/LargeFire</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
       <allowFlip>false</allowFlip>
@@ -17,7 +17,7 @@
         <rect>(0.2,0,0.6,0.1)</rect>
       </damageData>
     </graphicData>
-    <uiIconPath>Things/Building/Misc/Campfire_MenuIcon</uiIconPath>
+    <uiIconPath>Things/Building/Furniture/LargeFire/LargeFire</uiIconPath>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>

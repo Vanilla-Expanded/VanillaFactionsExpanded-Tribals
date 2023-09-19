@@ -15,6 +15,7 @@
 	</unlocksWorkTypes>
     <tags>
       <li>WildMenStart</li>
+	  <li>ClassicStart</li>
     </tags>
 	<unlocksWorkTags>
 		<li>Firefighting</li>
@@ -36,6 +37,9 @@
 	<unlocksDesignators>
 		<li>Designator_ZoneAdd_Growing</li>
 	</unlocksDesignators>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Fire</li>
     </prerequisites>
@@ -50,6 +54,9 @@
     <techLevel>Animal</techLevel>
     <researchViewX>2.00</researchViewX>
     <researchViewY>0.00</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Agriculture</li>
     </prerequisites>
@@ -68,6 +75,9 @@
 		<li>Doctor</li>
 		<li>Patient</li>
 	</unlocksWorkTypes>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Cultivation</li>
     </prerequisites>
@@ -89,6 +99,9 @@
 		<li>Designator_Tame</li>
 		<li>Designator_Slaughter</li>
 	</unlocksDesignators>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Fire</li>
     </prerequisites>
@@ -110,6 +123,9 @@
 		<li>Designator_Mine</li>
 		<li>Designator_SmoothSurface</li>
 	</unlocksDesignators>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Fire</li>
     </prerequisites>
@@ -130,6 +146,9 @@
 		<li>Designator_RemoveFloor</li>
 		<li>Designator_RemoveBridge</li>
 	</unlocksDesignators>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Mining</li>
     </prerequisites>
@@ -144,6 +163,9 @@
     <techLevel>Animal</techLevel>
     <researchViewX>3.00</researchViewX>
     <researchViewY>1.40</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Construction</li>
     </prerequisites>
@@ -158,6 +180,9 @@
     <techLevel>Animal</techLevel>
     <researchViewX>2.00</researchViewX>
     <researchViewY>2.10</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Fire</li>
     </prerequisites>
@@ -178,6 +203,9 @@
 	<unlocksDesignators>
 		<li>Designator_Hunt</li>
 	</unlocksDesignators>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Fire</li>
     </prerequisites>
@@ -192,6 +220,9 @@
     <techLevel>Animal</techLevel>
     <researchViewX>2.00</researchViewX>
     <researchViewY>2.80</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Hunting</li>
     </prerequisites>
@@ -206,6 +237,9 @@
     <techLevel>Animal</techLevel>
     <researchViewX>3.00</researchViewX>
     <researchViewY>2.80</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Weapons</li>
     </prerequisites>
@@ -223,6 +257,9 @@
 	<unlocksWorkTags>
 		<li>Intellectual</li>
 	</unlocksWorkTags>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
     <prerequisites>
       <li>VFET_Medicine</li>
 	  <li>VFET_Tribalwear</li>
