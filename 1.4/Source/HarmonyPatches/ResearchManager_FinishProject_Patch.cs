@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace VFETribals
@@ -42,6 +43,35 @@ namespace VFETribals
                 }
             }
             GameComponent_Tribals.Instance.lastTickResearchFinished = Find.TickManager.TicksGame;
+
+
+            List<ResearchProjectDef> activeResearchesOfTechLevel = (from x in DefDatabase<ResearchProjectDef>.AllDefsListForReading
+                                                               where x.CanStartNow && x.techLevel == proj.techLevel && x.techprintCount==0
+                                                               select x).ToList();
+
+            if (activeResearchesOfTechLevel.Count == 0)
+            {
+                switch (proj.techLevel)
+                {
+                    case TechLevel.Animal:
+                        GameComponent_Tribals.Instance.allAnimalResearchCompleted = true;
+                        break;
+                    case TechLevel.Neolithic:
+                        GameComponent_Tribals.Instance.allNeolithicResearchCompleted = true;
+                        break;
+                    case TechLevel.Medieval:
+                        GameComponent_Tribals.Instance.allMedievalResearchCompleted = true;
+                        break;
+                    case TechLevel.Industrial:
+                        GameComponent_Tribals.Instance.allIndustrialResearchCompleted = true;
+                        break;
+                    case TechLevel.Spacer:
+                        GameComponent_Tribals.Instance.allSpacerResearchCompleted = true;
+                        break;
+                   
+                }
+            }
+
         }
     }
 }

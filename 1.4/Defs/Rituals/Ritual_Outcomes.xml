@@ -83,11 +83,77 @@
 				<curve>
 					<points>
 						<li>(1,  1)</li>
-						
 					</points>
 				</curve>
 			</li>
 		</comps>
-		
+	</RitualOutcomeEffectDef>
+	<RitualOutcomeEffectDef>
+		<defName>VFET_AdvanceToMedieval_Outcome</defName>
+		<description>Upon completing all neolithic research projects, advance to medieval tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+		<workerClass>VFETribals.RitualOutcomeEffectWorker_AdvanceToMedieval</workerClass>
+		<givesDevelopmentPoints>false</givesDevelopmentPoints>
+		<warnOnLowQuality>false</warnOnLowQuality>
+		<comps>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  1)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+	<RitualOutcomeEffectDef>
+		<defName>VFET_AdvanceToIndustrial_Outcome</defName>
+		<description>Upon completing all medieval research projects, advance to industrial tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+		<workerClass>VFETribals.RitualOutcomeEffectWorker_AdvanceToIndustrial</workerClass>
+		<givesDevelopmentPoints>false</givesDevelopmentPoints>
+		<warnOnLowQuality>false</warnOnLowQuality>
+		<comps>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  1)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+	<RitualOutcomeEffectDef>
+		<defName>VFET_AdvanceToSpacer_Outcome</defName>
+		<description>Upon completing all industrial research projects, advance to spacer tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+		<workerClass>VFETribals.RitualOutcomeEffectWorker_AdvanceToSpacer</workerClass>
+		<givesDevelopmentPoints>false</givesDevelopmentPoints>
+		<warnOnLowQuality>false</warnOnLowQuality>
+		<comps>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  1)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+	<RitualOutcomeEffectDef>
+		<defName>VFET_AdvanceToUltra_Outcome</defName>
+		<description>Upon completing all spacer research projects, advance to ultratech tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+		<workerClass>VFETribals.RitualOutcomeEffectWorker_AdvanceToUltra</workerClass>
+		<givesDevelopmentPoints>false</givesDevelopmentPoints>
+		<warnOnLowQuality>false</warnOnLowQuality>
+		<comps>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  1)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
 	</RitualOutcomeEffectDef>
 </Defs>

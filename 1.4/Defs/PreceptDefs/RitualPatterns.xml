@@ -26,4 +26,64 @@
 			</li>
 		</ritualObligationTriggers>
 	</RitualPatternDef>
+	<RitualPatternDef>
+		<defName>VFET_AdvanceToMedieval_Pattern</defName>
+		<descOverride>Upon completing all neolithic research projects, advance to medieval tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</descOverride>
+		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+		<ritualObligationTargetFilter>VFET_GatheringSpot</ritualObligationTargetFilter>
+		<ritualBehavior>VFET_AdvanceToMedieval_Behaviour</ritualBehavior>
+		<maxTechLevel>Neolithic</maxTechLevel>
+		<ritualOutcomeEffect>VFET_AdvanceToMedieval_Outcome</ritualOutcomeEffect>
+		<playsIdeoMusic>false</playsIdeoMusic>
+		<ritualObligationTriggers>
+			<li Class="VFETribals.RitualObligationTrigger_AllResearchFinishedNeolithicProperties">
+				
+			</li>
+		</ritualObligationTriggers>
+	</RitualPatternDef>
+	<RitualPatternDef>
+		<defName>VFET_AdvanceToIndustrial_Pattern</defName>
+		<descOverride>Upon completing all medieval research projects, advance to industrial tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</descOverride>
+		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+		<ritualObligationTargetFilter>VFET_GatheringSpot</ritualObligationTargetFilter>
+		<ritualBehavior>VFET_AdvanceToIndustrial_Behaviour</ritualBehavior>
+		<maxTechLevel>Medieval</maxTechLevel>
+		<ritualOutcomeEffect>VFET_AdvanceToIndustrial_Outcome</ritualOutcomeEffect>
+		<playsIdeoMusic>false</playsIdeoMusic>
+		<ritualObligationTriggers>
+			<li Class="VFETribals.RitualObligationTrigger_AllResearchFinishedMedievalProperties">
+				
+			</li>
+		</ritualObligationTriggers>
+	</RitualPatternDef>
+	<RitualPatternDef>
+		<defName>VFET_AdvanceToSpacer_Pattern</defName>
+		<descOverride>Upon completing all industrial research projects, advance to spacer tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</descOverride>
+		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+		<ritualObligationTargetFilter>VFET_GatheringSpot</ritualObligationTargetFilter>
+		<ritualBehavior>VFET_AdvanceToSpacer_Behaviour</ritualBehavior>
+		<maxTechLevel>Industrial</maxTechLevel>
+		<ritualOutcomeEffect>VFET_AdvanceToSpacer_Outcome</ritualOutcomeEffect>
+		<playsIdeoMusic>false</playsIdeoMusic>
+		<ritualObligationTriggers>
+			<li Class="VFETribals.RitualObligationTrigger_AllResearchFinishedIndustrialProperties">
+				
+			</li>
+		</ritualObligationTriggers>
+	</RitualPatternDef>
+	<RitualPatternDef>
+		<defName>VFET_AdvanceToUltra_Pattern</defName>
+		<descOverride>Upon completing all spacer research projects, advance to ultratech tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</descOverride>
+		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+		<ritualObligationTargetFilter>VFET_GatheringSpot</ritualObligationTargetFilter>
+		<ritualBehavior>VFET_AdvanceToUltra_Behaviour</ritualBehavior>
+		<maxTechLevel>Spacer</maxTechLevel>
+		<ritualOutcomeEffect>VFET_AdvanceToUltra_Outcome</ritualOutcomeEffect>
+		<playsIdeoMusic>false</playsIdeoMusic>
+		<ritualObligationTriggers>
+			<li Class="VFETribals.RitualObligationTrigger_AllResearchFinishedSpacerProperties">
+				
+			</li>
+		</ritualObligationTriggers>
+	</RitualPatternDef>
 </Defs>

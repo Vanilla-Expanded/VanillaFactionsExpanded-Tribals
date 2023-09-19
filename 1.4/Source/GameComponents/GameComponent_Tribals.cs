@@ -22,6 +22,12 @@ namespace VFETribals
         public int lastLargeFireUpdate;
         public int lastTickResearchFinished;
 
+        public bool allAnimalResearchCompleted = false;
+        public bool allNeolithicResearchCompleted = false;
+        public bool allMedievalResearchCompleted = false;
+        public bool allIndustrialResearchCompleted = false;
+        public bool allSpacerResearchCompleted = false;
+
         public static GameComponent_Tribals Instance;
 
         public GameComponent_Tribals()
@@ -166,6 +172,12 @@ namespace VFETribals
             Scribe_Values.Look(ref largeFireActiveTicks, "largeFireActiveTicks");
             Scribe_Values.Look(ref lastTickResearchFinished, "lastTickResearchFinished");
             Scribe_Collections.Look(ref cornerstones, "cornerstones", LookMode.Def);
+            Scribe_Values.Look(ref allAnimalResearchCompleted, "allAnimalResearchCompleted");
+            Scribe_Values.Look(ref allNeolithicResearchCompleted, "allNeolithicResearchCompleted");
+            Scribe_Values.Look(ref allMedievalResearchCompleted, "allMedievalResearchCompleted");
+            Scribe_Values.Look(ref allIndustrialResearchCompleted, "allIndustrialResearchCompleted");
+            Scribe_Values.Look(ref allSpacerResearchCompleted, "allSpacerResearchCompleted");
+
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 cornerstones ??= new List<CornerstoneDef>();

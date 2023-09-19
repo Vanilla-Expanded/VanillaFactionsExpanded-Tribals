@@ -6,15 +6,15 @@ using Verse;
 
 namespace VFETribals
 {
-    public class RitualOutcomeEffectWorker_AdvanceToNeolithic : RitualOutcomeEffectWorker
+    public class RitualOutcomeEffectWorker_AdvanceToIndustrial : RitualOutcomeEffectWorker
     {
         public override bool SupportsAttachableOutcomeEffect => false;
 
-        public RitualOutcomeEffectWorker_AdvanceToNeolithic()
+        public RitualOutcomeEffectWorker_AdvanceToIndustrial()
         {
         }
 
-        public RitualOutcomeEffectWorker_AdvanceToNeolithic(RitualOutcomeEffectDef def)
+        public RitualOutcomeEffectWorker_AdvanceToIndustrial(RitualOutcomeEffectDef def)
             : base(def)
         {
         }
@@ -26,10 +26,11 @@ namespace VFETribals
 
             if (comp != null)
             {
-                comp.AdvanceToEra(VFET_DefOf.VFET_FormTribe);
-                Find.LetterStack.ReceiveLetter(VFET_DefOf.VFET_FormTribe.label, VFET_DefOf.VFET_FormTribe.description, LetterDefOf.RitualOutcomePositive, lookTargets, null, null, null, null);
-                GameComponent_Tribals.Instance.allAnimalResearchCompleted = false;
+                comp.AdvanceToEra(VFET_DefOf.VFET_FormCity);
+                Find.LetterStack.ReceiveLetter(VFET_DefOf.VFET_FormCity.label, VFET_DefOf.VFET_FormCity.description, LetterDefOf.RitualOutcomePositive, lookTargets, null, null, null, null);
+                GameComponent_Tribals.Instance.allMedievalResearchCompleted = false;
                 jobRitual.ritual.RemoveObligation(jobRitual.obligation, completed: true);
+
             }
 
 

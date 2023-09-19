@@ -7,11 +7,11 @@ using static HarmonyLib.Code;
 
 namespace VFETribals
 {
-    public class RitualObligationTrigger_AllResearchFinishedAnimal : RitualObligationTrigger
+    public class RitualObligationTrigger_AllResearchFinishedNeolithic : RitualObligationTrigger
     {
         public const int counterPeriod = 1250;
         public int tickCounter = counterPeriod;
-        
+
         public override void ExposeData()
         {
             base.ExposeData();
@@ -24,19 +24,19 @@ namespace VFETribals
             tickCounter++;
             if (tickCounter > counterPeriod) // Half an hour ingame
             {
-                if (GameComponent_Tribals.Instance.allAnimalResearchCompleted && Faction.OfPlayer.def.techLevel == TechLevel.Animal)
+                if (GameComponent_Tribals.Instance.allNeolithicResearchCompleted && Faction.OfPlayer.def.techLevel == TechLevel.Neolithic)
                 {
                     ritual.AddObligation(new RitualObligation(ritual));
                 }
 
                 tickCounter = 0;
             }
-           
+
         }
 
 
 
-       
+
 
     }
 }

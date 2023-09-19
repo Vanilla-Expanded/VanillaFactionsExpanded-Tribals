@@ -17,7 +17,6 @@
 		<useRepeatPenalty>false</useRepeatPenalty>
 		<showRitualFloatMenuOption>false</showRitualFloatMenuOption>
 	</PreceptDef>
-	
 	<PreceptDef>
 		<defName>VFET_AdvanceToNeolithic</defName>
 		<label>advance to neolithic</label>
@@ -25,6 +24,70 @@
 		<iconPath>UI/Icons/Rituals/Ritual_FormTribe</iconPath>
 		<preceptClass>Precept_Ritual</preceptClass>
 		<ritualPatternBase>VFET_AdvanceToNeolithic_Pattern</ritualPatternBase>
+		<visible>false</visible>
+		<classic>true</classic>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<usesIdeoVisualEffects>false</usesIdeoVisualEffects>
+		<mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
+		<useRepeatPenalty>false</useRepeatPenalty>
+		<showRitualFloatMenuOption>false</showRitualFloatMenuOption>
+	</PreceptDef>
+	<PreceptDef>
+		<defName>VFET_AdvanceToMedieval</defName>
+		<label>advance to medieval</label>
+		<issue>Ritual</issue>
+		<iconPath>UI/Icons/Rituals/Ritual_FormTown</iconPath>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<ritualPatternBase>VFET_AdvanceToMedieval_Pattern</ritualPatternBase>
+		<visible>false</visible>
+		<classic>true</classic>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<usesIdeoVisualEffects>false</usesIdeoVisualEffects>
+		<mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
+		<useRepeatPenalty>false</useRepeatPenalty>
+		<showRitualFloatMenuOption>false</showRitualFloatMenuOption>
+	</PreceptDef>
+	<PreceptDef>
+		<defName>VFET_AdvanceToIndustrial</defName>
+		<label>advance to industrial</label>
+		<issue>Ritual</issue>
+		<iconPath>UI/Icons/Rituals/Ritual_FormCity</iconPath>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<ritualPatternBase>VFET_AdvanceToIndustrial_Pattern</ritualPatternBase>
+		<visible>false</visible>
+		<classic>true</classic>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<usesIdeoVisualEffects>false</usesIdeoVisualEffects>
+		<mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
+		<useRepeatPenalty>false</useRepeatPenalty>
+		<showRitualFloatMenuOption>false</showRitualFloatMenuOption>
+	</PreceptDef>
+	<PreceptDef>
+		<defName>VFET_AdvanceToSpacer</defName>
+		<label>advance to spacer</label>
+		<issue>Ritual</issue>
+		<iconPath>UI/Icons/Rituals/Ritual_FormCollective</iconPath>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<ritualPatternBase>VFET_AdvanceToSpacer_Pattern</ritualPatternBase>
+		<visible>false</visible>
+		<classic>true</classic>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<usesIdeoVisualEffects>false</usesIdeoVisualEffects>
+		<mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
+		<useRepeatPenalty>false</useRepeatPenalty>
+		<showRitualFloatMenuOption>false</showRitualFloatMenuOption>
+	</PreceptDef>
+	<PreceptDef>
+		<defName>VFET_AdvanceToUltra</defName>
+		<label>advance to ultratech</label>
+		<issue>Ritual</issue>
+		<iconPath>UI/Icons/Rituals/Ritual_FormNexus</iconPath>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<ritualPatternBase>VFET_AdvanceToUltra_Pattern</ritualPatternBase>
 		<visible>false</visible>
 		<classic>true</classic>
 		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
