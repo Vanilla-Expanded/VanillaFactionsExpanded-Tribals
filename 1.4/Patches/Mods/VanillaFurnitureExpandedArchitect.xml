@@ -7,7 +7,7 @@
       <match Class="PatchOperationSequence">
          <operations>
             <li Class="PatchOperationAdd">
-               <xpath>Defs/ThingDef[defName="VFEArch_SingleDoor" or defName="VFEArch_SingleDoor_Flipped" or defName="VFEArch_AnimalGate" or defName="VFEArch_LogWall" or defName="VFEArch_PicketFence" or defName="VFEArch_LowFence" or defName="VFEArch_HedgeWall"]</xpath>
+               <xpath>Defs/ThingDef[defName="VFEArch_SingleDoor" or defName="VFEArch_SingleDoor_Flipped" or defName="VFEArch_AnimalGate" or defName="VFEArch_LogWall" or defName="VFEArch_PicketFence" or defName="VFEArch_LowFence" or defName="VFEArch_HedgeWall" or defName="VFEArch_FineWall"]</xpath>
                <value>
                   <researchPrerequisites>
                      <li>VFET_Construction</li>
@@ -15,7 +15,7 @@
                </value>
             </li>
             <li Class="PatchOperationAdd">
-               <xpath>Defs/TerrainDef[defName="VFEArch_Grass" or defName="VFEArch_LawnPlot" or @Name="VFEArch_WoodenParquetBase" or @Name="CobblestoneBase" or defName="VFEArch_BridgeSteel" or defName="VFEArch_WoodPlankFloorWalnut" or defName="VFEArch_WoodPlankFloorBirch" or defName="VFEArch_WoodPlankFloorMahogany"]</xpath>
+               <xpath>Defs/TerrainDef[defName="VFEArch_Grass" or defName="VFEArch_LawnPlot" or @Name="VFEArch_WoodenParquetBase" or @Name="CobblestoneBase" or defName="VFEArch_BridgeSteel" or defName="VFEArch_WoodPlankFloorWalnut" or defName="VFEArch_WoodPlankFloorBirch" or defName="VFEArch_WoodPlankFloorMahogany" or defName="VFEArch_FineWoodenFloor" or defName="VFEArch_FineWoodenFloorWalnut" or defName="VFEArch_FineWoodenFloorBirch" or defName="VFEArch_FineWoodenFloorMahogany"]</xpath>
                <value>
                   <researchPrerequisites>
                      <li>VFET_Construction</li>
