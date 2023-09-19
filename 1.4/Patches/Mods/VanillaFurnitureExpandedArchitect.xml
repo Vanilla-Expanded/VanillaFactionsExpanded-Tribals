@@ -15,7 +15,7 @@
                </value>
             </li>
             <li Class="PatchOperationAdd">
-               <xpath>Defs/TerrainDef[defName="VFEArch_Grass" or defName="VFEArch_LawnPlot" or @Name="VFEArch_WoodenParquetBase" or @Name="CobblestoneBase" or defName="VFEArch_BridgeSteel"]</xpath>
+               <xpath>Defs/TerrainDef[defName="VFEArch_Grass" or defName="VFEArch_LawnPlot" or @Name="VFEArch_WoodenParquetBase" or @Name="CobblestoneBase" or defName="VFEArch_BridgeSteel" or defName="VFEArch_WoodPlankFloorWalnut" or defName="VFEArch_WoodPlankFloorBirch" or defName="VFEArch_WoodPlankFloorMahogany"]</xpath>
                <value>
                   <researchPrerequisites>
                      <li>VFET_Construction</li>
