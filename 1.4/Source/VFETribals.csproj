@@ -68,6 +68,10 @@
     <Compile Include="HarmonyPatches\Thing_GetGizmos_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
     <Compile Include="PlaceWorker_OnFloorsOrStoneTerrains.cs" />
+    <Compile Include="RitualBehaviourWorkers\RitualBehaviourWorker_IndustrialGathering.cs" />
+    <Compile Include="RitualBehaviourWorkers\RitualBehaviourWorker_MedievalGathering.cs" />
+    <Compile Include="RitualBehaviourWorkers\RitualBehaviourWorker_SpacerGathering.cs" />
+    <Compile Include="RitualBehaviourWorkers\RitualBehaviourWorker_UltraGathering.cs" />
     <Compile Include="RitualObligationTriggers\Properties\RitualObligationTrigger_AllResearchFinishedNeolithicProperties.cs" />
     <Compile Include="RitualObligationTriggers\Properties\RitualObligationTrigger_AllResearchFinishedSpacerProperties.cs" />
     <Compile Include="RitualObligationTriggers\Properties\RitualObligationTrigger_AllResearchFinishedIndustrialProperties.cs" />

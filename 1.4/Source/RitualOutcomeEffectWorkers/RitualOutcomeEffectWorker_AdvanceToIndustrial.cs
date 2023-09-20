@@ -30,7 +30,7 @@ namespace VFETribals
                 Find.LetterStack.ReceiveLetter(VFET_DefOf.VFET_FormCity.label, VFET_DefOf.VFET_FormCity.description, LetterDefOf.RitualOutcomePositive, lookTargets, null, null, null, null);
                 GameComponent_Tribals.Instance.allMedievalResearchCompleted = false;
                 jobRitual.ritual.RemoveObligation(jobRitual.obligation, completed: true);
-
+                jobRitual.ritual.activeObligations.Clear();
             }
 
 

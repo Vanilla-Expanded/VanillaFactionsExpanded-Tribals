@@ -30,6 +30,7 @@ namespace VFETribals
                 Find.LetterStack.ReceiveLetter(VFET_DefOf.VFET_FormTribe.label, VFET_DefOf.VFET_FormTribe.description, LetterDefOf.RitualOutcomePositive, lookTargets, null, null, null, null);
                 GameComponent_Tribals.Instance.allAnimalResearchCompleted = false;
                 jobRitual.ritual.RemoveObligation(jobRitual.obligation, completed: true);
+                jobRitual.ritual.activeObligations.Clear();
             }
 
 

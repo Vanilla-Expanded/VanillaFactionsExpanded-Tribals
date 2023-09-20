@@ -109,7 +109,7 @@
 	<RitualBehaviorDef>
 		<defName>VFET_AdvanceToMedieval_Behaviour</defName>
 		<durationTicks>7500</durationTicks>
-		
+		<workerClass>VFETribals.RitualBehaviourWorker_MedievalGathering</workerClass>
 		<roles>
 			<li Class="RitualRoleTag">
 				<label>organizer</label>
@@ -162,7 +162,7 @@
 	<RitualBehaviorDef>
 		<defName>VFET_AdvanceToIndustrial_Behaviour</defName>
 		<durationTicks>7500</durationTicks>
-		
+		<workerClass>VFETribals.RitualBehaviourWorker_IndustrialGathering</workerClass>
 		<roles>
 			<li Class="RitualRoleTag">
 				<label>organizer</label>
@@ -215,7 +215,7 @@
 	<RitualBehaviorDef>
 		<defName>VFET_AdvanceToSpacer_Behaviour</defName>
 		<durationTicks>7500</durationTicks>
-		
+		<workerClass>VFETribals.RitualBehaviourWorker_SpacerGathering</workerClass>
 		<roles>
 			<li Class="RitualRoleTag">
 				<label>organizer</label>
@@ -268,7 +268,7 @@
 	<RitualBehaviorDef>
 		<defName>VFET_AdvanceToUltra_Behaviour</defName>
 		<durationTicks>7500</durationTicks>
-		
+		<workerClass>VFETribals.RitualBehaviourWorker_UltraGathering</workerClass>
 		<roles>
 			<li Class="RitualRoleTag">
 				<label>organizer</label>

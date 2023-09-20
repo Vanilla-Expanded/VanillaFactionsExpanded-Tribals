@@ -20,6 +20,11 @@ namespace VFETribals
 
         public static SoundDef VFET_RitualSustainer_TribalGathering;
         public static SoundDef VFET_RitualSounds_TribalGathering;
+        public static SoundDef VFET_RitualSustainer_MedievalGathering;
+        public static SoundDef VFET_RitualSustainer_IndustrialGathering;
+        public static SoundDef VFET_RitualSustainer_SpacerGathering;
+        public static SoundDef VFET_RitualSustainer_UltraGathering;
+
 
         public static DesignationDef VFET_LightLargeFire, VFET_ExtinguishLargeFire;
         
