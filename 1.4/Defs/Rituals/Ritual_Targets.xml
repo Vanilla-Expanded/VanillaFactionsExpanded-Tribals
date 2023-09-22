@@ -10,5 +10,12 @@
   </RitualObligationTargetFilterDef>
 
   
+  <RitualObligationTargetFilterDef>
+    <defName>VFET_GatheringSpotForAdvancement</defName>
+	<label>Any gathering spot</label>
+    <workerClass>VFETribals.RitualObligationTargetWorker_AnyGatherSpotForAdvancement</workerClass>
+  </RitualObligationTargetFilterDef>
+
+  
 
 </Defs>

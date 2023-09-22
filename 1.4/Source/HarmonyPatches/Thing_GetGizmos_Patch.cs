@@ -23,7 +23,7 @@ namespace VFETribals
                     for (int i = 0; i < ideo.PreceptsListForReading.Count; i++)
                     {
                         Precept precept = ideo.PreceptsListForReading[i];
-                        if (precept.def == VFET_DefOf.VFET_TribalGathering)
+                        if (precept.def == VFET_DefOf.VFET_TribalGathering || Utils.advancementPrecepts.Contains(precept.def))
                         {
                             Precept_Ritual precept_Ritual;
                             Precept_Ritual ritual = (precept_Ritual = precept as Precept_Ritual);
@@ -45,7 +45,9 @@ namespace VFETribals
                 List<LordJob_Ritual> activeRituals = Find.IdeoManager.GetActiveRituals(__instance.MapHeld);
                 foreach (LordJob_Ritual item2 in activeRituals)
                 {
-                    if (item2.ritual.def == VFET_DefOf.VFET_TribalGathering && item2.selectedTarget == __instance)
+                    if (item2.selectedTarget == __instance && 
+                        (item2.ritual.def == VFET_DefOf.VFET_TribalGathering 
+                        || Utils.advancementPrecepts.Contains(item2.ritual.def)))
                     {
                         yield return item2.GetCancelGizmo();
                     }

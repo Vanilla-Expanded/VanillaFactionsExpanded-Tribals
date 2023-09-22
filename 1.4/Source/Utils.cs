@@ -17,7 +17,14 @@ namespace VFETribals
             .AllDefsListForReading.Where(x => x.unlocksWorkTags != WorkTags.None).ToList();
         public static List<TribalResearchProjectDef> researchProjectsWithDesignators = DefDatabase<TribalResearchProjectDef>
             .AllDefsListForReading.Where(x => x.unlocksDesignators != null).ToList();
-
+        public static HashSet<PreceptDef> advancementPrecepts = new HashSet<PreceptDef>
+        {
+            VFET_DefOf.VFET_AdvanceToNeolithic,
+            VFET_DefOf.VFET_AdvanceToMedieval,
+            VFET_DefOf.VFET_AdvanceToIndustrial,
+            VFET_DefOf.VFET_AdvanceToSpacer,
+            VFET_DefOf.VFET_AdvanceToUltra
+        };
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsUnlocked(this WorkTypeDef workTypeDef, out TribalResearchProjectDef research)
         {

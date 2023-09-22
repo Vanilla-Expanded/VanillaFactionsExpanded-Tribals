@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Verse;
 using Verse.Grammar;
@@ -21,12 +22,6 @@ namespace VFETribals
         public int largeFireActiveTicks;
         public int lastLargeFireUpdate;
         public int lastTickResearchFinished;
-
-        public bool allAnimalResearchCompleted = false;
-        public bool allNeolithicResearchCompleted = false;
-        public bool allMedievalResearchCompleted = false;
-        public bool allIndustrialResearchCompleted = false;
-        public bool allSpacerResearchCompleted = false;
 
         public static GameComponent_Tribals Instance;
 
@@ -66,6 +61,8 @@ namespace VFETribals
         {
             playerTechLevel = Faction.OfPlayer.def.techLevel = def.newTechLevel;
             OffsetAvailableCornerstonePoints(def.cornerstonePoint);
+            TryRegisterAdvancementObligation();
+            Log.Message("Advanced to " + playerTechLevel.Value.ToStringHuman());
         }
 
         public void OffsetAvailableCornerstonePoints(int offset)
@@ -80,6 +77,22 @@ namespace VFETribals
             if (ethosLocked is false)
             {
                 ethos = GetNewEthos();
+            }
+        }
+
+        public void TryRegisterAdvancementObligation()
+        {
+            foreach (Ideo ideo in Faction.OfPlayer.ideos.AllIdeos)
+            {
+                for (int i = 0; i < ideo.PreceptsListForReading.Count; i++)
+                {
+                    Precept_Ritual precept = ideo.PreceptsListForReading[i] as Precept_Ritual;
+                    if (precept != null && Utils.advancementPrecepts.Contains(precept.def))
+                    {
+                        var trigger = precept.obligationTriggers.OfType<RitualObligationTrigger_TargetTechlevel>().First();
+                        trigger.RegisterObligation();
+                    }
+                }
             }
         }
 
@@ -159,6 +172,8 @@ namespace VFETribals
             {
                 Find.IdeoManager.classicMode = true;
             }
+
+            TryRegisterAdvancementObligation();
         }
 
         public override void ExposeData()
@@ -172,12 +187,6 @@ namespace VFETribals
             Scribe_Values.Look(ref largeFireActiveTicks, "largeFireActiveTicks");
             Scribe_Values.Look(ref lastTickResearchFinished, "lastTickResearchFinished");
             Scribe_Collections.Look(ref cornerstones, "cornerstones", LookMode.Def);
-            Scribe_Values.Look(ref allAnimalResearchCompleted, "allAnimalResearchCompleted");
-            Scribe_Values.Look(ref allNeolithicResearchCompleted, "allNeolithicResearchCompleted");
-            Scribe_Values.Look(ref allMedievalResearchCompleted, "allMedievalResearchCompleted");
-            Scribe_Values.Look(ref allIndustrialResearchCompleted, "allIndustrialResearchCompleted");
-            Scribe_Values.Look(ref allSpacerResearchCompleted, "allSpacerResearchCompleted");
-
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 cornerstones ??= new List<CornerstoneDef>();

@@ -28,7 +28,6 @@ namespace VFETribals
             {
                 comp.AdvanceToEra(VFET_DefOf.VFET_FormCollective);
                 Find.LetterStack.ReceiveLetter(VFET_DefOf.VFET_FormCollective.label, VFET_DefOf.VFET_FormCollective.description, LetterDefOf.RitualOutcomePositive, lookTargets, null, null, null, null);
-                GameComponent_Tribals.Instance.allIndustrialResearchCompleted = false;
                 jobRitual.ritual.RemoveObligation(jobRitual.obligation, completed: true);
                 jobRitual.ritual.activeObligations.Clear();
             }

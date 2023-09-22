@@ -34,8 +34,6 @@ namespace VFETribals
 
         public static StorytellerDef VFET_TalonTribal;
 
-        public static PreceptDef VFET_TribalGathering;
-
         public static EraAdvancementDef VFET_FormTribe;
         public static EraAdvancementDef VFET_FormTown;
         public static EraAdvancementDef VFET_FormCity;
@@ -43,6 +41,14 @@ namespace VFETribals
         public static EraAdvancementDef VFET_FormNexus;
 
         public static ThingDef VFET_FloorPainting;
+
+        public static PreceptDef VFET_TribalGathering;
+        public static PreceptDef VFET_AdvanceToNeolithic;
+        public static PreceptDef VFET_AdvanceToMedieval;
+        public static PreceptDef VFET_AdvanceToIndustrial;
+        public static PreceptDef VFET_AdvanceToSpacer;
+        public static PreceptDef VFET_AdvanceToUltra;
+
 
     }
 }
