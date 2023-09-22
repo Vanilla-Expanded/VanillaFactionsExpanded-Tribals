@@ -62,7 +62,6 @@ namespace VFETribals
             playerTechLevel = Faction.OfPlayer.def.techLevel = def.newTechLevel;
             OffsetAvailableCornerstonePoints(def.cornerstonePoint);
             TryRegisterAdvancementObligation();
-            Log.Message("Advanced to " + playerTechLevel.Value.ToStringHuman());
         }
 
         public void OffsetAvailableCornerstonePoints(int offset)
