@@ -19,13 +19,17 @@ namespace VFETribals
 
         public override RitualTargetUseReport CanUseTargetInternal(TargetInfo target, RitualObligation obligation)
         {
-            if (DefDatabase<ResearchProjectDef>.AllDefsListForReading
-    .Where(x => x.CanStartNow && x.techLevel == Faction.OfPlayer.def.techLevel
-    && x.techprintCount == 0).Any())
+            var result = base.CanUseTargetInternal(target, obligation);
+            if (result.ShouldShowGizmo)
             {
-                return "VFET.NotAllReseachProjectsResearched".Translate();
+                if (DefDatabase<ResearchProjectDef>.AllDefsListForReading
+                        .Where(x => x.techLevel == Faction.OfPlayer.def.techLevel
+                        && x.techprintCount == 0 && x.CanStartNow).Any())
+                {
+                    return "VFET.NotAllReseachProjectsResearched".Translate();
+                }
             }
-            return base.CanUseTargetInternal(target, obligation);
+            return result;
         }
     }
 }
