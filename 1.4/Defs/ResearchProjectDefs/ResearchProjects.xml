@@ -141,7 +141,6 @@
     <researchViewX>2.00</researchViewX>
     <researchViewY>1.40</researchViewY>
 	<unlocksDesignators>
-		<li>Designator_Deconstruct</li>
 		<li>Designator_AreaBuildRoof</li>
 		<li>Designator_RemoveFloor</li>
 		<li>Designator_RemoveBridge</li>
