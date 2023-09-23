@@ -43,6 +43,7 @@ namespace VFETribals
         {
             Find.Archive.Remove(this);
             Find.LetterStack.RemoveLetter(this);
+            GameComponent_Tribals.Instance.TryRegisterAdvancementObligation();
         }
 
         private void DoCustomize(bool fluid = false)

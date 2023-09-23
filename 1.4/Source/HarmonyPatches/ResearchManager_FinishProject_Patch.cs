@@ -43,12 +43,6 @@ namespace VFETribals
                 }
             }
 
-            if (DefDatabase<ResearchProjectDef>.AllDefsListForReading
-                .Where(x => x.CanStartNow && x.techLevel == Faction.OfPlayer.def.techLevel 
-                && x.techprintCount == 0).Any() is false)
-            {
-
-            }
             GameComponent_Tribals.Instance.lastTickResearchFinished = Find.TickManager.TicksGame;
             GameComponent_Tribals.Instance.TryRegisterAdvancementObligation();
         }

@@ -108,7 +108,10 @@ namespace VFETribals
                         var newTechLevel = (TechLevel)((int)playerTechLevel.Value + i);
                         var eraAdvancementDef = DefDatabase<EraAdvancementDef>.AllDefsListForReading
                             .FirstOrDefault(x => x.newTechLevel  == newTechLevel);
-                        AdvanceToEra(eraAdvancementDef);
+                        if (eraAdvancementDef != null)
+                        {
+                            AdvanceToEra(eraAdvancementDef);
+                        }
                     }
                 }
             }
@@ -189,6 +192,10 @@ namespace VFETribals
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 cornerstones ??= new List<CornerstoneDef>();
+                if (playerTechLevel.HasValue)
+                {
+                    Faction.OfPlayer.def.techLevel = playerTechLevel.Value;
+                }
             }
         }
     }
