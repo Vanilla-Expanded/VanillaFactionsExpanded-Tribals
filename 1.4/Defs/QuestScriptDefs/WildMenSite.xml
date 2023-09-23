@@ -4,7 +4,7 @@
   <SitePartDef>
     <defName>VFET_WildMenSite</defName>
     <label>wild men group</label>
-    <description>todo.</description>
+    <description>A group of wild men trying to form a tribe.</description>
     <siteTexture>UI/QuestSites/QuestSite_WildMenGroup</siteTexture>
     <expandingIconTexture>UI/QuestSites/QuestSite_WildMenGroup</expandingIconTexture>
     <applyFactionColorToSiteTexture>false</applyFactionColorToSiteTexture>
@@ -12,7 +12,7 @@
     <requiresFaction>false</requiresFaction>
     <approachOrderString>Visit {0}</approachOrderString>
     <approachingReportString>Visiting {0}</approachingReportString>
-    <arrivedLetter>todo.</arrivedLetter>
+    <arrivedLetter>Arrived at wild men gathering</arrivedLetter>
     <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
     <wantsThreatPoints>true</wantsThreatPoints>
     <minThreatPoints>0</minThreatPoints>

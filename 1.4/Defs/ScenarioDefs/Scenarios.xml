@@ -6,7 +6,7 @@
     <label>Wild men</label>
     <description>Your small group has discovered fire, a stepping stone towards forming a tribe. Fire offers warmth, safety, and a chance to develop further. Yet, dangers abound in the wild, unknown world around you. You will have to learn how to perform basic tasks - from hunting and sowing, to doctoring and research. Work your way towards forming a tribe that can stand the test of time.\n\nWarning: You start without the ability to do basic tasks, such as sowing, doctoring and hunting - it is extremely difficult and anything can end your run.</description>
     <scenario>
-      <summary>A group of wild people trying to form a tribe. A classic Vanilla Factions Expanded - Tribal experience.</summary>
+      <summary>A group of wild people trying to form a tribe. A classic VFE - Tribal experience.</summary>
 		<playerFaction>
 			<def>PlayerFaction</def>
 			<factionDef>VFET_WildMen</factionDef>

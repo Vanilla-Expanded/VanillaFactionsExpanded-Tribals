@@ -2,7 +2,7 @@
 <Defs>
 	<RitualPatternDef>
 		<defName>VFET_TribalGathering_Pattern</defName>
-		<descOverride>todo.</descOverride>
+		<descOverride>Gather the participants to try and brainstorm a way through the research projects. Grants small amounts of research progress to random, available research projects for each participant.</descOverride>
 		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
 		<ritualObligationTargetFilter>VFET_GatheringSpot</ritualObligationTargetFilter>
 		<ritualBehavior>VFET_TribalGathering_Behaviour</ritualBehavior>
