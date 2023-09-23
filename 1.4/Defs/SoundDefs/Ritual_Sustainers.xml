@@ -123,4 +123,21 @@
 			</li>
 		</subSounds>
 	</SoundDef>
+	
+  <SoundDef>
+    <defName>VFET_GameStartSting_WildMen</defName>    
+    <maxVoices>1</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Ritual/Speech_WildMan</clipFolderPath>
+					</li>
+				</grains>  
+        <volumeRange>30~30</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
 </Defs>

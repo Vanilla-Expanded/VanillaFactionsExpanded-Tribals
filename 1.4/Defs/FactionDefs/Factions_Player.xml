@@ -4,12 +4,12 @@
   	<FactionDef ParentName="PlayerFactionBase">
 		<defName>VFET_WildMen</defName>
 		<label>wild men</label>
-		<description>text.todo.</description>
+		<description>A player-controlled gathering of wild men.</description>
 		<isPlayer>true</isPlayer>
 		<categoryTag>VFET_WildMen</categoryTag>
 		<pawnSingular>wild man</pawnSingular>
 		<pawnsPlural>wild men</pawnsPlural>
-		<basicMemberKind>Tribesperson</basicMemberKind>
+		<basicMemberKind>VFET_Wildperson</basicMemberKind>
 		<techLevel>Animal</techLevel>
 		<factionNameMaker>NamerFactionTribal</factionNameMaker>
 		<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
