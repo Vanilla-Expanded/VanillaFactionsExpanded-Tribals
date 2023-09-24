@@ -133,7 +133,7 @@ namespace VFETribals
 
                 if (wildmanWanders)
                 {
-                    Pawn wildman = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.WildMan, Faction.OfPlayer, PawnGenerationContext.NonPlayer, 
+                    Pawn wildman = PawnGenerator.GeneratePawn(new PawnGenerationRequest(VFET_DefOf.VFET_Wildperson, Faction.OfPlayer, PawnGenerationContext.NonPlayer, 
                         -1, forceGenerateNewPawn: true, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, 
                         false, 20f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, 
                         inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false,

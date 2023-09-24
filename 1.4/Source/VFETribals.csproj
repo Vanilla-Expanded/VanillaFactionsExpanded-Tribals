@@ -65,6 +65,8 @@
     <Compile Include="AI\JobDrivers\JobDriver_StandSociallyActive.cs" />
     <Compile Include="AI\JobDrivers\JobDriver_LargeFireControlBase.cs" />
     <Compile Include="AI\JobGivers\WorkGiver_ManageLargeFire.cs" />
+    <Compile Include="HarmonyPatches\Dialog_BeginRitual_BlockingIssues_Patch.cs" />
+    <Compile Include="HarmonyPatches\RitualRoleAssignments_PawnNotAssignableReason_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_GetGizmos_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
     <Compile Include="PlaceWorker_OnFloorsOrStoneTerrains.cs" />

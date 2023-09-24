@@ -25,6 +25,7 @@ namespace VFETribals
         public static SoundDef VFET_RitualSustainer_SpacerGathering;
         public static SoundDef VFET_RitualSustainer_UltraGathering;
 
+        public static PawnKindDef VFET_Wildperson;
 
         public static DesignationDef VFET_LightLargeFire, VFET_ExtinguishLargeFire;
         
