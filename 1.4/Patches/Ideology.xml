@@ -16,6 +16,14 @@
                         </sowResearchPrerequisites>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="AltarBase" or defName="Ideogram" or @Name="IdeoBuildingConsumableBase" or defName="Lectern" or defName="GibbetCage" or defName="Drum" or @Name="RitualSeatBase" or defName="Skullspike"]</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFET_Culture</li>
+						</researchPrerequisites>
+					</value>
+				</li>
 				
 			</operations>
 		</match>
