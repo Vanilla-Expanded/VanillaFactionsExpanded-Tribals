@@ -66,6 +66,7 @@
     <Compile Include="AI\JobDrivers\JobDriver_LargeFireControlBase.cs" />
     <Compile Include="AI\JobGivers\WorkGiver_ManageLargeFire.cs" />
     <Compile Include="HarmonyPatches\Dialog_BeginRitual_BlockingIssues_Patch.cs" />
+    <Compile Include="HarmonyPatches\JobDriver_ConstructFinishFrame_MakeNewToils_TickAction_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualRoleAssignments_PawnNotAssignableReason_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_GetGizmos_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="RitualOutcomeEffectWorkers\RitualOutcomeEffectWorker_AdvanceToIndustrial.cs" />
     <Compile Include="RitualOutcomeEffectWorkers\RitualOutcomeEffectWorker_AdvanceToMedieval.cs" />
     <Compile Include="RitualOutcomeEffectWorkers\RitualOutcomeEffectWorker_AdvanceToNeolithic.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="StatPart_FloorPainting_TechLevel.cs" />
     <Compile Include="Things\ThrowspikesThrown.cs" />
     <Compile Include="Things\Building_AnimalTrap.cs" />
@@ -131,7 +133,6 @@
     <Compile Include="UI\Page_ConfigureFluidIdeo_Colonists.cs" />
     <Compile Include="UI\Page_ConfigureIdeo_Colonists.cs" />
     <Compile Include="Utils.cs" />
-    <Compile Include="VFETribalsMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\Window_CustomizeCornerstones.cs" />
     <Compile Include="DefOfs\VFET_DefOf.cs" />

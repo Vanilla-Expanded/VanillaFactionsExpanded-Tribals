@@ -90,6 +90,8 @@
       <li>ITab_Art</li>
     </inspectorTabs>
     <designationCategory>Joy</designationCategory>
+    <repairEffect>Sculpt</repairEffect>
+    <constructEffect>Sculpt</constructEffect>
     <ideoBuildingNamerBase MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoSculpture</ideoBuildingNamerBase>
     <ritualFocus>
       <spectateDistance>2</spectateDistance>

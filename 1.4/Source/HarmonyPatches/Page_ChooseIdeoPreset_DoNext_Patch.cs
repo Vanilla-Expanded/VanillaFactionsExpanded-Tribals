@@ -13,6 +13,7 @@ namespace VFETribals
             {
                 Find.IdeoManager.classicMode = true;
                 Find.Scenario.PostIdeoChosen();
+                __instance.next.prev = __instance.prev;
                 Find.WindowStack.Add(__instance.next);
                 if (__instance.nextAct != null)
                 {
