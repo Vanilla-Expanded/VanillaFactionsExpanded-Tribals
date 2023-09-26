@@ -94,7 +94,7 @@ namespace VFETribals
                     }
                     if (i == activeResearches.Count - 1 && totalResearchPoints != 0)
                     {
-                        pointsToAllocate = totalResearchPoints;
+                        pointsToAllocate += totalResearchPoints;
                     }
                     if (Prefs.DevMode) {
                         Log.Message("Research project " + activeResearches[i].LabelCap + " was allocated " + pointsToAllocate + " research points.");

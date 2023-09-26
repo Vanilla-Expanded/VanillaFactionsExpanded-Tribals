@@ -2,7 +2,7 @@
 <Defs>
 	<RitualOutcomeEffectDef>
 		<defName>VFET_TribalGathering_Outcome</defName>
-		<description>Depending on ritual quality, participants will receive between 2 and 12 research points per participant, divided between the available research projects at the moment. Animal technology level projects will be prioritized.\n\nAdditionally, positive results have a chance for a wild man or farm animals to be attracted to the colony.</description>
+		<description>Depending on ritual quality, participants will receive between 2 and 12 research points per participant, divided between the available research projects at the moment. Animal technology level projects will be prioritized, and no points will be allocated to neolithic projects until all animal ones are finished.\n\nAdditionally, positive results have a chance for a wild man or farm animals to be attracted to the colony.</description>
 		<workerClass>VFETribals.RitualOutcomeEffectWorker_TribalGathering</workerClass>
 		<givesDevelopmentPoints>false</givesDevelopmentPoints>
 		<warnOnLowQuality>false</warnOnLowQuality>
