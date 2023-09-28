@@ -34,6 +34,7 @@
 			<li Class="RitualOutcomeComp_RitualTargetDefs">
 				<defs>
 					<li>Campfire</li>
+					<li>VFET_LargeFire</li>
 				</defs>
 				<label>started at campfire</label>
 				<qualityOffset>0.1</qualityOffset>
