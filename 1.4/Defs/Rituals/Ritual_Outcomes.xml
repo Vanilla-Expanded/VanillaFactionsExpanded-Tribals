@@ -7,9 +7,7 @@
 		<givesDevelopmentPoints>false</givesDevelopmentPoints>
 		<warnOnLowQuality>false</warnOnLowQuality>
 		<comps>
-			<li Class="RitualOutcomeComp_RitualSeatPresent">
-				<qualityOffset>0.1</qualityOffset>
-			</li>
+			
 			<li Class="RitualOutcomeComp_ParticipantCount">
 				<label>participant count</label>
 				<curve>
