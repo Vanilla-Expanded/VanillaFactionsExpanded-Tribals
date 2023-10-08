@@ -20,11 +20,14 @@ namespace VFETribals
         public static void Postfix(Toil ___build)
         {
             Pawn actor = ___build.actor;
-            var jobDriver = actor.jobs.curDriver as JobDriver_ConstructFinishFrame;
-            Frame frame = jobDriver.Frame;
-            if (frame.def.entityDefToBuild == VFET_DefOf.VFET_FloorPainting && actor.skills != null)
+            var jobDriver = actor.jobs?.curDriver as JobDriver_ConstructFinishFrame;
+            if (jobDriver != null)
             {
-                actor.skills.Learn(SkillDefOf.Artistic, 0.25f);
+                Frame frame = jobDriver.Frame;
+                if (frame?.def?.entityDefToBuild == VFET_DefOf.VFET_FloorPainting && actor.skills != null)
+                {
+                    actor.skills.Learn(SkillDefOf.Artistic, 0.25f);
+                }
             }
         }
     }

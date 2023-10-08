@@ -36,6 +36,11 @@
 		<factionIconPath>UI/Expanding/WildMenTribe</factionIconPath>
 		<settlementTexturePath>UI/FactionGathering</settlementTexturePath>
 		<forageabilityFactor>1.7</forageabilityFactor>
+		<modExtensions>
+			<li Class="VFECore.FactionDefExtension">
+				<strangerInBlackReplacement>VFET_Wildperson</strangerInBlackReplacement>
+			</li>
+		</modExtensions>
 	</FactionDef>
 	
 </Defs>

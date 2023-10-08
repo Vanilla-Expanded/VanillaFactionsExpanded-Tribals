@@ -9,7 +9,7 @@ namespace VFETribals
     {
         public static bool Prefix(Page_ChooseIdeoPreset __instance)
         {
-            if (Current.Game.Scenario == VFET_DefOf.VFET_WildMenScenario.scenario)
+            if (Current.Game.Scenario?.playerFaction?.factionDef == VFET_DefOf.VFET_WildMen)
             {
                 Find.IdeoManager.classicMode = true;
                 Find.Scenario.PostIdeoChosen();

@@ -51,4 +51,5 @@ Choosing fixed allows you to customize the ideology and every aspect of it. This
 	<VFET.MustPlaceOnFloorOrStonyTerrain>Must be placed on a floor or stony terrain.</VFET.MustPlaceOnFloorOrStonyTerrain>
 	<VFET.StatsReport_BeautyMultiplier>Beauty multiplier for colony {0} tech level</VFET.StatsReport_BeautyMultiplier>
 	<VFET.NotAllReseachProjectsResearched>Requirements not met: Not all research projects of the previous tech level have been researched.</VFET.NotAllReseachProjectsResearched>
+	<VFET.ManInBlackLabelReplacement>Wild man in black</VFET.ManInBlackLabelReplacement>
 </LanguageData>

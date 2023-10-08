@@ -11,8 +11,9 @@ namespace VFETribals
     {
         public static void Postfix(Page_ChooseIdeoPreset __instance)
         {
-            if (Current.Game.Scenario == VFET_DefOf.VFET_WildMenScenario.scenario)
+            if (Current.Game.Scenario?.playerFaction?.factionDef == VFET_DefOf.VFET_WildMen)
             {
+                __instance.classicIdeo.memberName = VFET_DefOf.VFET_WildMen.basicMemberKind.label;
                 if (Find.WindowStack.WindowOfType<Page_ChooseIdeoPreset>() != null)
                 {
                     __instance.DoNext();

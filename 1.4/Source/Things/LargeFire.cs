@@ -75,7 +75,7 @@ namespace VFETribals
             CellRect endRect = CellRect.SingleCell(position);
             if (GenSight.LineOfSight(base.Position, position, base.Map, startRect, endRect))
             {
-                ((Spark)GenSpawn.Spawn(ThingDefOf.Spark, base.Position, base.Map)).Launch(this, position, position, ProjectileHitFlags.All);
+                ((Spark)GenSpawn.Spawn(VFET_DefOf.VFET_LargeFireSpark, base.Position, base.Map)).Launch(this, position, position, ProjectileHitFlags.All);
             }
         }
 

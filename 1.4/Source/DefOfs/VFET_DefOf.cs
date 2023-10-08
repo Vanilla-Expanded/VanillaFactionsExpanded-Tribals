@@ -7,7 +7,6 @@ namespace VFETribals
     public static class VFET_DefOf
     {
         public static TribalResearchProjectDef VFET_Culture;
-        [DefAlias("VFET_WildMen")] public static ScenarioDef VFET_WildMenScenario;
         public static FactionDef VFET_WildMen;
         public static FactionDef VFET_WildMenGroup;
 
@@ -49,7 +48,7 @@ namespace VFETribals
         public static PreceptDef VFET_AdvanceToIndustrial;
         public static PreceptDef VFET_AdvanceToSpacer;
         public static PreceptDef VFET_AdvanceToUltra;
-
-
+        public static ThingDef VFET_LargeFireSpark;
+        public static IncidentDef StrangerInBlackJoin;
     }
 }
