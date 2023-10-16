@@ -7,8 +7,8 @@
 		<description>A player-controlled gathering of wild men.</description>
 		<isPlayer>true</isPlayer>
 		<categoryTag>VFET_WildMen</categoryTag>
-		<pawnSingular>wild man</pawnSingular>
-		<pawnsPlural>wild men</pawnsPlural>
+		<pawnSingular>native</pawnSingular>
+		<pawnsPlural>natives</pawnsPlural>
 		<basicMemberKind>VFET_Wildperson</basicMemberKind>
 		<techLevel>Animal</techLevel>
 		<factionNameMaker>NamerFactionTribal</factionNameMaker>
