@@ -25,7 +25,7 @@ namespace VFETribals
 
         public static void Postfix(Precept_Ritual ritual, Pawn p, ref string __result)
         {
-            if (ritual.def == VFET_DefOf.VFET_TribalGathering)
+            if (ritual?.def == VFET_DefOf.VFET_TribalGathering)
             {
 
                 if (__result == "MessageRitualWontAttendExtremeTemperature".Translate(p))

@@ -4,10 +4,10 @@
 
   <PawnKindDef ParentName="BasePlayerPawnKind">
     <defName>VFET_Wildperson</defName>
-    <label>man</label>
-    <labelPlural>men</labelPlural>
-    <labelFemale>woman</labelFemale>
-    <labelFemalePlural>women</labelFemalePlural>
+    <label>wild man</label>
+    <labelPlural>wild men</labelPlural>
+    <labelFemale>wild woman</labelFemale>
+    <labelFemalePlural>wild women</labelFemalePlural>
     <race>Human</race>
     <defaultFactionType>VFET_WildMen</defaultFactionType>
     <chemicalAddictionChance>0.0</chemicalAddictionChance>
@@ -15,8 +15,6 @@
     <backstoryFilters>
       <li>
         <categories>
-          <li>Offworld</li>
-          <li>Pirate</li>
           <li>Tribal</li>
         </categories>
       </li>

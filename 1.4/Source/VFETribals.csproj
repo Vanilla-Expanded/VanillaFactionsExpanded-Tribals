@@ -66,7 +66,10 @@
     <Compile Include="AI\JobDrivers\JobDriver_LargeFireControlBase.cs" />
     <Compile Include="AI\JobGivers\WorkGiver_ManageLargeFire.cs" />
     <Compile Include="HarmonyPatches\Dialog_BeginRitual_BlockingIssues_Patch.cs" />
+    <Compile Include="HarmonyPatches\IncidentWorker_WandererJoin_GeneratePawn_Patch.cs" />
+    <Compile Include="HarmonyPatches\IncidentWorker_WandererJoin_TryExecuteWorker_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_ConstructFinishFrame_MakeNewToils_TickAction_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_HearClamor_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualRoleAssignments_PawnNotAssignableReason_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_GetGizmos_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />

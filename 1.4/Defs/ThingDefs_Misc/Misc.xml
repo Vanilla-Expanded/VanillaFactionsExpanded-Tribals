@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+    <defName>VFET_LargeFireSpark</defName>
+    <label>spark</label>
+    <category>Projectile</category>
+    <thingClass>Spark</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Spark</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <neverMultiSelect>true</neverMultiSelect>
+    <projectile>
+      <alwaysFreeIntercept>true</alwaysFreeIntercept>
+      <speed>1.5</speed>
+    </projectile>
+  </ThingDef>
+  
+</Defs>

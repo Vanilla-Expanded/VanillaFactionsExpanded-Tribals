@@ -161,7 +161,8 @@ namespace VFETribals
             base.FinalizeInit();
             if (Faction.OfPlayer.def.techLevel > TechLevel.Animal)
             {
-                foreach (var def in DefDatabase<TribalResearchProjectDef>.AllDefsListForReading)
+                foreach (var def in DefDatabase<TribalResearchProjectDef>.AllDefsListForReading
+                    .Where(x => x.techLevel == TechLevel.Animal))
                 {
                     if (!def.IsFinished)
                     {
