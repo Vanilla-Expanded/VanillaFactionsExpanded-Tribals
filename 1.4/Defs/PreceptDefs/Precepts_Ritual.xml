@@ -18,9 +18,11 @@
 	<PreceptDef ParentName="VFET_PreceptBase">
 		<defName>VFET_TribalGathering</defName>
 		<label>tribal gathering</label>
+	
 		<iconPath>UI/Icons/Rituals/Ritual_TribalGathering</iconPath>
 		<ritualPatternBase>VFET_TribalGathering_Pattern</ritualPatternBase>
 		<useCooldownFromAbilityGroupDef>VFET_TribalGathering</useCooldownFromAbilityGroupDef>
+	
 	</PreceptDef>
 	
 	<PreceptDef ParentName="VFET_PreceptBase">
