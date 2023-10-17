@@ -131,9 +131,12 @@ namespace VFETribals
             lastLargeFireUpdate = largeFireActiveTicks = 0;
         }
 
-        public override void StartedNewGame()
+        public void Notify_GameStarted()
         {
-            base.StartedNewGame();
+            if (Faction.OfPlayer.def == VFET_DefOf.VFET_WildMen)
+            {
+                Faction.OfPlayer.def.techLevel = TechLevel.Animal;
+            }
             playerTechLevel = Faction.OfPlayer.def.techLevel;
         }
 
