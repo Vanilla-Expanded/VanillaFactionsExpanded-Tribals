@@ -50,5 +50,6 @@ namespace VFETribals
         public static PreceptDef VFET_AdvanceToUltra;
         public static ThingDef VFET_LargeFireSpark;
         public static IncidentDef StrangerInBlackJoin;
+        public static PreceptDef TreeConnection;
     }
 }

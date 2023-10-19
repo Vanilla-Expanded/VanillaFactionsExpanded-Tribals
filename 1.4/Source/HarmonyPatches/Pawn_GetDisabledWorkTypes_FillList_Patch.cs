@@ -21,16 +21,19 @@ namespace VFETribals
 
         public static void Postfix(Pawn __instance, List<WorkTypeDef> list)
         {
-            if (Current.ProgramState == ProgramState.Playing && __instance.Faction == Faction.OfPlayerSilentFail)
+            LongEventHandler.ExecuteWhenFinished(delegate
             {
-                foreach (var def in DefDatabase<WorkTypeDef>.AllDefs)
+                if (__instance.Faction == Faction.OfPlayerSilentFail)
                 {
-                    if (list.Contains(def) is false && def.IsUnlocked(out _) is false)
+                    foreach (var def in DefDatabase<WorkTypeDef>.AllDefs)
                     {
-                        list.Add(def);
+                        if (list.Contains(def) is false && def.IsUnlocked(out _) is false)
+                        {
+                            list.Add(def);
+                        }
                     }
                 }
-            }
+            });
         }
     }
 }

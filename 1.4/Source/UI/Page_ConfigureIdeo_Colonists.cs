@@ -10,12 +10,23 @@ namespace VFETribals
 
         public override bool CanDoNext()
         {
+            ConfigurePlayerIdeo(ideo);
+            return true;
+        }
+
+        public static void ConfigurePlayerIdeo(Ideo ideo)
+        {
             Find.IdeoManager.classicMode = false;
-            Faction.OfPlayer.ideos.SetPrimary(ideo);
-            foreach (Ideo item in Find.IdeoManager.IdeosListForReading)
+            var prevIdeos = Find.IdeoManager.IdeosListForReading.ToList();
+            Faction.OfPlayer.ideos.RemoveAll();
+            foreach (var prevIdeo in prevIdeos)
             {
-                item.initialPlayerIdeo = false;
+                if (prevIdeo.initialPlayerIdeo && ideo != prevIdeo)
+                {
+                    Find.IdeoManager.Remove(prevIdeo);
+                }
             }
+            Faction.OfPlayer.ideos.SetPrimary(ideo);
             ideo.initialPlayerIdeo = true;
             var colonists = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists;
             foreach (var c in colonists)
@@ -26,7 +37,6 @@ namespace VFETribals
                 }
             }
             Find.IdeoManager.RemoveUnusedStartingIdeos();
-            return true;
         }
 
         public override void DoNext()
