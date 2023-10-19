@@ -25,8 +25,7 @@ namespace VFETribals
             }
 
             GenSpawn.Spawn(ThingDefOf.Campfire, result, map);
-            var wildmen = new List<Pawn>();
-            foreach (var wildman in parms.sitePart.things.OfType<Pawn>().ToList())
+            foreach (var wildman in parms.sitePart.things.ToList())
             {
                 if (RCellFinder.TryFindRandomCellNearWith(result, delegate (IntVec3 x)
                 {
@@ -34,7 +33,6 @@ namespace VFETribals
                 }, map, out var cell))
                 {
                     GenSpawn.Spawn(wildman, cell, map);
-                    wildmen.Add(wildman);
                 }
             }
         }

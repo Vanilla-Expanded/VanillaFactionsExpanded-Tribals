@@ -28,6 +28,7 @@ namespace VFETribals
             {
                 comp.AdvanceToEra(VFET_DefOf.VFET_FormNexus);
                 Find.LetterStack.ReceiveLetter(VFET_DefOf.VFET_FormNexus.label, VFET_DefOf.VFET_FormNexus.description, LetterDefOf.RitualOutcomePositive, lookTargets, null, null, null, null);
+                jobRitual.ritual.completedObligations ??= new List<RitualObligation>();
                 jobRitual.ritual.RemoveObligation(jobRitual.obligation, completed: true);
                 jobRitual.ritual.activeObligations.Clear();
             }

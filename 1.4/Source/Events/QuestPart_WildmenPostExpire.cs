@@ -31,7 +31,7 @@ namespace VFETribals
                 {
                     if (pawn.Destroyed)
                     {
-                        Log.Error("Tried to add a destroyed thing to QuestPart_DropPods: " + pawn.ToStringSafe());
+                        Log.Error("Tried to add a destroyed thing to QuestPart_WildmenPostExpire: " + pawn.ToStringSafe());
                         continue;
                     }
                     wildmen.Add(pawn);
@@ -68,7 +68,7 @@ namespace VFETribals
             Map map = mapParent.Map;
             wildmen.RemoveAll((Pawn x) => x.Destroyed);
             var colonistCount = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists.Count;
-            if (colonistCount >= wildmen.Count + 5)
+            if (colonistCount >= wildmen.Count + 5 && wildmen.Any())
             {
                 var letter = LetterMaker.MakeLetter("VFET.WildMenJoinTitle".Translate(),
                         "VFET.WildMenJoinDesc".Translate(map.Parent.Label), VFET_DefOf.VFET_WildMenJoin, 
@@ -78,7 +78,10 @@ namespace VFETribals
             }
             else
             {
-                Utils.MakeWildmenRaid(wildmen, map, "VFET.WildMenRaid".Translate(), "VFET.WildMenRaidDesc".Translate(map.Parent.Label));
+                if (wildmen.Any())
+                {
+                    Utils.MakeWildmenRaid(wildmen, map, "VFET.WildMenRaid".Translate(), "VFET.WildMenRaidDesc".Translate(map.Parent.Label));
+                }
                 this.quest.End(QuestEndOutcome.Fail, false);
             }
         }
