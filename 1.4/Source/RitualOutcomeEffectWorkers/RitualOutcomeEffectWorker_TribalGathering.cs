@@ -43,12 +43,12 @@ namespace VFETribals
 
             List<ResearchProjectDef> activeAnimalResearches = (from x in DefDatabase<ResearchProjectDef>.AllDefsListForReading
                                                          where x.CanStartNow && x.techLevel == TechLevel.Animal
-                                                         select x).ToList();
+                                                         select x).InRandomOrder().ToList();
 
 
             List<ResearchProjectDef>  activeNeolithicResearches = (from x in DefDatabase<ResearchProjectDef>.AllDefsListForReading
                                                           where x.CanStartNow && x.techLevel == TechLevel.Neolithic
-                                                          select x).ToList();
+                                                          select x).InRandomOrder().ToList();
 
             int totalResearchPoints = 1;
 
@@ -84,6 +84,23 @@ namespace VFETribals
                 {
                     Log.Message("Total research points is " + totalResearchPoints);
                 }
+
+                if (Find.ResearchManager.currentProj!=null && Find.ResearchManager.currentProj.techLevel< TechLevel.Neolithic
+                    && activeResearches.Contains(Find.ResearchManager.currentProj))
+                {
+                    totalResearchPoints -= totalResearchPoints / 2;
+                    Find.ResearchManager.progress[Find.ResearchManager.currentProj] += totalResearchPoints / 2;
+                    if (Find.ResearchManager.currentProj.IsFinished)
+                    {
+                        Find.ResearchManager.FinishProject(Find.ResearchManager.currentProj, doCompletionDialog: false, null);
+                    }
+                    activeResearches.Remove(Find.ResearchManager.currentProj);
+                    if (Prefs.DevMode)
+                    {
+                        Log.Message("Research project " + Find.ResearchManager.currentProj.LabelCap + " was selected by the player and got half of the research points: " + totalResearchPoints + " points.");
+                    }
+                }
+
                 for (int i = 0; i < activeResearches.Count; i++)
                 {
                     int pointsToAllocate = new IntRange(0, totalResearchPoints).RandomInRange;
