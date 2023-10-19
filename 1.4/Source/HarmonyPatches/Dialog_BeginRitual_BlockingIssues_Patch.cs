@@ -23,7 +23,7 @@ namespace VFETribals
 
         public static IEnumerable<string> Postfix(IEnumerable<string> values, Precept_Ritual ___ritual)
         {
-            if (___ritual.def == VFET_DefOf.VFET_TribalGathering)
+            if (___ritual?.def == VFET_DefOf.VFET_TribalGathering)
             {
                 List<string> resultingList = values.ToList();
                
