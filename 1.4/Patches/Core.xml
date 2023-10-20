@@ -93,7 +93,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="ButcherSpot" or defName="TableButcher" or defName="TrapSpike"]</xpath>
+					<xpath>Defs/ThingDef[defName="ButcherSpot" or defName="TrapSpike"]</xpath>
 					<value>
 						<researchPrerequisites>
 							<li>VFET_Hunting</li>
