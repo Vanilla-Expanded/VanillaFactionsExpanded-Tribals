@@ -173,7 +173,7 @@
   <VFETribals.TribalResearchProjectDef>
     <defName>VFET_Tribalwear</defName>
     <label>tribalwear</label>
-    <description>Introduce basic furniture crafting for improved living conditions.</description>
+    <description>Learn to craft traditional tribal attire for various purposes.</description>
     <baseCost>50</baseCost>
 	<tab>VFET_Basics</tab>
     <techLevel>Animal</techLevel>
@@ -190,7 +190,7 @@
   <VFETribals.TribalResearchProjectDef>
     <defName>VFET_Hunting</defName>
     <label>hunting</label>
-    <description>Introduce basic furniture crafting for improved living conditions.</description>
+    <description>Establish methods for effective hunting and resource processing. Unlocks hunting job and allows you to craft throwspikes.</description>
     <baseCost>50</baseCost>
 	<tab>VFET_Basics</tab>
     <techLevel>Animal</techLevel>
