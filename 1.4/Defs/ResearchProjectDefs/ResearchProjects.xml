@@ -66,7 +66,7 @@
     <defName>VFET_Medicine</defName>
     <label>medicine</label>
     <description>Introduce basic medical care and herbal treatment methods. Unlocks doctoring and patient jobs.</description>
-    <baseCost>50</baseCost>
+    <baseCost>70</baseCost>
 	<tab>VFET_Basics</tab>
     <techLevel>Animal</techLevel>
     <researchViewX>3.00</researchViewX>
@@ -157,7 +157,7 @@
     <defName>VFET_Furniture</defName>
     <label>furniture</label>
     <description>Introduce basic furniture crafting for improved living conditions.</description>
-    <baseCost>50</baseCost>
+    <baseCost>70</baseCost>
 	<tab>VFET_Basics</tab>
     <techLevel>Animal</techLevel>
     <researchViewX>3.00</researchViewX>
@@ -231,7 +231,7 @@
     <defName>VFET_Bow</defName>
     <label>bow</label>
     <description>Unlock the ability to craft the staple of ranged combat - a short bow.</description>
-    <baseCost>50</baseCost>
+    <baseCost>70</baseCost>
 	<tab>VFET_Basics</tab>
     <techLevel>Animal</techLevel>
     <researchViewX>3.00</researchViewX>
@@ -248,7 +248,7 @@
     <defName>VFET_Culture</defName>
     <label>culture</label>
     <description>Unlock the ability to conduct research, as well as develop ideological thoughts. Unlocks intellectual job.</description>
-    <baseCost>50</baseCost>
+    <baseCost>100</baseCost>
 	<tab>VFET_Basics</tab>
     <techLevel>Animal</techLevel>
     <researchViewX>4.00</researchViewX>
