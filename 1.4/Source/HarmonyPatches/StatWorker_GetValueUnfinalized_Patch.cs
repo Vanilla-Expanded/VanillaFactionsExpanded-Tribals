@@ -65,10 +65,13 @@ namespace VFETribals
 
         public static bool CanApplyCornerstones(StatRequest req)
         {
-            var playerFaction = Faction.OfPlayerSilentFail;
-            if (playerFaction != null && GameComponent_Tribals.Instance?.cornerstones != null && req.Thing is Thing thing && thing.Faction == playerFaction)
+            if (Find.World != null && Find.FactionManager != null)
             {
-                return true;
+                var playerFaction = Faction.OfPlayerSilentFail;
+                if (playerFaction != null && GameComponent_Tribals.Instance?.cornerstones != null && req.Thing is Thing thing && thing.Faction == playerFaction)
+                {
+                    return true;
+                }
             }
             return false;
         }
