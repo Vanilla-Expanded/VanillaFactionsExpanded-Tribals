@@ -3,6 +3,7 @@ using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
+using Verse;
 
 namespace VFETribals
 {
@@ -36,7 +37,7 @@ namespace VFETribals
 
         public static void SetOffsets(ref float __result, StatWorker __instance, StatRequest req)
         {
-            if (GameComponent_Tribals.Instance?.cornerstones != null)
+            if (CanApplyCornerstones(req))
             {
                 foreach (var cornerstone in GameComponent_Tribals.Instance.cornerstones)
                 {
@@ -50,7 +51,7 @@ namespace VFETribals
 
         private static void SetFactors(ref float __result, StatWorker __instance, StatRequest req)
         {
-            if (GameComponent_Tribals.Instance?.cornerstones != null)
+            if (CanApplyCornerstones(req))
             {
                 foreach (var cornerstone in GameComponent_Tribals.Instance.cornerstones)
                 {
@@ -60,7 +61,16 @@ namespace VFETribals
                     }
                 }
             }
+        }
 
+        public static bool CanApplyCornerstones(StatRequest req)
+        {
+            var playerFaction = Faction.OfPlayerSilentFail;
+            if (playerFaction != null && GameComponent_Tribals.Instance?.cornerstones != null && req.Thing is Thing thing && thing.Faction == playerFaction)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
