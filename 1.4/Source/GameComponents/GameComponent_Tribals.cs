@@ -98,26 +98,23 @@ namespace VFETribals
         public override void GameComponentTick()
         {
             base.GameComponentTick();
-            if (playerTechLevel.HasValue)
-            {
-                if (Faction.OfPlayer.def.techLevel > playerTechLevel.Value)
-                {
-                    var diff = (int)(Faction.OfPlayer.def.techLevel - playerTechLevel.Value);
-                    for (var i = 0; i < diff; i++)
-                    {
-                        var newTechLevel = (TechLevel)((int)playerTechLevel.Value + i);
-                        var eraAdvancementDef = DefDatabase<EraAdvancementDef>.AllDefsListForReading
-                            .FirstOrDefault(x => x.newTechLevel  == newTechLevel);
-                        if (eraAdvancementDef != null)
-                        {
-                            AdvanceToEra(eraAdvancementDef);
-                        }
-                    }
-                }
-            }
-            else
+            if (playerTechLevel.HasValue is false)
             {
                 playerTechLevel = Faction.OfPlayer.def.techLevel;
+            }
+            if (Faction.OfPlayer.def.techLevel > playerTechLevel.Value)
+            {
+                var diff = (int)(Faction.OfPlayer.def.techLevel - playerTechLevel.Value);
+                for (var i = 1; i <= diff; i++)
+                {
+                    var newTechLevel = (TechLevel)((int)playerTechLevel.Value + i);
+                    var eraAdvancementDef = DefDatabase<EraAdvancementDef>.AllDefsListForReading
+                        .FirstOrDefault(x => x.newTechLevel == newTechLevel);
+                    if (eraAdvancementDef != null)
+                    {
+                        AdvanceToEra(eraAdvancementDef);
+                    }
+                }
             }
 
             if (largeFireActiveTicks != 0 && lastLargeFireUpdate != Find.TickManager.TicksGame)

@@ -19,11 +19,6 @@ namespace VFETribals
         public static void Postfix(IncidentWorker_WandererJoin __instance, string __state)
         {
             __instance.def.letterLabel = __state;
-
-            foreach (var colonist in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists)
-            {
-                Log.Message(colonist + " - " + colonist.Ideo + " - " + colonist.Ideo?.memberName);
-            }
         }
     }
 }
