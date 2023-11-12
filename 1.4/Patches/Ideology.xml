@@ -1,32 +1,53 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-	
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Ideology</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-				
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="Plant_Nutrifungus" or defName="Plant_Fibercorn"]/plant</xpath>
-					<value>
-                        <sowResearchPrerequisites>
-                            <li>VFET_Cultivation</li>
-                        </sowResearchPrerequisites>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[@Name="AltarBase" or defName="Ideogram" or @Name="IdeoBuildingConsumableBase" or defName="Lectern" or defName="GibbetCage" or defName="Drum" or @Name="RitualSeatBase" or defName="Skullspike"]</xpath>
-					<value>
-						<researchPrerequisites>
-							<li>VFET_Culture</li>
-						</researchPrerequisites>
-					</value>
-				</li>
-				
-			</operations>
-		</match>
-	</Operation>
-
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Ideology</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Plant_Fibercorn"]/plant</xpath>
+               <value>
+                  <sowResearchPrerequisites>
+                     <li>VFET_Cultivation</li>
+                  </sowResearchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationConditional">
+               <xpath>/Defs/ThingDef[defName="Plant_Nutrifungus"]/plant/sowResearchPrerequisites</xpath>
+               <match Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Plant_Nutrifungus"]/plant/sowResearchPrerequisites</xpath>
+                        <value>
+                           <li>VFET_Agriculture</li>
+                        </value>
+                     </li>
+                  </operations>
+               </match>
+               <nomatch Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Plant_Nutrifungus"]/plant</xpath>
+                        <value>
+                           <sowResearchPrerequisites>
+                              <li>VFET_Agriculture</li>
+                           </sowResearchPrerequisites>
+                        </value>
+                     </li>
+                  </operations>
+               </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[@Name="AltarBase" or defName="Ideogram" or @Name="IdeoBuildingConsumableBase" or defName="Lectern" or defName="GibbetCage" or defName="Drum" or @Name="RitualSeatBase" or defName="Skullspike"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>VFET_Culture</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
 </Patch>
