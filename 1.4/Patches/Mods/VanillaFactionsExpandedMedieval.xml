@@ -14,6 +14,14 @@
 						</researchPrerequisites>
 					</value>
 				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VFEM_WallTorchLamp"]</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFET_Fire</li>
+						</researchPrerequisites>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>
