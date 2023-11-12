@@ -86,7 +86,7 @@
   <VFETribals.TribalResearchProjectDef>
     <defName>VFET_AnimalHandling</defName>
     <label>animal handling</label>
-    <description>Learn to grow various staple crops. Unlocks growing job.</description>
+    <description>Acquire the knowledge to manage, tame, and accommodate animals. Unlocks handing job, as well as animal taming and slaughtering.</description>
     <baseCost>50</baseCost>
 	<tab>VFET_Basics</tab>
     <techLevel>Animal</techLevel>
