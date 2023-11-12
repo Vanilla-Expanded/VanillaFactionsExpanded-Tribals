@@ -13,6 +13,7 @@
 		<techLevel>Animal</techLevel>
 		<factionNameMaker>NamerFactionTribal</factionNameMaker>
 		<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+		<hidden>true</hidden>
 		<allowedCultures><li>Corunan</li></allowedCultures>
 		<disallowedMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>

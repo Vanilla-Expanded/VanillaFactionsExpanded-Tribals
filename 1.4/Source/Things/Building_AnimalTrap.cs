@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using System.Linq;
 using Verse;
 using Verse.Sound;
@@ -7,6 +8,21 @@ namespace VFETribals
 {
     public class Building_AnimalTrap : Building_TrapDamager
     {
+        [HarmonyPatch(typeof(Building_Trap), "KnowsOfTrap")]
+        public static class Building_Trap_KnowsOfTrap_Patch
+        {
+            public static void Postfix(ref bool __result, Building_Trap __instance, Pawn p)
+            {
+                if (__result && __instance is Building_AnimalTrap)
+                {
+                    if (p.RaceProps.Animal && p.Faction != Faction.OfPlayer)
+                    {
+                        __result = false;
+                    }
+                }
+            }
+        }
+
         public override float SpringChance(Pawn p)
         {
             if (p.Faction == Faction.OfPlayer)

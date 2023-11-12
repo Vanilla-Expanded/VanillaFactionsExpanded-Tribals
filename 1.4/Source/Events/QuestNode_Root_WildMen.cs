@@ -17,7 +17,15 @@ namespace VFETribals
             List<FactionRelation> list = new List<FactionRelation>();
             foreach (Faction item2 in Find.FactionManager.AllFactionsListForReading)
             {
-                if (!item2.def.permanentEnemy)
+                if (item2 == Faction.OfPlayer)
+                {
+                    list.Add(new FactionRelation
+                    {
+                        other = item2,
+                        kind = FactionRelationKind.Hostile
+                    });
+                }
+                else if (!item2.def.permanentEnemy)
                 {
                     list.Add(new FactionRelation
                     {
