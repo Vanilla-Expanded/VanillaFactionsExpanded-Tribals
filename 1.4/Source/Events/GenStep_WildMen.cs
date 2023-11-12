@@ -25,8 +25,10 @@ namespace VFETribals
             }
 
             GenSpawn.Spawn(ThingDefOf.Campfire, result, map);
+            Faction faction = null;
             foreach (var wildman in parms.sitePart.things.ToList())
             {
+                faction = wildman.Faction;
                 if (RCellFinder.TryFindRandomCellNearWith(result, delegate (IntVec3 x)
                 {
                     return x.Standable(map) && GenSight.LineOfSight(x, result, map);
@@ -34,6 +36,10 @@ namespace VFETribals
                 {
                     GenSpawn.Spawn(wildman, cell, map);
                 }
+            }
+            if (faction.HostileTo(Faction.OfPlayer) is false)
+            {
+                faction.SetRelationDirect(Faction.OfPlayer, FactionRelationKind.Hostile, false);
             }
         }
     }

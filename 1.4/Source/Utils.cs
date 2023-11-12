@@ -90,6 +90,12 @@ namespace VFETribals
                 faction = wildmen.First().Faction,
                 pawnGroups = dict,
             };
+
+            if (parms.faction.HostileTo(Faction.OfPlayer) is false)
+            {
+                parms.faction.SetRelationDirect(Faction.OfPlayer, FactionRelationKind.Hostile, false);
+            }
+
             var worker = IncidentDefOf.RaidEnemy.Worker as IncidentWorker_RaidEnemy;
             TryGenerateRaidInfo(worker, parms, wildmen);
             if (letterLabel == default)
