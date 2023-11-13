@@ -35,13 +35,38 @@
                   </researchPrerequisites>
                </value>
             </li>
-            <li Class="PatchOperationAdd">
+            <!-- <li Class="PatchOperationAdd">
                <xpath>Defs/ThingDef[defName="SimpleResearchBench"]</xpath>
                <value>
                   <researchPrerequisites>
                      <li>ComplexFurniture</li>
                   </researchPrerequisites>
                </value>
+            </li> -->
+            <li Class="PatchOperationConditional">
+               <xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/researchPrerequisites</xpath>
+               <match Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/researchPrerequisites</xpath>
+                        <value>
+                           <li>ComplexFurniture</li>
+                        </value>
+                     </li>
+                  </operations>
+               </match>
+               <nomatch Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="SimpleResearchBench"]</xpath>
+                        <value>
+                           <researchPrerequisites>
+                              <li>ComplexFurniture</li>
+                           </researchPrerequisites>
+                        </value>
+                     </li>
+                  </operations>
+               </nomatch>
             </li>
             <li Class="PatchOperationAdd">
                <xpath>Defs/ResearchProjectDef[defName="ComplexFurniture"]</xpath>
@@ -57,13 +82,38 @@
                   </researchPrerequisites>
                </value>
             </li>
-            <li Class="PatchOperationAdd">
+            <!-- <li Class="PatchOperationAdd">
                <xpath>Defs/ThingDef[defName="Wall" or defName="Door" or defName="Column" or defName="Barricade" or defName="Sandbags" or defName="FueledStove" or defName="TableButcher"]</xpath>
                <value>
                   <researchPrerequisites>
                      <li>VFET_Construction</li>
                   </researchPrerequisites>
                </value>
+            </li> -->
+            <li Class="PatchOperationConditional">
+               <xpath>/Defs/ThingDef[defName="Wall" or defName="Door" or defName="Column" or defName="Barricade" or defName="Sandbags" or defName="FueledStove" or defName="TableButcher"]/researchPrerequisites</xpath>
+               <match Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Wall" or defName="Door" or defName="Column" or defName="Barricade" or defName="Sandbags" or defName="FueledStove" or defName="TableButcher"]/researchPrerequisites</xpath>
+                        <value>
+                           <li>VFET_Construction</li>
+                        </value>
+                     </li>
+                  </operations>
+               </match>
+               <nomatch Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Wall" or defName="Door" or defName="Column" or defName="Barricade" or defName="Sandbags" or defName="FueledStove" or defName="TableButcher"]</xpath>
+                        <value>
+                           <researchPrerequisites>
+                              <li>VFET_Construction</li>
+                           </researchPrerequisites>
+                        </value>
+                     </li>
+                  </operations>
+               </nomatch>
             </li>
             <li Class="PatchOperationAdd">
                <xpath>Defs/TerrainDef[defName="Bridge" or defName="WoodPlankFloor" or @Name="FlagstoneBase" or defName="StrawMatting"]</xpath>
