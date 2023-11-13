@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThoughtDef>
+		<defName>VFET_NoExpectations</defName>
+		<workerClass>VFETribals.ThoughtWorker_NoExpectations</workerClass>
+		<stages>
+			<li>
+				<label>no expectations</label>
+				<description>Expectations? What’s that?</description>
+				<baseMoodEffect>50</baseMoodEffect>
+			</li>
+		</stages>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+	</ThoughtDef>
+</Defs>

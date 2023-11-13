@@ -77,6 +77,7 @@
     <Compile Include="HarmonyPatches\SitePart_SitePartTick_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_GetGizmos_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
+    <Compile Include="HarmonyPatches\ThoughtWorker_Expectations_CurrentStateInternal.cs" />
     <Compile Include="PlaceWorker_OnFloorsOrStoneTerrains.cs" />
     <Compile Include="RitualBehaviourWorkers\RitualBehaviourWorker_IndustrialGathering.cs" />
     <Compile Include="RitualBehaviourWorkers\RitualBehaviourWorker_MedievalGathering.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Comps\CompGlower_LargeFire.cs" />
     <Compile Include="Comps\CompHeatPusher_LargeFire.cs" />
     <Compile Include="Things\LargeFire.cs" />
+    <Compile Include="ThoughtWorkers\ThoughtWorker_NoExpectations.cs" />
     <Compile Include="UI\ChoiceLetter_ConfigureIdeo.cs" />
     <Compile Include="HarmonyPatches\Designator_GizmoOnGUI_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_ChooseIdeoPreset_PostOpen_Patch.cs" />
