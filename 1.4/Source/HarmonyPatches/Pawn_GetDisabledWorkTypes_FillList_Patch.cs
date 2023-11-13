@@ -2,6 +2,7 @@
 using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Reflection;
 using Verse;
 
@@ -29,6 +30,7 @@ namespace VFETribals
                     {
                         if (list.Contains(def) is false && def.IsUnlocked(out _) is false)
                         {
+                            Log.Message("[VFET] Disabling " + def + " for " + __instance + " - " + new StackTrace());
                             list.Add(def);
                         }
                     }

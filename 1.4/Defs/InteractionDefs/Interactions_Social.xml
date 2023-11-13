@@ -5,16 +5,15 @@
 
   <InteractionDef>
     <defName>VFET_TribalGatheringInteraction</defName>
-    <label>sahring ideas</label>
+    <label>sharing ideas</label>
     <workerClass>VFETribals.InteractionWorker_TribalGathering</workerClass>
     <symbol>Things/Mote/SpeechSymbols/GatheringSocialInteraction</symbol>
     <initiatorThought>Chitchat</initiatorThought>
     <recipientThought>Chitchat</recipientThought>
     <logRulesInitiator>
       <rulesStrings>
-        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [TalkTopicLight].</li>
-        <li>r_logentry->[INITIATOR_nameDef] [talkedabout] [TalkTopicLight] with [RECIPIENT_nameDef].</li>
-        <li>r_logentry(p=0.8)->[INITIATOR_nameDef] [commentedabout] [TalkTopicLight] to [RECIPIENT_nameDef].</li>
+        <li>r_logentry->[INITIATOR_nameDef] [talkedabout] [TalkTopicLight].</li>
+        <li>r_logentry(p=0.8)->[INITIATOR_nameDef] [commentedabout] [TalkTopicLight].</li>
 
         <li>talkedabout(p=4)->chatted about</li>
         <li>talkedabout->shared a word about</li>

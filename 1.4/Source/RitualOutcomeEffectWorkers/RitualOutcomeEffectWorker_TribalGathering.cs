@@ -89,7 +89,7 @@ namespace VFETribals
                     && activeResearches.Contains(Find.ResearchManager.currentProj))
                 {
                     totalResearchPoints -= totalResearchPoints / 2;
-                    Find.ResearchManager.progress[Find.ResearchManager.currentProj] += totalResearchPoints / 2;
+                    Find.ResearchManager.progress[Find.ResearchManager.currentProj] += totalResearchPoints;
                     if (Find.ResearchManager.currentProj.IsFinished)
                     {
                         Find.ResearchManager.FinishProject(Find.ResearchManager.currentProj, doCompletionDialog: false, null);

@@ -9,42 +9,49 @@ namespace VFETribals
     [HarmonyPatch(typeof(ResearchManager), "FinishProject")]
     public static class ResearchManager_FinishProject_Patch
     {
-        private static void Postfix(ResearchProjectDef proj, bool doCompletionDialog = false, Pawn researcher = null)
+        private static void Prefix(out bool __state, ResearchProjectDef proj)
         {
-            if (proj is TribalResearchProjectDef project)
+            __state = proj.IsFinished is false;
+        }
+        private static void Postfix(bool __state, ResearchProjectDef proj, bool doCompletionDialog = false, Pawn researcher = null)
+        {
+            if (__state)
             {
-                if (project.unlocksWorkTypes != null || project.unlocksWorkTags != WorkTags.None)
+                if (proj is TribalResearchProjectDef project)
                 {
-                    foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive)
+                    if (project.unlocksWorkTypes != null || project.unlocksWorkTags != WorkTags.None)
                     {
-                        pawn.Notify_DisabledWorkTypesChanged();
+                        foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive)
+                        {
+                            pawn.Notify_DisabledWorkTypesChanged();
+                        }
+                    }
+
+                    if (Faction.OfPlayer.def == VFET_DefOf.VFET_WildMen && project == VFET_DefOf.VFET_Culture
+                        && ModsConfig.IdeologyActive)
+                    {
+                        Find.LetterStack.ReceiveLetter(LetterMaker.MakeLetter("VFET.FormIdeology".Translate(),
+                            "VFET.FormIdeologyDesc".Translate(), VFET_DefOf.VFET_ConfigureIdeo));
                     }
                 }
 
-                if (Faction.OfPlayer.def == VFET_DefOf.VFET_WildMen && project == VFET_DefOf.VFET_Culture 
-                    && ModsConfig.IdeologyActive)
+                if (Find.Storyteller?.def == VFET_DefOf.VFET_TalonTribal)
                 {
-                    Find.LetterStack.ReceiveLetter(LetterMaker.MakeLetter("VFET.FormIdeology".Translate(), 
-                        "VFET.FormIdeologyDesc".Translate(), VFET_DefOf.VFET_ConfigureIdeo));
-                }
-            }
-
-            if (Find.Storyteller?.def == VFET_DefOf.VFET_TalonTribal)
-            {
-                if (GameComponent_Tribals.Instance.lastTickResearchFinished > 0 && GenDate.TicksPerDay * 4 >= 
-                    Find.TickManager.TicksGame - GameComponent_Tribals.Instance.lastTickResearchFinished)
-                {
-                    var map = Find.AnyPlayerHomeMap; 
-                    if (map != null)
+                    if (GameComponent_Tribals.Instance.lastTickResearchFinished > 0 && GenDate.TicksPerDay * 4 >=
+                        Find.TickManager.TicksGame - GameComponent_Tribals.Instance.lastTickResearchFinished)
                     {
-                        var parms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.RaidEnemy.category, map);
-                        IncidentDefOf.RaidEnemy.Worker.TryExecute(parms);
+                        var map = Find.AnyPlayerHomeMap;
+                        if (map != null)
+                        {
+                            var parms = StorytellerUtility.DefaultParmsNow(IncidentDefOf.RaidEnemy.category, map);
+                            IncidentDefOf.RaidEnemy.Worker.TryExecute(parms);
+                        }
                     }
                 }
-            }
 
-            GameComponent_Tribals.Instance.lastTickResearchFinished = Find.TickManager.TicksGame;
-            GameComponent_Tribals.Instance.TryRegisterAdvancementObligation();
+                GameComponent_Tribals.Instance.lastTickResearchFinished = Find.TickManager.TicksGame;
+                GameComponent_Tribals.Instance.TryRegisterAdvancementObligation();
+            }
         }
     }
 }

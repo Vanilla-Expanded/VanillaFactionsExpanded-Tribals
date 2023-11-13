@@ -15,7 +15,8 @@ namespace VFETribals
                 {
                     __result *= 0.25f;
                 }
-                if (GameComponent_Tribals.Instance.lastLargeFireUpdate + 150 >= Find.TickManager.TicksGame)
+                if (GameComponent_Tribals.Instance.lastLargeFireUpdate != 0 
+                    && GameComponent_Tribals.Instance.lastLargeFireUpdate + 150 >= Find.TickManager.TicksGame)
                 {
                     __result *= 1.1f;
                 }

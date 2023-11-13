@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using Verse;
 
@@ -17,6 +18,7 @@ namespace VFETribals
                 {
                     if (!workTag.IsUnlocked(out _))
                     {
+                        Log.Message("[VFET] Disabling " + workTag + " for " + __instance + " - " + new StackTrace());
                         __result |= workTag;
                     }
                 }
