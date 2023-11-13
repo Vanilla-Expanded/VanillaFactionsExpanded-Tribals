@@ -76,6 +76,7 @@
     <Compile Include="HarmonyPatches\RitualRoleAssignments_PawnNotAssignableReason_Patch.cs" />
     <Compile Include="HarmonyPatches\ScenPart_ConfigPage_ConfigureStartingPawnsBase_PostIdeoChosen_Patch.cs" />
     <Compile Include="HarmonyPatches\SitePart_SitePartTick_Patch.cs" />
+    <Compile Include="HarmonyPatches\SocialCardUtility_DrawPawnRoleSelection_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_GetGizmos_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
     <Compile Include="HarmonyPatches\ThoughtWorker_Expectations_CurrentStateInternal.cs" />
