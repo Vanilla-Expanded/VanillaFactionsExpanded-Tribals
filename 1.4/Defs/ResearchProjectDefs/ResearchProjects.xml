@@ -65,16 +65,12 @@
   <VFETribals.TribalResearchProjectDef>
     <defName>VFET_Medicine</defName>
     <label>medicine</label>
-    <description>Introduce basic medical care and herbal treatment methods. Unlocks doctoring and patient jobs.</description>
+    <description>Introduce basic herbal treatment methods.</description>
     <baseCost>70</baseCost>
 	<tab>VFET_Basics</tab>
     <techLevel>Animal</techLevel>
     <researchViewX>3.00</researchViewX>
     <researchViewY>0.00</researchViewY>
-	<unlocksWorkTypes>
-		<li>Doctor</li>
-		<li>Patient</li>
-	</unlocksWorkTypes>
     <tags>
       <li>ClassicStart</li>
     </tags>
