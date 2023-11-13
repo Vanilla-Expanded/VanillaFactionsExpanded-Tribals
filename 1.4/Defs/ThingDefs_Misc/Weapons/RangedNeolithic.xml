@@ -34,7 +34,7 @@
       <recipeUsers>
         <li>CraftingSpot</li>
       </recipeUsers>
-      <researchPrerequisite>VFET_Weapons</researchPrerequisite>
+      <researchPrerequisite>VFET_Hunting</researchPrerequisite>
       <displayPriority>501</displayPriority>
     </recipeMaker>
     <verbs>
