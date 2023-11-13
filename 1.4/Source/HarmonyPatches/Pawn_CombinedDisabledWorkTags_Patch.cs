@@ -18,7 +18,6 @@ namespace VFETribals
                 {
                     if (!workTag.IsUnlocked(out _))
                     {
-                        Log.Message("[VFET] Disabling " + workTag + " for " + __instance + " - " + new StackTrace());
                         __result |= workTag;
                     }
                 }
