@@ -19,7 +19,7 @@ namespace VFETribals
         {
             if (Faction.OfPlayer.def.techLevel + 1 == targetTechLevel)
             {
-                var obligation = new RitualObligation(ritual);
+                var obligation = new RitualObligation(ritual, expires: false);
                 ritual.AddObligation(obligation);
             }
         }

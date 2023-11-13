@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using Verse;
+using Verse.Profile;
 
 namespace VFETribals
 {
@@ -11,19 +12,25 @@ namespace VFETribals
         {
             foreach (var def in Utils.researchProjectsWithDesignators)
             {
-                foreach (var type in def.unlocksDesignators)
+                if (def.IsFinished is false)
                 {
-                    if (DesignatorUtility.StandaloneDesignators.TryGetValue(type, out var designator) is false)
+                    foreach (var type in def.unlocksDesignators)
                     {
-                        designator = Find.ReverseDesignatorDatabase.AllDesignators.FirstOrDefault(x => x.GetType() == type);
-                    }
-                    if (designator != null)
-                    {
-                        if (designator.Designation == newDes.def && !def.IsFinished)
+                        if ((Find.ReverseDesignatorDatabase.desList is not null || UnityData.IsInMainThread))
                         {
-                            var reason = "VFET.WorkDisabledByMissingResearch".Translate(def.label);
-                            Messages.Message(reason, MessageTypeDefOf.NeutralEvent);
-                            return false;
+                            if (DesignatorUtility.StandaloneDesignators.TryGetValue(type, out var designator) is false)
+                            {
+                                designator = Find.ReverseDesignatorDatabase.AllDesignators.FirstOrDefault(x => x.GetType() == type);
+                            }
+                            if (designator != null)
+                            {
+                                if (designator.Designation == newDes.def)
+                                {
+                                    var reason = "VFET.WorkDisabledByMissingResearch".Translate(def.label);
+                                    Messages.Message(reason, MessageTypeDefOf.NeutralEvent);
+                                    return false;
+                                }
+                            }
                         }
                     }
                 }
