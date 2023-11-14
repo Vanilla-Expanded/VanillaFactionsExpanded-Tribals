@@ -22,19 +22,31 @@ namespace VFETribals
 
         public static void Postfix(Pawn __instance, List<WorkTypeDef> list)
         {
-            LongEventHandler.ExecuteWhenFinished(delegate
+            if (UnityData.IsInMainThread)
             {
-                if (__instance.Faction == Faction.OfPlayerSilentFail)
+                DisableWorkTypes(__instance, list);
+            }
+            else
+            {
+                LongEventHandler.ExecuteWhenFinished(delegate
                 {
-                    foreach (var def in DefDatabase<WorkTypeDef>.AllDefs)
+                    DisableWorkTypes(__instance, list);
+                });
+            }
+        }
+
+        private static void DisableWorkTypes(Pawn __instance, List<WorkTypeDef> list)
+        {
+            if (__instance.Faction == Faction.OfPlayerSilentFail)
+            {
+                foreach (var def in DefDatabase<WorkTypeDef>.AllDefs)
+                {
+                    if (list.Contains(def) is false && def.IsUnlocked(out _) is false)
                     {
-                        if (list.Contains(def) is false && def.IsUnlocked(out _) is false)
-                        {
-                            list.Add(def);
-                        }
+                        list.Add(def);
                     }
                 }
-            });
+            }
         }
     }
 }

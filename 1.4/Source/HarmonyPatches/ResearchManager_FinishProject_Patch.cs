@@ -9,14 +9,11 @@ namespace VFETribals
     [HarmonyPatch(typeof(ResearchManager), "FinishProject")]
     public static class ResearchManager_FinishProject_Patch
     {
-        private static void Prefix(out bool __state, ResearchProjectDef proj)
+        private static void Postfix(ResearchProjectDef proj)
         {
-            __state = proj.IsFinished is false;
-        }
-        private static void Postfix(bool __state, ResearchProjectDef proj, bool doCompletionDialog = false, Pawn researcher = null)
-        {
-            if (__state)
+            if (GameComponent_Tribals.Instance.FinishedResearchProjects.Contains(proj) is false)
             {
+                GameComponent_Tribals.Instance.FinishedResearchProjects.Add(proj);
                 if (proj is TribalResearchProjectDef project)
                 {
                     if (project.unlocksWorkTypes != null || project.unlocksWorkTags != WorkTags.None)

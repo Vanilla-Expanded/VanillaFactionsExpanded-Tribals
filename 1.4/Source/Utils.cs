@@ -13,8 +13,6 @@ namespace VFETribals
     public static class Utils
     {
         public static List<WorkTags> workTags = Enum.GetValues(typeof(WorkTags)).Cast<WorkTags>().ToList();
-        public static List<TribalResearchProjectDef> researchProjectsWithUnlockWorkTags = DefDatabase<TribalResearchProjectDef>
-            .AllDefsListForReading.Where(x => x.unlocksWorkTags != WorkTags.None).ToList();
         public static List<TribalResearchProjectDef> researchProjectsWithDesignators = DefDatabase<TribalResearchProjectDef>
             .AllDefsListForReading.Where(x => x.unlocksDesignators != null).ToList();
         public static HashSet<PreceptDef> advancementPrecepts = new HashSet<PreceptDef>
@@ -28,37 +26,55 @@ namespace VFETribals
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsUnlocked(this WorkTypeDef workTypeDef, out TribalResearchProjectDef research)
         {
-            foreach (var tribalResearch in DefDatabase<TribalResearchProjectDef>.AllDefs)
+            foreach (var tribalResearch in GetCachedResearchProjectsFor(workTypeDef))
             {
-                if (tribalResearch.unlocksWorkTypes?.Contains(workTypeDef) ?? false)
+                if (tribalResearch.IsFinished is false)
                 {
-                    if (tribalResearch.IsFinished is false)
-                    {
-                        research = tribalResearch;
-                        return false;
-                    }
+                    research = tribalResearch;
+                    return false;
                 }
             }
             research = null;
             return true;
         }
 
+        private static Dictionary<WorkTypeDef, List<TribalResearchProjectDef>> cachedResearchProjectsForWorkTypes = new Dictionary<WorkTypeDef, List<TribalResearchProjectDef>>();
+
+        private static List<TribalResearchProjectDef> GetCachedResearchProjectsFor(WorkTypeDef workTypeDef)
+        {
+            if (!cachedResearchProjectsForWorkTypes.TryGetValue(workTypeDef, out var list))
+            {
+                cachedResearchProjectsForWorkTypes[workTypeDef] = list = 
+                    DefDatabase<TribalResearchProjectDef>.AllDefs.Where(x => x.unlocksWorkTypes != null && x.unlocksWorkTypes.Contains(workTypeDef)).ToList();
+            }
+            return list;
+        }
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsUnlocked(this WorkTags workTags, out TribalResearchProjectDef research)
         {
-            foreach (var tribalResearch in researchProjectsWithUnlockWorkTags)
+            foreach (var tribalResearch in GetCachedResearchProjectsFor(workTags))
             {
-                if (tribalResearch.unlocksWorkTags.HasFlag(workTags))
+                if (tribalResearch.IsFinished is false)
                 {
-                    if (tribalResearch.IsFinished is false)
-                    {
-                        research = tribalResearch;
-                        return false;
-                    }
+                    research = tribalResearch;
+                    return false;
                 }
             }
             research = null;
             return true;
+        }
+
+        private static Dictionary<WorkTags, List<TribalResearchProjectDef>> cachedResearchProjectsForWorkTags = new Dictionary<WorkTags, List<TribalResearchProjectDef>>();
+
+        private static List<TribalResearchProjectDef> GetCachedResearchProjectsFor(WorkTags workTags)
+        {
+            if (!cachedResearchProjectsForWorkTags.TryGetValue(workTags, out var list))
+            {
+                cachedResearchProjectsForWorkTags[workTags] = list =
+                    DefDatabase<TribalResearchProjectDef>.AllDefs.Where(x => x.unlocksWorkTags.HasFlag(workTags)).ToList();
+            }
+            return list;
         }
 
         public static QuestPart_WildmenPostExpire WildmenPostExpire(MapParent mapParent, List<Pawn> wildmen, string inSignal = null, 

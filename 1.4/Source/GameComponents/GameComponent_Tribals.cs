@@ -22,6 +22,15 @@ namespace VFETribals
         public int largeFireActiveTicks;
         public int lastLargeFireUpdate;
         public int lastTickResearchFinished;
+        private HashSet<ResearchProjectDef> finishedResearchProjects = new HashSet<ResearchProjectDef>();
+        public HashSet<ResearchProjectDef> FinishedResearchProjects
+        {
+            get
+            {
+                finishedResearchProjects.RemoveWhere(x => x.IsFinished is false);
+                return finishedResearchProjects;
+            }
+        }
 
         public static GameComponent_Tribals Instance;
 
@@ -195,9 +204,11 @@ namespace VFETribals
             Scribe_Values.Look(ref largeFireActiveTicks, "largeFireActiveTicks");
             Scribe_Values.Look(ref lastTickResearchFinished, "lastTickResearchFinished");
             Scribe_Collections.Look(ref cornerstones, "cornerstones", LookMode.Def);
+            Scribe_Collections.Look(ref finishedResearchProjects, "finishedResearchProjects", LookMode.Def);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 cornerstones ??= new List<CornerstoneDef>();
+                finishedResearchProjects ??= new HashSet<ResearchProjectDef>();
                 if (playerTechLevel.HasValue)
                 {
                     Faction.OfPlayer.def.techLevel = playerTechLevel.Value;

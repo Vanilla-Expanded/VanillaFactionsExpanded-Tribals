@@ -16,7 +16,7 @@ namespace VFETribals
             {
                 foreach (var workTag in Utils.workTags)
                 {
-                    if (!workTag.IsUnlocked(out _))
+                    if (workTag != WorkTags.None && !workTag.IsUnlocked(out _))
                     {
                         __result |= workTag;
                     }
