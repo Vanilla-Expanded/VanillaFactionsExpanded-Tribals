@@ -85,20 +85,20 @@ namespace VFETribals
                     Log.Message("Total research points is " + totalResearchPoints);
                 }
 
-                if (Find.ResearchManager.currentProj!=null && Find.ResearchManager.currentProj.techLevel< TechLevel.Neolithic
-                    && activeResearches.Contains(Find.ResearchManager.currentProj))
+                ResearchProjectDef currentProj = Find.ResearchManager.currentProj;
+                if (currentProj != null && currentProj.techLevel < TechLevel.Neolithic && activeResearches.Contains(currentProj))
                 {
                     totalResearchPoints -= totalResearchPoints / 2;
-                    Find.ResearchManager.progress[Find.ResearchManager.currentProj] += totalResearchPoints;
-                    if (Find.ResearchManager.currentProj.IsFinished)
-                    {
-                        Find.ResearchManager.FinishProject(Find.ResearchManager.currentProj, doCompletionDialog: false, null);
-                    }
-                    activeResearches.Remove(Find.ResearchManager.currentProj);
                     if (Prefs.DevMode)
                     {
-                        Log.Message("Research project " + Find.ResearchManager.currentProj.LabelCap + " was selected by the player and got half of the research points: " + totalResearchPoints + " points.");
+                        Log.Message("Research project " + currentProj.LabelCap + " was selected by the player and got half of the research points: " + totalResearchPoints + " points.");
                     }
+                    Find.ResearchManager.progress[currentProj] += totalResearchPoints;
+                    if (currentProj.IsFinished)
+                    {
+                        Find.ResearchManager.FinishProject(currentProj, doCompletionDialog: false, null);
+                    }
+                    activeResearches.Remove(currentProj);
                 }
 
                 for (int i = 0; i < activeResearches.Count; i++)
