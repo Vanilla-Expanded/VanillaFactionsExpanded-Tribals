@@ -7,7 +7,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="AB_ExoticDoor" or defName="AB_ExoticWall" or defName="AB_ExoticColumn"]</xpath>
+					<xpath>Defs/TerrainDef[@Name="RB_WaxFloorBase" or @Name="RB_WaxTiledFloorBase"]</xpath>
 					<value>
 						<researchPrerequisites>
 							<li>VFET_Construction</li>
