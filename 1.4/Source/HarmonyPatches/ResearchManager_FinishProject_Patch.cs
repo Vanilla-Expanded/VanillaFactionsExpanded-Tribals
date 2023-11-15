@@ -27,8 +27,7 @@ namespace VFETribals
                     if (Faction.OfPlayer.def == VFET_DefOf.VFET_WildMen && project == VFET_DefOf.VFET_Culture
                         && ModsConfig.IdeologyActive)
                     {
-                        Find.LetterStack.ReceiveLetter(LetterMaker.MakeLetter("VFET.FormIdeology".Translate(),
-                            "VFET.FormIdeologyDesc".Translate(), VFET_DefOf.VFET_ConfigureIdeo));
+                        IssueFormIdeologyLetter();
                     }
                 }
 
@@ -50,5 +49,13 @@ namespace VFETribals
                 GameComponent_Tribals.Instance.TryRegisterAdvancementObligation();
             }
         }
+
+        [DebugAction("General", "Form ideology")]
+        public static void IssueFormIdeologyLetter()
+        {
+            Find.LetterStack.ReceiveLetter(LetterMaker.MakeLetter("VFET.FormIdeology".Translate(),
+                "VFET.FormIdeologyDesc".Translate(), VFET_DefOf.VFET_ConfigureIdeo));
+        }
     }
+
 }
