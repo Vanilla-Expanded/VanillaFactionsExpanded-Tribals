@@ -22,6 +22,25 @@ namespace VFETribals
             var result = base.CanUseTargetInternal(target, obligation);
             if (result.ShouldShowGizmo)
             {
+                var trigger = parent.obligationTriggers.OfType<RitualObligationTrigger_TargetTechlevel>().First();
+                if (trigger != null) 
+                {
+                    if (trigger.targetTechLevel == TechLevel.Undefined)
+                    {
+                        var props = obligation.precept.sourcePattern.ritualObligationTriggers?
+                            .OfType<RitualObligationTrigger_TargetTechlevel_Props>().FirstOrDefault();
+                        if (props != null)
+                        {
+                            trigger.targetTechLevel = props.targetTechLevel;
+                        }
+                    }
+                    if (trigger.targetTechLevel != Faction.OfPlayer.def.techLevel + 1)
+                    {
+                        result.canUse = false;
+                        result.failReason = null;
+                        return result;
+                    }
+                }
                 if (DefDatabase<ResearchProjectDef>.AllDefsListForReading
                         .Where(x => x.techLevel == Faction.OfPlayer.def.techLevel
                         && x.techprintCount == 0 && x.CanStartNow).Any())
