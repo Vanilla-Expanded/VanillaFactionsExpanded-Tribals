@@ -28,7 +28,7 @@ namespace VFETribals
             }
             Faction.OfPlayer.ideos.SetPrimary(ideo);
             ideo.initialPlayerIdeo = true;
-            var colonists = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists;
+            var colonists = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists.ToList();
             foreach (var c in colonists)
             {
                 if (c.Ideo != ideo)
