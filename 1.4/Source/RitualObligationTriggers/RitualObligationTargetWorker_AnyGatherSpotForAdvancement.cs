@@ -19,6 +19,10 @@ namespace VFETribals
 
         public override RitualTargetUseReport CanUseTargetInternal(TargetInfo target, RitualObligation obligation)
         {
+            if (obligation?.precept != null)
+            {
+                obligation.precept.isAnytime = true;
+            }
             var result = base.CanUseTargetInternal(target, obligation);
             if (result.ShouldShowGizmo)
             {
