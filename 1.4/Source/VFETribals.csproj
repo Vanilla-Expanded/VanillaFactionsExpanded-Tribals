@@ -73,6 +73,7 @@
     <Compile Include="HarmonyPatches\Pawn_HearClamor_Patch.cs" />
     <Compile Include="HarmonyPatches\Precept_Ritual_ShouldShowGizmo_Patch.cs" />
     <Compile Include="HarmonyPatches\QuestNode_Root_RelicHunt_RunInt_Patch.cs" />
+    <Compile Include="HarmonyPatches\RecipeDef_AvailableNow_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualRoleAssignments_PawnNotAssignableReason_Patch.cs" />
     <Compile Include="HarmonyPatches\ScenPart_ConfigPage_ConfigureStartingPawnsBase_PostIdeoChosen_Patch.cs" />
     <Compile Include="HarmonyPatches\SitePart_SitePartTick_Patch.cs" />
