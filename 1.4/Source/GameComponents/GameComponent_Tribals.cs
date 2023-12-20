@@ -113,22 +113,27 @@ namespace VFETribals
             }
             if (Faction.OfPlayer.def.techLevel > playerTechLevel.Value)
             {
-                var diff = (int)(Faction.OfPlayer.def.techLevel - playerTechLevel.Value);
-                for (var i = 1; i <= diff; i++)
-                {
-                    var newTechLevel = (TechLevel)((int)playerTechLevel.Value + i);
-                    var eraAdvancementDef = DefDatabase<EraAdvancementDef>.AllDefsListForReading
-                        .FirstOrDefault(x => x.newTechLevel == newTechLevel);
-                    if (eraAdvancementDef != null)
-                    {
-                        AdvanceToEra(eraAdvancementDef);
-                    }
-                }
+                AdvanceTechLevel();
             }
 
             if (largeFireActiveTicks != 0 && lastLargeFireUpdate != Find.TickManager.TicksGame)
             {
                 ResetLargeFireCounter();
+            }
+        }
+
+        private void AdvanceTechLevel()
+        {
+            var diff = (int)(Faction.OfPlayer.def.techLevel - playerTechLevel.Value);
+            for (var i = 1; i <= diff; i++)
+            {
+                var newTechLevel = (TechLevel)((int)playerTechLevel.Value + i);
+                var eraAdvancementDef = DefDatabase<EraAdvancementDef>.AllDefsListForReading
+                    .FirstOrDefault(x => x.newTechLevel == newTechLevel);
+                if (eraAdvancementDef != null)
+                {
+                    AdvanceToEra(eraAdvancementDef);
+                }
             }
         }
 
@@ -139,10 +144,6 @@ namespace VFETribals
 
         public void Notify_GameStarted()
         {
-            if (Faction.OfPlayer.def == VFET_DefOf.VFET_WildMen)
-            {
-                Faction.OfPlayer.def.techLevel = TechLevel.Animal;
-            }
             playerTechLevel = Faction.OfPlayer.def.techLevel;
         }
 

@@ -12,7 +12,7 @@ namespace VFETribals
     {
         public static void Postfix(ref string __result, StatWorker __instance, StatRequest req, ToStringNumberSense numberSense)
         {
-            if (GameComponent_Tribals.Instance != null)
+            if (GameComponent_Tribals.Instance != null && StatWorker_GetValueUnfinalized_Patch.CanApplyCornerstones(req))
             {
                 bool hasCornerstoneModifiers = false;
                 var stringBuilder = new StringBuilder();
