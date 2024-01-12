@@ -9,6 +9,9 @@ namespace VFETribals
     {
         public List<Pawn> wildmen;
         public Map map;
+
+        public override bool CanDismissWithRightClick => false;
+
         public override IEnumerable<DiaOption> Choices
         {
             get
@@ -23,7 +26,7 @@ namespace VFETribals
                         }
                         IncidentParms parms = new IncidentParms
                         {
-                            target = Find.CurrentMap
+                            target = map
                         };
                         PawnsArrivalModeDef edgeWalkIn = PawnsArrivalModeDefOf.EdgeWalkIn;
                         edgeWalkIn.Worker.TryResolveRaidSpawnCenter(parms);
@@ -57,6 +60,14 @@ namespace VFETribals
         {
             Find.Archive.Remove(this);
             Find.LetterStack.RemoveLetter(this);
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+        
+            Scribe_References.Look(ref map, "map");
+            Scribe_Collections.Look(ref wildmen, "wildmen", LookMode.Reference);
         }
     }
 }
