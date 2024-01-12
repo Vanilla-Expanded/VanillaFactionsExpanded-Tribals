@@ -51,7 +51,7 @@ namespace VFETribals
                     SetNextSparkTick();
                 }
                 GasUtility.AddGas(this.OccupiedRect().RandomCell, Map, GasType.BlindSmoke, 1);
-                if (Position.Roofed(Map) is false)
+                if (Position.Roofed(Map) is false && Faction.IsPlayer)
                 {
                     GameComponent_Tribals.Instance.IncrementLargeFireCounter(this);
                 }

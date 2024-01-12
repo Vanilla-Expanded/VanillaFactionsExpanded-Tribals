@@ -52,7 +52,15 @@ namespace VFETribals
                 lastLargeFireUpdate = Find.TickManager.TicksGame;
                 if (largeFireActiveTicks >= GenDate.TicksPerDay * 10)
                 {
-                    SpawnWildMan(largeFire.Map);
+                    // Pick a random map from all active player fires to give all maps a chance to get the event.
+                    // If we just use the currently ticking fire it should (in theory) always trigger on the same map.
+                    var map = LargeFire.largeFires
+                        .Where(x => x.Map != null && x.lightOn && x.Faction.IsPlayer)
+                        .Select(x => x.Map)
+                        .Distinct()
+                        .RandomElement();
+                    // Use the currently ticking fire as a fallback in case something went really bad
+                    SpawnWildMan(map ?? largeFire.Map);
                     ResetLargeFireCounter();
                 }
             }
