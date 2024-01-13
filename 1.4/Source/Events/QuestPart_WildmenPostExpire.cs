@@ -74,6 +74,7 @@ namespace VFETribals
                         "VFET.WildMenJoinDesc".Translate(map.Parent.Label), VFET_DefOf.VFET_WildMenJoin, 
                         this.wildmen.First().Faction, this.quest) as ChoiceLetter_WildMenJoin;
                 letter.wildmen = wildmen;
+                letter.map = map;
                 Find.LetterStack.ReceiveLetter(letter);
             }
             else
