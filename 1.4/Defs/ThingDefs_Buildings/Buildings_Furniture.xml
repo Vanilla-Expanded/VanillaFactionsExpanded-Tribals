@@ -27,8 +27,14 @@
 			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
 			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
 			<ai_chillDestination>false</ai_chillDestination>
+			<!-- Don't destroy trees when putting a sitting spot over them -->
+			<sowTag>SupportPlantsOnly</sowTag>
+			<!-- Don't wake up dormant mechanoids when placed near them -->
+			<wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
 			
 		</building>
+		<!-- Prevent colonists from using sitting spots in prisons -->
+		<socialPropernessMatters>true</socialPropernessMatters>
 		
 	</ThingDef>
 </Defs>
