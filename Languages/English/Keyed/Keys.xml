@@ -52,4 +52,6 @@ Choosing fixed allows you to customize the ideology and every aspect of it. This
 	<VFET.StatsReport_BeautyMultiplier>Beauty multiplier for colony {0} tech level</VFET.StatsReport_BeautyMultiplier>
 	<VFET.NotAllReseachProjectsResearched>Requirements not met: Not all research projects of the previous tech level have been researched.</VFET.NotAllReseachProjectsResearched>
 	<VFET.ManInBlackLabelReplacement>Wild man in black</VFET.ManInBlackLabelReplacement>
+	<VFET.CustomizeNPCIdeologion>Customize NPC ideoligion</VFET.CustomizeNPCIdeologion>
+	<VFET.CustomizeNPCIdeologionDesc>Your ideology will be customized upon researching Culture.</VFET.CustomizeNPCIdeologionDesc>
 </LanguageData>

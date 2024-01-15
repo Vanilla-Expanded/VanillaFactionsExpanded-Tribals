@@ -75,6 +75,8 @@
     <Compile Include="HarmonyPatches\IncidentWorker_WandererJoin_TryExecuteWorker_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_ConstructFinishFrame_MakeNewToils_TickAction_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_ConfigureIdeo_CanDoNext_Patch.cs" />
+    <Compile Include="HarmonyPatches\Page_ConfigureIdeo_DoWindowContents_Patch.cs" />
+    <Compile Include="HarmonyPatches\Page_ConfigureIdeo_PageTitle_Patch.cs" />
     <Compile Include="HarmonyPatches\Page_ConfigureIdeo_SelectOrMakeNewIdeo_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_HearClamor_Patch.cs" />
     <Compile Include="HarmonyPatches\Precept_Ritual_ShouldShowGizmo_Patch.cs" />

@@ -181,6 +181,10 @@ namespace VFETribals
             {
                 ResearchAllAnimalProjects();
             }
+            else if (Faction.OfPlayer.def.techLevel < playerTechLevel.Value)
+            {
+                Faction.OfPlayer.def.techLevel = playerTechLevel.Value;
+            }
 
             if (VFET_DefOf.VFET_Culture.IsFinished is false)
             {
