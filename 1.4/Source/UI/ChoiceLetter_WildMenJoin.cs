@@ -16,6 +16,10 @@ namespace VFETribals
         {
             get
             {
+                var targetMap = map;
+                if (targetMap == null || !Find.Maps.Contains(targetMap))
+                    targetMap = Find.Maps.Where(x => x.IsPlayerHome).RandomElementWithFallback();
+
                 yield return new DiaOption("Accept".Translate())
                 {
                     action = () =>
@@ -26,7 +30,7 @@ namespace VFETribals
                         }
                         IncidentParms parms = new IncidentParms
                         {
-                            target = map
+                            target = targetMap
                         };
                         PawnsArrivalModeDef edgeWalkIn = PawnsArrivalModeDefOf.EdgeWalkIn;
                         edgeWalkIn.Worker.TryResolveRaidSpawnCenter(parms);
@@ -34,15 +38,16 @@ namespace VFETribals
                         Close();
                         this.quest.End(QuestEndOutcome.Success, false);
                     },
-                    resolveTree = true
+                    resolveTree = true,
+                    disabled = targetMap == null
                 };
                 yield return new DiaOption("VFET.Reject".Translate())
                 {
                     action = () =>
                     {
-                        if (Rand.Chance(0.2f))
+                        if (targetMap != null && Rand.Chance(0.2f))
                         {
-                            Utils.MakeWildmenRaid(wildmen, map);
+                            Utils.MakeWildmenRaid(wildmen, targetMap);
                             this.quest.End(QuestEndOutcome.Fail, false);
                         }
                         else
