@@ -5,6 +5,7 @@
     <defName>VFET_Chunk</defName>
     <label>chunk</label>
     <description>A chunk of rock, carefully picked to have the highest smashing potential.</description>
+	<relicChance>0</relicChance>
     <graphicData>
       <texPath>Equipment/WeaponMelee/Chunk</texPath>
       <graphicClass>Graphic_Single</graphicClass>
