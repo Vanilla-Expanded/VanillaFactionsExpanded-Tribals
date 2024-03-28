@@ -53,9 +53,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.*">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4046-beta">
     </PackageReference>
-    <PackageReference Include="Lib.Harmony" Version="2.2.2">
+    <PackageReference Include="Lib.Harmony" Version="2.3.2">
       <ExcludeAssets>runtime</ExcludeAssets>
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -87,7 +87,6 @@
     <Compile Include="HarmonyPatches\ScenPart_ConfigPage_ConfigureStartingPawnsBase_PostIdeoChosen_Patch.cs" />
     <Compile Include="HarmonyPatches\SitePart_SitePartTick_Patch.cs" />
     <Compile Include="HarmonyPatches\SocialCardUtility_DrawPawnRoleSelection_Patch.cs" />
-    <Compile Include="HarmonyPatches\Thing_GetGizmos_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
     <Compile Include="HarmonyPatches\ThoughtWorker_Expectations_CurrentStateInternal.cs" />
     <Compile Include="PlaceWorker_OnFloorsOrStoneTerrains.cs" />

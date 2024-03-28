@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Core</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/StatDef[defName="Beauty"]/parts</xpath>
+               <value>
+                  <li Class="VFETribals.StatPart_FloorPainting_TechLevel">
+                     <animal>1</animal>
+                     <neolithic>1</neolithic>
+                     <medieval>2</medieval>
+                     <industrial>8</industrial>
+                     <spacer>16</spacer>
+                     <ultra>32</ultra>
+                  </li>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Campfire" or defName="TorchLamp"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>VFET_Fire</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="TableSculpting"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>VFET_Culture</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+            <!-- <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="SimpleResearchBench"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>ComplexFurniture</li>
+                  </researchPrerequisites>
+               </value>
+            </li> -->
+            <li Class="PatchOperationConditional">
+               <xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/researchPrerequisites</xpath>
+               <match Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="SimpleResearchBench"]/researchPrerequisites</xpath>
+                        <value>
+                           <li>ComplexFurniture</li>
+                        </value>
+                     </li>
+                  </operations>
+               </match>
+               <nomatch Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="SimpleResearchBench"]</xpath>
+                        <value>
+                           <researchPrerequisites>
+                              <li>ComplexFurniture</li>
+                           </researchPrerequisites>
+                        </value>
+                     </li>
+                  </operations>
+               </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ResearchProjectDef[defName="ComplexFurniture"]</xpath>
+               <value>
+                  <requiredResearchBuilding>VFET_ResearchSpot</requiredResearchBuilding>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Fence" or defName="FenceGate" or defName="AnimalFlap" or defName="AnimalSleepingBox" or defName="AnimalBed" or defName="EggBox" or defName="PenMarker"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>VFET_AnimalHandling</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+            <!-- <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Wall" or defName="Door" or defName="Column" or defName="Barricade" or defName="Sandbags" or defName="FueledStove" or defName="TableButcher"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>VFET_Construction</li>
+                  </researchPrerequisites>
+               </value>
+            </li> -->
+            <li Class="PatchOperationConditional">
+               <xpath>/Defs/ThingDef[defName="Wall" or defName="Door" or defName="Column" or defName="Barricade" or defName="Sandbags" or defName="FueledStove" or defName="TableButcher"]/researchPrerequisites</xpath>
+               <match Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Wall" or defName="Door" or defName="Column" or defName="Barricade" or defName="Sandbags" or defName="FueledStove" or defName="TableButcher"]/researchPrerequisites</xpath>
+                        <value>
+                           <li>VFET_Construction</li>
+                        </value>
+                     </li>
+                  </operations>
+               </match>
+               <nomatch Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Wall" or defName="Door" or defName="Column" or defName="Barricade" or defName="Sandbags" or defName="FueledStove" or defName="TableButcher"]</xpath>
+                        <value>
+                           <researchPrerequisites>
+                              <li>VFET_Construction</li>
+                           </researchPrerequisites>
+                        </value>
+                     </li>
+                  </operations>
+               </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/TerrainDef[defName="Bridge" or defName="WoodPlankFloor" or @Name="FlagstoneBase" or defName="StrawMatting"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>VFET_Construction</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble" or @Name="TableGatherSpotBase" or defName="Stool" or defName="HoopstoneRing" or defName="GameOfUrBoard"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>VFET_Furniture</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Apparel_TribalA" or defName="Apparel_WarVeil" or defName="Apparel_WarMask"]/recipeMaker</xpath>
+               <value>
+                  <researchPrerequisite>VFET_Tribalwear</researchPrerequisite>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="Apparel_TribalHeaddress"]/recipeMaker/researchPrerequisite</xpath>
+               <value>
+                  <researchPrerequisite>VFET_Tribalwear</researchPrerequisite>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife" or defName="MeleeWeapon_Club"]/recipeMaker</xpath>
+               <value>
+                  <researchPrerequisite>VFET_Weapons</researchPrerequisite>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Bow_Short"]/recipeMaker</xpath>
+               <value>
+                  <researchPrerequisite>VFET_Bow</researchPrerequisite>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="ButcherSpot" or defName="TrapSpike"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>VFET_Hunting</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="PlantPot"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>VFET_Agriculture</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Plant_Rice" or defName="Plant_Potato" or defName="Plant_Corn" or defName="Plant_Haygrass" or defName="Plant_Cotton"]/plant</xpath>
+               <value>
+                  <sowResearchPrerequisites>
+                     <li>VFET_Agriculture</li>
+                  </sowResearchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationConditional">
+               <xpath>/Defs/ThingDef[defName="Plant_Strawberry"]/plant/sowResearchPrerequisites</xpath>
+               <match Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Plant_Strawberry"]/plant/sowResearchPrerequisites</xpath>
+                        <value>
+                           <li>VFET_Agriculture</li>
+                        </value>
+                     </li>
+                  </operations>
+               </match>
+               <nomatch Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Plant_Strawberry"]/plant</xpath>
+                        <value>
+                           <sowResearchPrerequisites>
+                              <li>VFET_Agriculture</li>
+                           </sowResearchPrerequisites>
+                        </value>
+                     </li>
+                  </operations>
+               </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Plant_Hops" or defName="Plant_Smokeleaf" or defName="Plant_Psychoid" or defName="Plant_Tinctoria"]/plant</xpath>
+               <value>
+                  <sowResearchPrerequisites>
+                     <li>VFET_Cultivation</li>
+                  </sowResearchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Plant_Healroot"]/plant</xpath>
+               <value>
+                  <sowResearchPrerequisites>
+                     <li>VFET_Medicine</li>
+                  </sowResearchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="PartySpot"]/label</xpath>
+               <value>
+                  <label>gathering spot</label>
+               </value>
+            </li>
+            <li Class="PatchOperationConditional">
+               <success>Always</success>
+               <xpath>/Defs/ThingDef[defName = "PartySpot"]/comps</xpath>
+               <nomatch Class="PatchOperationAdd">
+                  <xpath>/Defs/ThingDef[defName = "PartySpot"]</xpath>
+                  <value>
+                     <comps>
+                        <li>
+                           <compClass>CompGatherSpot</compClass>
+                        </li>
+                     </comps>
+                  </value>
+               </nomatch>
+               <match Class="PatchOperationAdd">
+                  <xpath>/Defs/ThingDef[defName = "PartySpot"]/comps</xpath>
+                  <value>
+                     <li>
+                        <compClass>CompGatherSpot</compClass>
+                     </li>
+                  </value>
+               </match>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+</Patch>

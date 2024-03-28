@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>VFET_SittingSpot</defName>
+		<label>sitting spot</label>
+		<description>A spot on which to sit. Not very comfortable, and only marginally better than nothing. Can be used at tables, work stations, and elsewhere.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/SittingSpot/SittingSpot</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<useHitPoints>False</useHitPoints>
+		<altitudeLayer>Building</altitudeLayer>
+		<designationCategory>Furniture</designationCategory>
+		<statBases>
+			<WorkToBuild>0</WorkToBuild>
+			<Beauty>-2</Beauty>
+			<Comfort>0.1</Comfort>
+		</statBases>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<passability>Standable</passability>
+		<designationHotKey>Misc6</designationHotKey>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<uiOrder>2400</uiOrder>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<isSittable>true</isSittable>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+			<!-- Don't destroy trees when putting a sitting spot over them -->
+			<sowTag>SupportPlantsOnly</sowTag>
+			<!-- Don't wake up dormant mechanoids when placed near them -->
+			<wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+			
+		</building>
+		<!-- Prevent colonists from using sitting spots in prisons -->
+		<socialPropernessMatters>true</socialPropernessMatters>
+		
+	</ThingDef>
+</Defs>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Plants Expanded - More Plants</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Agriculture"]/unlocksDesignators</xpath>
+					<value>
+						<li>VanillaPlantsExpandedMorePlants.Designator_AquaticGrowingZone</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Agriculture"]/unlocksDesignators</xpath>
+					<value>
+						<li>VanillaPlantsExpandedMorePlants.Designator_SandyGrowingZone</li>
+					</value>
+				</li>
+			
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VCE_BrusselsSprout" or defName="VCE_Cassava" or defName="VCE_SweetPotato" or defName="VCE_Buckwheat" or defName="VCE_Garlic" or defName="VCE_Carrot" or defName="VCE_Beans" or defName="VCE_Canola" ]/plant</xpath>
+					<value>
+						<sowResearchPrerequisites>
+							<li>VFET_Agriculture</li>
+						</sowResearchPrerequisites>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VCE_Celery" or defName="VCE_Pineapple" or defName="VCE_Lettuce" or defName="VCE_Radish" or defName="VCE_Peanut" or defName="VCE_Sunflower" or defName="VCE_Okra" or defName="VCE_Peanut" or defName="VCE_Chickpea" or defName="VCE_BellPepper" or defName="VCE_TreeAvocado" or defName="VCE_TreeOlive" or defName="VCE_CoconutPalm" or defName="VCE_TreeAlmond" or defName="VCE_TreeMango"]/plant</xpath>
+					<value>
+						<sowResearchPrerequisites>
+							<li>VFET_Cultivation</li>
+						</sowResearchPrerequisites>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+

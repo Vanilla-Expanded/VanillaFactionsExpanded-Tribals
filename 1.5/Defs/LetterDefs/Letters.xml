@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <LetterDef ParentName="CustomChoiceLetterBase">
+    <defName>VFET_ConfigureIdeo</defName>
+    <letterClass>VFETribals.ChoiceLetter_ConfigureIdeo</letterClass>
+  </LetterDef>
+
+  <LetterDef ParentName="CustomChoiceLetterBase">
+    <defName>VFET_WildMenJoin</defName>
+    <letterClass>VFETribals.ChoiceLetter_WildMenJoin</letterClass>
+  </LetterDef>
+  
+</Defs>

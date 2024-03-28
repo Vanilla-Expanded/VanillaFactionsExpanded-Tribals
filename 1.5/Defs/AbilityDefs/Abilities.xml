@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AbilityGroupDef>
+		<defName>VFET_TribalGathering</defName>
+		<cooldownTicks>60000</cooldownTicks>
+		<ritualRoleIds>
+			<li>organizer</li>
+		</ritualRoleIds>
+	</AbilityGroupDef>
+</Defs>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RitualBehaviorDef>
+		<defName>VFET_TribalGathering_Behaviour</defName>
+		<durationTicks>7500</durationTicks>
+		<workerClass>VFETribals.RitualBehaviourWorker_TribalGathering</workerClass>
+		<roles>
+			<li Class="RitualRoleTag">
+				<label>organizer</label>
+				<tag>Organizer</tag>
+				<id>organizer</id>
+				<required>True</required>
+				<substitutable>True</substitutable>
+				<maxCount>1</maxCount>
+				<countsAsParticipant>true</countsAsParticipant>
+				<allowChild>false</allowChild>
+				<mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+			</li>
+		</roles>
+		<spectatorsLabel>Participants</spectatorsLabel>
+		<spectatorGerund>participate</spectatorGerund>
+		<stages>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.2</percentage>
+					</li>
+				</endTriggers>
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The introduction is over and the tribal gathering is beginning.</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>
+				<roleBehaviors>
+					<li>
+						<roleId>organizer</roleId>
+						<dutyDef>VFET_SpeakOnCellFacingSpectators</dutyDef>
+						<speakerInteraction>VFET_TribalGatheringInteraction</speakerInteraction>
+						<customPositions>
+							<li Class="RitualPosition_BesideThing"/>
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>VFET_SpectateSociallyActive</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.7</percentage>
+					</li>
+				</endTriggers>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+	<RitualBehaviorDef>
+		<defName>VFET_AdvanceToNeolithic_Behaviour</defName>
+		<durationTicks>7500</durationTicks>
+		<workerClass>VFETribals.RitualBehaviourWorker_TribalGathering</workerClass>
+		<roles>
+			<li Class="RitualRoleTag">
+				<label>organizer</label>
+				<tag>Organizer</tag>
+				<id>organizer</id>
+				<required>True</required>
+				<substitutable>True</substitutable>
+				<maxCount>1</maxCount>
+				<countsAsParticipant>true</countsAsParticipant>
+				<allowChild>false</allowChild>
+				<mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+			</li>
+		</roles>
+		<spectatorsLabel>Participants</spectatorsLabel>
+		<spectatorGerund>participate</spectatorGerund>
+		<stages>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.2</percentage>
+					</li>
+				</endTriggers>
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The introduction is over and the group is analyzing all available data.</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>
+				<roleBehaviors>
+					<li>
+						<roleId>organizer</roleId>
+						<dutyDef>VFET_SpeakOnCellFacingSpectators</dutyDef>
+						<speakerInteraction>VFET_TribalGatheringInteraction</speakerInteraction>
+						<customPositions>
+							<li Class="RitualPosition_BesideThing"/>
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>VFET_SpectateSociallyActive</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.7</percentage>
+					</li>
+				</endTriggers>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+	<RitualBehaviorDef>
+		<defName>VFET_AdvanceToMedieval_Behaviour</defName>
+		<durationTicks>7500</durationTicks>
+		<workerClass>VFETribals.RitualBehaviourWorker_MedievalGathering</workerClass>
+		<roles>
+			<li Class="RitualRoleTag">
+				<label>organizer</label>
+				<tag>Organizer</tag>
+				<id>organizer</id>
+				<required>True</required>
+				<substitutable>True</substitutable>
+				<maxCount>1</maxCount>
+				<countsAsParticipant>true</countsAsParticipant>
+				<allowChild>false</allowChild>
+				<mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+			</li>
+		</roles>
+		<spectatorsLabel>Participants</spectatorsLabel>
+		<spectatorGerund>participate</spectatorGerund>
+		<stages>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.2</percentage>
+					</li>
+				</endTriggers>
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The introduction is over and the group is analyzing all available data.</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>
+				<roleBehaviors>
+					<li>
+						<roleId>organizer</roleId>
+						<dutyDef>VFET_SpeakOnCellFacingSpectators</dutyDef>
+						<speakerInteraction>VFET_TribalGatheringInteraction</speakerInteraction>
+						<customPositions>
+							<li Class="RitualPosition_BesideThing"/>
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>VFET_SpectateSociallyActive</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.7</percentage>
+					</li>
+				</endTriggers>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+	<RitualBehaviorDef>
+		<defName>VFET_AdvanceToIndustrial_Behaviour</defName>
+		<durationTicks>7500</durationTicks>
+		<workerClass>VFETribals.RitualBehaviourWorker_IndustrialGathering</workerClass>
+		<roles>
+			<li Class="RitualRoleTag">
+				<label>organizer</label>
+				<tag>Organizer</tag>
+				<id>organizer</id>
+				<required>True</required>
+				<substitutable>True</substitutable>
+				<maxCount>1</maxCount>
+				<countsAsParticipant>true</countsAsParticipant>
+				<allowChild>false</allowChild>
+				<mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+			</li>
+		</roles>
+		<spectatorsLabel>Participants</spectatorsLabel>
+		<spectatorGerund>participate</spectatorGerund>
+		<stages>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.2</percentage>
+					</li>
+				</endTriggers>
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The introduction is over and the group is analyzing all available data.</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>
+				<roleBehaviors>
+					<li>
+						<roleId>organizer</roleId>
+						<dutyDef>VFET_SpeakOnCellFacingSpectators</dutyDef>
+						<speakerInteraction>VFET_TribalGatheringInteraction</speakerInteraction>
+						<customPositions>
+							<li Class="RitualPosition_BesideThing"/>
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>VFET_SpectateSociallyActive</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.7</percentage>
+					</li>
+				</endTriggers>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+	<RitualBehaviorDef>
+		<defName>VFET_AdvanceToSpacer_Behaviour</defName>
+		<durationTicks>7500</durationTicks>
+		<workerClass>VFETribals.RitualBehaviourWorker_SpacerGathering</workerClass>
+		<roles>
+			<li Class="RitualRoleTag">
+				<label>organizer</label>
+				<tag>Organizer</tag>
+				<id>organizer</id>
+				<required>True</required>
+				<substitutable>True</substitutable>
+				<maxCount>1</maxCount>
+				<countsAsParticipant>true</countsAsParticipant>
+				<allowChild>false</allowChild>
+				<mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+			</li>
+		</roles>
+		<spectatorsLabel>Participants</spectatorsLabel>
+		<spectatorGerund>participate</spectatorGerund>
+		<stages>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.2</percentage>
+					</li>
+				</endTriggers>
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The introduction is over and the group is analyzing all available data.</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>
+				<roleBehaviors>
+					<li>
+						<roleId>organizer</roleId>
+						<dutyDef>VFET_SpeakOnCellFacingSpectators</dutyDef>
+						<speakerInteraction>VFET_TribalGatheringInteraction</speakerInteraction>
+						<customPositions>
+							<li Class="RitualPosition_BesideThing"/>
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>VFET_SpectateSociallyActive</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.7</percentage>
+					</li>
+				</endTriggers>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+	<RitualBehaviorDef>
+		<defName>VFET_AdvanceToUltra_Behaviour</defName>
+		<durationTicks>7500</durationTicks>
+		<workerClass>VFETribals.RitualBehaviourWorker_UltraGathering</workerClass>
+		<roles>
+			<li Class="RitualRoleTag">
+				<label>organizer</label>
+				<tag>Organizer</tag>
+				<id>organizer</id>
+				<required>True</required>
+				<substitutable>True</substitutable>
+				<maxCount>1</maxCount>
+				<countsAsParticipant>true</countsAsParticipant>
+				<allowChild>false</allowChild>
+				<mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+			</li>
+		</roles>
+		<spectatorsLabel>Participants</spectatorsLabel>
+		<spectatorGerund>participate</spectatorGerund>
+		<stages>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.2</percentage>
+					</li>
+				</endTriggers>
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The introduction is over and the group is analyzing all available data.</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>
+				<roleBehaviors>
+					<li>
+						<roleId>organizer</roleId>
+						<dutyDef>VFET_SpeakOnCellFacingSpectators</dutyDef>
+						<speakerInteraction>VFET_TribalGatheringInteraction</speakerInteraction>
+						<customPositions>
+							<li Class="RitualPosition_BesideThing"/>
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>VFET_SpectateSociallyActive</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.7</percentage>
+					</li>
+				</endTriggers>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+</Defs>
