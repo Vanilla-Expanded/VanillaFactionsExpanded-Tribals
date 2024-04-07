@@ -7,7 +7,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/VAE_Accessories.CaravanCapacityApparelDef[defName="VAEA_Apparel_Backpack"]/recipeMaker</xpath>
+					<xpath>Defs/ThingDef[defName="VAEA_Apparel_Backpack"]/recipeMaker</xpath>
 					<value>
 						<researchPrerequisite>VFET_Tribalwear</researchPrerequisite>
 					</value>

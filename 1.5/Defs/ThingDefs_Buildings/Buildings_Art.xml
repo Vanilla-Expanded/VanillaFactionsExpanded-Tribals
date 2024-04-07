@@ -108,7 +108,7 @@
 	<blocksAltitudes>
       <li>FloorCoverings</li>
     </blocksAltitudes>
-    <blocksPlants>true</blocksPlants>
+    <blockPlants>true</blockPlants>
 	<modExtensions>
 		<li Class="VFECore.ThingDefExtension">
 			<constructionSkillRequirement>
