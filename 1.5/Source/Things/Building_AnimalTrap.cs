@@ -54,18 +54,21 @@ namespace VFETribals
             {
                 return;
             }
-            float num = this.GetStatValue(StatDefOf.TrapMeleeDamage) * DamageRandomFactorRange.RandomInRange;
-            float armorPenetration = num * 0.015f;
-            var part = p.health.hediffSet.GetNotMissingParts().Where(x => x.IsCorePart
-            || x.IsInGroup(BodyPartGroupDefOf.FullHead)).RandomElement();
-            DamageInfo dinfo = new DamageInfo(DamageDefOf.Stab, num, armorPenetration, -1f, this, part);
-            DamageWorker.DamageResult damageResult = p.TakeDamage(dinfo);
-            BattleLogEntry_DamageTaken battleLogEntry_DamageTaken = new BattleLogEntry_DamageTaken(p, RulePackDefOf.DamageEvent_TrapSpike);
-            Find.BattleLog.Add(battleLogEntry_DamageTaken);
-            damageResult.AssociateWithLog(battleLogEntry_DamageTaken);
-            if (p.RaceProps.Animal)
+            for (int i = 0; (float)i < 5f; i++)
             {
-                Messages.Message("VFET.AnimalTrapSprung".Translate(p.Label), new TargetInfo(this.Position, this.Map), MessageTypeDefOf.NeutralEvent);
+                float num = this.GetStatValue(StatDefOf.TrapMeleeDamage) * DamageRandomFactorRange.RandomInRange;
+                float armorPenetration = num * 0.015f;
+                var part = p.health.hediffSet.GetNotMissingParts().Where(x => x.IsCorePart
+                || x.IsInGroup(BodyPartGroupDefOf.FullHead)).RandomElement();
+                DamageInfo dinfo = new DamageInfo(DamageDefOf.Stab, num, armorPenetration, -1f, this, part);
+                DamageWorker.DamageResult damageResult = p.TakeDamage(dinfo);
+                if (i == 0 && p.RaceProps.Animal)
+                {
+                    BattleLogEntry_DamageTaken battleLogEntry_DamageTaken = new BattleLogEntry_DamageTaken(p, RulePackDefOf.DamageEvent_TrapSpike);
+                    Find.BattleLog.Add(battleLogEntry_DamageTaken);
+                    damageResult.AssociateWithLog(battleLogEntry_DamageTaken);
+                    Messages.Message("VFET.AnimalTrapSprung".Translate(p.Label), new TargetInfo(this.Position, this.Map), MessageTypeDefOf.NeutralEvent);
+                }
             }
         }
     }
