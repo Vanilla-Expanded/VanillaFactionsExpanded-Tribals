@@ -48,6 +48,7 @@ namespace VFETribals
                 TechLevel.Industrial => industrial,
                 TechLevel.Spacer => spacer,
                 TechLevel.Ultra => ultra,
+                TechLevel.Archotech => ultra,
                 _ => throw new ArgumentOutOfRangeException(),
             };
         }
