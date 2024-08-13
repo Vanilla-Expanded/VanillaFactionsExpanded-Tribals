@@ -69,12 +69,6 @@
                </nomatch>
             </li>
             <li Class="PatchOperationAdd">
-               <xpath>Defs/ResearchProjectDef[defName="ComplexFurniture"]</xpath>
-               <value>
-                  <requiredResearchBuilding>VFET_ResearchSpot</requiredResearchBuilding>
-               </value>
-            </li>
-            <li Class="PatchOperationAdd">
                <xpath>Defs/ThingDef[defName="Fence" or defName="FenceGate" or defName="AnimalFlap" or defName="AnimalSleepingBox" or defName="AnimalBed" or defName="EggBox" or defName="PenMarker"]</xpath>
                <value>
                   <researchPrerequisites>
