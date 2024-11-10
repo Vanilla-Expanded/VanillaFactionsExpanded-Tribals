@@ -147,7 +147,7 @@
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>VFET_Apparel_TribalWar</defName>
     <label>war tribalwear</label>
-    <description>A full-body garment crafted using neolithic tools. While it may look primitive, it is very effective at insulating against cold temperatures. Provides slightly more protection than the standard tribalwear.</description>
+    <description>An upper-body garment crafted using neolithic tools. While it may look primitive, it is very effective at protecting against sharp and blunt damage. Provides little insulation.</description>
     <graphicData>
       <texPath>Humanlike/TribalwearWar/TribalwearWar</texPath>
       <graphicClass>Graphic_Single</graphicClass>
