@@ -31,9 +31,7 @@ namespace VFETribals
             var outcome = this.GetOutcome(quality, jobRitual);
             LookTargets lookTargets = jobRitual.selectedTarget;
             string text = this.Description;
-            Random randomWildmanOrFarmAnimals = new Random();
-            Random extraEventChance = new Random();
-
+          
             bool flag = false;
             foreach (Pawn pawn in totalPresence.Keys)
             {
@@ -128,20 +126,20 @@ namespace VFETribals
        
 
 
-            if (randomWildmanOrFarmAnimals.NextDouble() > 0.5)
+            if (Rand.Chance(0.5f))
             {
                 bool wildmanWanders = false;
                 
                 switch (outcome.positivityIndex)
                 {                  
                     case 1:
-                        if (extraEventChance.NextDouble() > 0.75)
+                        if (Rand.Chance(0.25f))
                         {
                             wildmanWanders = true;
                         }
                         break;
                     case 2:
-                        if (extraEventChance.NextDouble() > 0.5)
+                        if (Rand.Chance(0.5f))
                         {
                             wildmanWanders = true;
                         }
@@ -170,19 +168,19 @@ namespace VFETribals
                 switch (outcome.positivityIndex)
                 {
                     case -1:
-                        if (extraEventChance.NextDouble() > 0.9)
+                        if (Rand.Chance(0.1f))
                         {
                             farmAnimalsWander = true;
                         }
                         break;
                     case 1:
-                        if (extraEventChance.NextDouble() > 0.75)
+                        if (Rand.Chance(0.25f))
                         {
                             farmAnimalsWander = true;
                         }
                         break;
                     case 2:
-                        if (extraEventChance.NextDouble() > 0.5)
+                        if (Rand.Chance(0.5f))
                         {
                             farmAnimalsWander = true;
                         }
