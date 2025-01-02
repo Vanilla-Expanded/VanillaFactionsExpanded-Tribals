@@ -86,7 +86,7 @@ namespace VFETribals
                 }
 
                 ResearchProjectDef currentProj = Find.ResearchManager.currentProj;
-                if (currentProj != null && currentProj.techLevel < TechLevel.Neolithic && activeResearches.Contains(currentProj))
+                if (currentProj != null && currentProj.techLevel < TechLevel.Neolithic && activeResearches.Count > 1 && activeResearches.Contains(currentProj))
                 {
                     totalResearchPoints -= totalResearchPoints / 2;
                     if (Prefs.DevMode)
