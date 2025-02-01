@@ -19,7 +19,13 @@
 						<li>VanillaPlantsExpandedMorePlants.Designator_SandyGrowingZone</li>
 					</value>
 				</li>
-			
+
+		                <li Class="PatchOperationAdd">
+		                    <xpath>Defs/VFETribals.TribalResearchProjectDef[defName="VFET_Agriculture"]/unlocksDesignators</xpath>
+		                    <value>
+		                        <li>VanillaPlantsExpandedMorePlants.Designator_FlowerGardenGrowingZone</li>
+		                    </value>
+		                </li>			
 				
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName="VCE_BrusselsSprout" or defName="VCE_Cassava" or defName="VCE_SweetPotato" or defName="VCE_Buckwheat" or defName="VCE_Garlic" or defName="VCE_Carrot" or defName="VCE_Beans" or defName="VCE_Canola" ]/plant</xpath>
