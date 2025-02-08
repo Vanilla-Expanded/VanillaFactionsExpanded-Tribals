@@ -2,15 +2,15 @@
 <Patch>
    <Operation Class="PatchOperationFindMod">
       <mods>
-         <li>Vanilla Factions Expanded - Medieval</li>
+         <li>Vanilla Factions Expanded - Medieval 2</li>
       </mods>
       <match Class="PatchOperationSequence">
          <operations>
             <li Class="PatchOperationReplace">
-               <xpath>/Defs/ThingDef[defName="VFET_Chunk"]/stuffCategories</xpath>
+               <xpath>Defs/ThingDef[defName="VFET_Chunk"]/stuffCategories</xpath>
                <value>
                   <stuffCategories Inherit="False">
-                     <li>VFEM_StoneChunks</li>
+                     <li>VFEM2_StoneChunks</li>
                   </stuffCategories>
                </value>
             </li>
@@ -19,7 +19,7 @@
       <nomatch Class="PatchOperationSequence">
          <operations>
             <li Class="PatchOperationAdd">
-               <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]</xpath>
+               <xpath>Defs/ThingDef[@Name="ChunkRockBase"]</xpath>
                <value>
                   <stuffProps>
                      <categories>
