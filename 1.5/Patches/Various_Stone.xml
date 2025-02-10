@@ -14,6 +14,16 @@
                   </stuffCategories>
                </value>
             </li>
+			<li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[@Name="ChunkRockBase"]</xpath>
+               <value>
+                  <stuffProps>
+                     <categories>
+					    <li>VFEM2_StoneChunks</li>
+					 </categories>
+                  </stuffProps>
+               </value>
+            </li>
          </operations>
       </match>
       <nomatch Class="PatchOperationSequence">
