@@ -8,7 +8,7 @@
 			<operations>
 			
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/TerrainDef[defName="VFEM2_Chemdrench"]</xpath>
+					<xpath>Defs/VFECore.ActiveTerrainDef[defName="VFEM2_Chemdrench"]</xpath>
 					<value>
 						<researchPrerequisites>
 							<li>VFET_Construction</li>
