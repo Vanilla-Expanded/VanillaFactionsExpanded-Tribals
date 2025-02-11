@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Christmas Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="VCE_BuildingFloorCoveringBase"]</xpath>
+					<value>
+						<researchPrerequisite>VFET_Furniture</researchPrerequisite>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="VCE_MakeToy_Cloth"]</xpath>
+					<value>
+						<researchPrerequisite>VFET_Culture</researchPrerequisite>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="VCE_MakeToy_Metal"]</xpath>
+					<value>
+						<researchPrerequisite>VFET_Culture</researchPrerequisite>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName="VCE_MakeToy_Wooden"]</xpath>
+					<value>
+						<researchPrerequisite>VFET_Culture</researchPrerequisite>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+
