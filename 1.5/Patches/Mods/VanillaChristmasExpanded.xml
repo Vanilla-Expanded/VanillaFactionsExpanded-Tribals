@@ -9,7 +9,9 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[@Name="VCE_BuildingFloorCoveringBase"]</xpath>
 					<value>
-						<researchPrerequisite>VFET_Furniture</researchPrerequisite>
+						<researchPrerequisites>
+							<li>VFET_Construction</li>
+						</researchPrerequisites>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
