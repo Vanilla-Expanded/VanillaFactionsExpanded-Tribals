@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Plant_Toxipotato"]/plant</xpath>
+					<value>
+                        <sowResearchPrerequisites>
+                            <li>VFET_Agriculture</li>
+                        </sowResearchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Crib"]/researchPrerequisites</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFET_Furniture</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Apparel_KidTribal"]/recipeMaker/researchPrerequisite</xpath>
+					<value>
+                        <researchPrerequisite>VFET_Tribalwear</researchPrerequisite>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

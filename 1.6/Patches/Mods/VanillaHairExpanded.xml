@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Hair Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- <li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VHE_TableBarber"]</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFET_Culture</li>
+						</researchPrerequisites>
+					</value>
+				</li> -->
+            <li Class="PatchOperationConditional">
+               <xpath>/Defs/ThingDef[defName="VHE_TableBarber"]/researchPrerequisites</xpath>
+               <match Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="VHE_TableBarber"]/researchPrerequisites</xpath>
+                        <value>
+                           <li>VFET_Culture</li>
+                        </value>
+                     </li>
+                  </operations>
+               </match>
+               <nomatch Class="PatchOperationSequence">
+                  <operations>
+                     <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="VHE_TableBarber"]</xpath>
+                        <value>
+                           <researchPrerequisites>
+                              <li>VFET_Culture</li>
+                           </researchPrerequisites>
+                        </value>
+                     </li>
+                  </operations>
+               </nomatch>
+            </li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PreceptDef Name="VFET_PreceptBase" Abstract="True">
+		<issue>Ritual</issue>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<visible>false</visible>
+		<classic>true</classic>
+		<showRitualFloatMenuOption>false</showRitualFloatMenuOption>
+		<useRepeatPenalty>false</useRepeatPenalty>
+		<usesIdeoVisualEffects>false</usesIdeoVisualEffects>
+		<mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<notifyPlayerOnOpportunity>false</notifyPlayerOnOpportunity>
+	</PreceptDef>
+	
+	<PreceptDef ParentName="VFET_PreceptBase">
+		<defName>VFET_TribalGathering</defName>
+		<label>tribal gathering</label>
+	
+		<iconPath>UI/Icons/Rituals/Ritual_TribalGathering</iconPath>
+		<ritualPatternBase>VFET_TribalGathering_Pattern</ritualPatternBase>
+		<useCooldownFromAbilityGroupDef>VFET_TribalGathering</useCooldownFromAbilityGroupDef>
+	
+	</PreceptDef>
+	
+	<PreceptDef ParentName="VFET_PreceptBase">
+		<defName>VFET_AdvanceToNeolithic</defName>
+		<label>advance to neolithic</label>
+		<iconPath>UI/Icons/Rituals/Ritual_FormTribe</iconPath>
+		<ritualPatternBase>VFET_AdvanceToNeolithic_Pattern</ritualPatternBase>
+	</PreceptDef>
+	
+	<PreceptDef ParentName="VFET_PreceptBase">
+		<defName>VFET_AdvanceToMedieval</defName>
+		<label>advance to medieval</label>
+		<iconPath>UI/Icons/Rituals/Ritual_FormTown</iconPath>
+		<ritualPatternBase>VFET_AdvanceToMedieval_Pattern</ritualPatternBase>
+	</PreceptDef>
+	
+	<PreceptDef ParentName="VFET_PreceptBase">
+		<defName>VFET_AdvanceToIndustrial</defName>
+		<label>advance to industrial</label>
+		<iconPath>UI/Icons/Rituals/Ritual_FormCity</iconPath>
+		<ritualPatternBase>VFET_AdvanceToIndustrial_Pattern</ritualPatternBase>
+	</PreceptDef>
+	
+	<PreceptDef ParentName="VFET_PreceptBase">
+		<defName>VFET_AdvanceToSpacer</defName>
+		<label>advance to spacer</label>
+		<iconPath>UI/Icons/Rituals/Ritual_FormCollective</iconPath>
+		<ritualPatternBase>VFET_AdvanceToSpacer_Pattern</ritualPatternBase>
+	</PreceptDef>
+	
+	<PreceptDef ParentName="VFET_PreceptBase">
+		<defName>VFET_AdvanceToUltra</defName>
+		<label>advance to ultratech</label>
+		<iconPath>UI/Icons/Rituals/Ritual_FormNexus</iconPath>
+		<ritualPatternBase>VFET_AdvanceToUltra_Pattern</ritualPatternBase>
+	</PreceptDef>
+</Defs>

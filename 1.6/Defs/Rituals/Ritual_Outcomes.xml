@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RitualOutcomeEffectDef>
+		<defName>VFET_TribalGathering_Outcome</defName>
+		<description>Depending on ritual quality, participants will receive between 2 and 12 research points per participant, divided between the available research projects at the moment. Animal technology level projects will be prioritized, and no points will be allocated to neolithic projects until all animal ones are finished.\n\nAdditionally, positive results have a chance for a wild man or farm animals to be attracted to the colony.</description>
+		<workerClass>VFETribals.RitualOutcomeEffectWorker_TribalGathering</workerClass>
+		<givesDevelopmentPoints>false</givesDevelopmentPoints>
+		<warnOnLowQuality>false</warnOnLowQuality>
+		<comps>
+			
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  0.0)</li>
+						<li>(5,  0.15)</li>
+						<li>(10, 0.25)</li>
+					</points>
+				</curve>
+			</li>
+			<li Class="VFETribals.RitualOutcomeComp_TotalPawnSkill">
+				<label>Total intellectual skill</label>
+				<skillDef>Intellectual</skillDef>
+				<curve>
+					<points>
+						<li>(0,  0.0)</li>
+						<li>(50,  0.5)</li>
+						<li>(100, 1)</li>
+					</points>
+				</curve>
+			</li>
+			<li Class="RitualOutcomeComp_RitualTargetDefs">
+				<defs>
+					<li>Campfire</li>
+					<li>VFET_LargeFire</li>
+				</defs>
+				<label>started at campfire</label>
+				<qualityOffset>0.1</qualityOffset>
+				<expectedThingLabelTip>a campfire</expectedThingLabelTip>
+			</li>
+		</comps>
+		<outcomeChances>
+			<li>
+				<label>Ineffective</label>
+				<chance>0.05</chance>
+				<memory>VFET_Ineffective</memory>
+				<description>The {0} was ineffective! We tried to discuss some new developments in the tribe, but it devolved into petty bickering about food and shelter...\n\n2 points of research per participant will be distributed among the available research projects.</description>
+				<positivityIndex>-2</positivityIndex>
+			</li>
+			<li>
+				<label>Uninspiring</label>
+				<chance>0.25</chance>
+				<memory>VFET_Uninspiring</memory>
+				<description>The {0} was uninspiring. There were some new ideas floating around, but not much of substance. At least it was kinda entertaining.\n\n4 points of research per participant will be distributed among the available research projects.</description>
+				<positivityIndex>-1</positivityIndex>
+			</li>
+			<li>
+				<label>Encouraging</label>
+				<chance>0.6</chance>
+				<memory>VFET_Encouraging</memory>
+				<description>The {0} was encouraging. Some of the ideas discussed were pretty great! We are probably unto something here.\n\n8 points of research per participant will be distributed among the available research projects.</description>
+				<positivityIndex>1</positivityIndex>
+			</li>
+			<li>
+				<label>Inspiring</label>
+				<chance>0.1</chance>
+				<memory>VFET_Inspiring</memory>
+				<description>The {0} was inspiring! The tribe is close to a breakthrough!\n\n12 points of research per participant will be distributed among the available research projects.</description>
+				<positivityIndex>2</positivityIndex>
+			</li>
+		</outcomeChances>
+	</RitualOutcomeEffectDef>
+	<RitualOutcomeEffectDef>
+		<defName>VFET_AdvanceToNeolithic_Outcome</defName>
+		<description>Upon completing all pre-neolithic research projects, advance to neolithic tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+		<workerClass>VFETribals.RitualOutcomeEffectWorker_AdvanceToNeolithic</workerClass>
+		<givesDevelopmentPoints>false</givesDevelopmentPoints>
+		<warnOnLowQuality>false</warnOnLowQuality>
+		<comps>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  1)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+	<RitualOutcomeEffectDef>
+		<defName>VFET_AdvanceToMedieval_Outcome</defName>
+		<description>Upon completing all neolithic research projects, advance to medieval tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+		<workerClass>VFETribals.RitualOutcomeEffectWorker_AdvanceToMedieval</workerClass>
+		<givesDevelopmentPoints>false</givesDevelopmentPoints>
+		<warnOnLowQuality>false</warnOnLowQuality>
+		<comps>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  1)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+	<RitualOutcomeEffectDef>
+		<defName>VFET_AdvanceToIndustrial_Outcome</defName>
+		<description>Upon completing all medieval research projects, advance to industrial tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+		<workerClass>VFETribals.RitualOutcomeEffectWorker_AdvanceToIndustrial</workerClass>
+		<givesDevelopmentPoints>false</givesDevelopmentPoints>
+		<warnOnLowQuality>false</warnOnLowQuality>
+		<comps>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  1)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+	<RitualOutcomeEffectDef>
+		<defName>VFET_AdvanceToSpacer_Outcome</defName>
+		<description>Upon completing all industrial research projects, advance to spacer tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+		<workerClass>VFETribals.RitualOutcomeEffectWorker_AdvanceToSpacer</workerClass>
+		<givesDevelopmentPoints>false</givesDevelopmentPoints>
+		<warnOnLowQuality>false</warnOnLowQuality>
+		<comps>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  1)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+	<RitualOutcomeEffectDef>
+		<defName>VFET_AdvanceToUltra_Outcome</defName>
+		<description>Upon completing all spacer research projects, advance to ultratech tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+		<workerClass>VFETribals.RitualOutcomeEffectWorker_AdvanceToUltra</workerClass>
+		<givesDevelopmentPoints>false</givesDevelopmentPoints>
+		<warnOnLowQuality>false</warnOnLowQuality>
+		<comps>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  1)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+</Defs>

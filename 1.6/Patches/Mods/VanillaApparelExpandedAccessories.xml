@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Apparel Expanded — Accessories</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VAEA_Apparel_Backpack"]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisite>VFET_Tribalwear</researchPrerequisite>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VAEA_Apparel_BattleBanner"]/recipeMaker</xpath>
+					<value>
+						<researchPrerequisite>VFET_Culture</researchPrerequisite>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+

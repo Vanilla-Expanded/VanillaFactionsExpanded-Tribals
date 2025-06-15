@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Furniture Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Bed_StoneSlab" or defName="Seat_Cushion"]</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>VFET_Furniture</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RitualOutcomeEffectDef[defName="VFET_TribalGathering_Outcome"]/comps/li[@Class="RitualOutcomeComp_RitualTargetDefs"]/defs</xpath>
+					<value>
+						<li>Stone_Campfire</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+

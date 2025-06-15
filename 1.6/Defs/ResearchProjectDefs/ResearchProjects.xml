@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Fire</defName>
+    <label>fire</label>
+    <description>Unlock the capability to utilize and manage fire for various purposes. Unlocks firefighting job.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+	<unlocksWorkTypes>
+		<li>Firefighter</li>
+	</unlocksWorkTypes>
+    <tags>
+      <li>WildMenStart</li>
+	  <li>ClassicStart</li>
+    </tags>
+	<unlocksWorkTags>
+		<li>Firefighting</li>
+	</unlocksWorkTags>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->discovery of fire</li>
+    <li>subject_story->harnessed the primal force of fire, illuminating the darkness and warming the cold</li>
+    <li>subject_story->transformed the night into a time of activity and safety, warding off predators</li>
+    <li>subject_story->laid the foundation of civilization with the control of this wild element</li>
+    <li>subject_gerund->mastering the flame</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Agriculture</defName>
+    <label>agriculture</label>
+    <description>Learn to grow various staple crops. Unlocks growing job.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+	<unlocksWorkTypes>
+		<li>Growing</li>
+	</unlocksWorkTypes>
+	<unlocksDesignators>
+		<li>Designator_ZoneAdd_Growing</li>
+	</unlocksDesignators>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Fire</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->birth of farming</li>
+    <li>subject_story->turned from the nomadic life to sow the seeds of the future</li>
+    <li>subject_story->nurtured the earth to yield bountiful harvests, ensuring prosperity</li>
+    <li>subject_story->founded the first settlements, around which communities flourished</li>
+    <li>subject_gerund->cultivating sustenance from the soil</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Cultivation</defName>
+    <label>cultivation</label>
+    <description>Expand crop variety with more specific, difficult to grow plants, such as smokeleaf or psychoid plant.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Agriculture</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->diversification of crops</li>
+    <li>subject_story->explored the cultivation of exotic plants, enriching diets and medicine</li>
+    <li>subject_story->braved the cultivation of finicky crops, securing a variety of sustenance</li>
+    <li>subject_story->expanded the agricultural horizon, embracing the wealth of nature’s bounty</li>
+    <li>subject_gerund->expanding the garden of civilization</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Medicine</defName>
+    <label>medicine</label>
+    <description>Introduce basic herbal treatment methods.</description>
+    <baseCost>70</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Cultivation</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->foundations of healing</li>
+    <li>subject_story->unveiled the curative powers of nature, blending herbs into the first remedies</li>
+    <li>subject_story->soothed the ails of their kin with poultices and potions, birthed from the wild</li>
+    <li>subject_story->paved the path for the healing arts, bridging the gap between ailment and health</li>
+    <li>subject_gerund->weaving the first threads of wellness</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_AnimalHandling</defName>
+    <label>animal handling</label>
+    <description>Acquire the knowledge to manage, tame, and accommodate animals. Unlocks handing job, as well as animal taming and slaughtering.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.70</researchViewY>
+	<unlocksWorkTypes>
+		<li>Handling</li>
+	</unlocksWorkTypes>
+	<unlocksDesignators>
+		<li>Designator_Tame</li>
+		<li>Designator_Slaughter</li>
+	</unlocksDesignators>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Fire</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->the bond between beast and kin</li>
+    <li>subject_story->formed alliances with the animal kingdom, taming the wild for companionship and aid</li>
+    <li>subject_story->harnessed the strength of beasts, elevating their tribe's potential</li>
+    <li>subject_story->merged their destiny with that of their animal brethren, securing a mutual survival</li>
+    <li>subject_gerund->fostering the first companions</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Mining</defName>
+    <label>mining</label>
+    <description>Develop methods to extract resources from the earth using force. Unlocks mining job.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+	<unlocksWorkTypes>
+		<li>Mining</li>
+	</unlocksWorkTypes>
+	<unlocksDesignators>
+		<li>Designator_Mine</li>
+		<li>Designator_SmoothSurface</li>
+	</unlocksDesignators>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Fire</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->unearthing the earth’s secrets</li>
+    <li>subject_story->delved into the belly of the earth to claim its hidden riches</li>
+    <li>subject_story->crafted the first tools to pierce stone, revealing the minerals within</li>
+    <li>subject_story->laid the groundwork for advancements with the raw materials of progress</li>
+    <li>subject_gerund->chiseling the path to prosperity</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Construction</defName>
+    <label>construction</label>
+    <description>Learn the absolute basic techniques of building and structural design. Unlocks the ability to build walls and roofs.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+	<unlocksDesignators>
+		<li>Designator_AreaBuildRoof</li>
+		<li>Designator_RemoveFloor</li>
+		<li>Designator_RemoveFoundation</li>
+	</unlocksDesignators>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Mining</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->shelter and structure</li>
+    <li>subject_story->raised the first walls against the elements, crafting sanctuaries from the wild</li>
+    <li>subject_story->assembled places of gathering and rest, fostering community and safety</li>
+    <li>subject_story->embarked on the architectural journey, laying the cornerstone of progress</li>
+    <li>subject_gerund->building the cradle of civilization</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Furniture</defName>
+    <label>furniture</label>
+    <description>Introduce basic furniture crafting for improved living conditions.</description>
+    <baseCost>70</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Construction</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->comforts of craftsmanship</li>
+    <li>subject_story->carved the first symbols of comfort and utility from the heartwood of nature</li>
+    <li>subject_story->transformed living spaces with the artistry of handcrafted furniture</li>
+    <li>subject_story->elevated daily life, from survival to living, through the touch of creation</li>
+    <li>subject_gerund->shaping the comforts of home</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Tribalwear</defName>
+    <label>tribalwear</label>
+    <description>Learn to craft traditional tribal attire for various purposes.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>2.10</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Fire</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->weaving identity and protection</li>
+    <li>subject_story->fashioned attire that spoke of culture and safeguarded against the harsh world</li>
+    <li>subject_story->blended functionality with tradition, clothing the spirit of their people</li>
+    <li>subject_story->crafted garments that would become the hallmark of their tribe’s identity</li>
+    <li>subject_gerund->dressing the essence of a people</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Hunting</defName>
+    <label>hunting</label>
+    <description>Establish methods for effective hunting and resource processing. Unlocks hunting job and allows you to craft throwspikes.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+	<unlocksWorkTypes>
+		<li>Hunting</li>
+	</unlocksWorkTypes>
+	<unlocksDesignators>
+		<li>Designator_Hunt</li>
+	</unlocksDesignators>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Fire</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->the hunt’s mastery</li>
+    <li>subject_story->honed the primal dance of predator and prey, ensuring the tribe’s sustenance</li>
+    <li>subject_story->crafted the tools of the chase, bringing skill to the wild’s challenge</li>
+    <li>subject_story->secured their place atop the food chain, through cunning and craft</li>
+    <li>subject_gerund->capturing the wild’s bounty</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Weapons</defName>
+    <label>weapons</label>
+    <description>Introduce basic weaponry for defense against enemies.</description>
+    <baseCost>50</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Hunting</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->the edge of survival</li>
+    <li>subject_story->forged the first weapons, steeling their tribe against threats</li>
+    <li>subject_story->balanced the scales of nature and conflict with the craft of armament</li>
+    <li>subject_story->ensured their survival through the innovation of defense and offense</li>
+    <li>subject_gerund->arming the hands of fate</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+  
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Bow</defName>
+    <label>bow</label>
+    <description>Unlock the ability to craft the staple of ranged combat - a short bow.</description>
+    <baseCost>70</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.80</researchViewY>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Weapons</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->the arc of ascendancy</li>
+    <li>subject_story->stretched the bowstring of progress, launching arrows towards the horizon</li>
+    <li>subject_story->mastered the bow, blending patience, skill, and technology</li>
+    <li>subject_story->ushered in the era of ranged combat, shifting the dynamics of the hunt and warfare</li>
+    <li>subject_gerund->extending reach beyond grasp</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+
+  <VFETribals.TribalResearchProjectDef>
+    <defName>VFET_Culture</defName>
+    <label>culture</label>
+    <description>Unlock the ability to conduct research, as well as develop ideological thoughts. Unlocks intellectual job.</description>
+    <baseCost>100</baseCost>
+	<tab>VFET_Basics</tab>
+    <techLevel>Animal</techLevel>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>1.40</researchViewY>
+	<unlocksWorkTags>
+		<li>Intellectual</li>
+	</unlocksWorkTags>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>VFET_Medicine</li>
+	  <li>VFET_Tribalwear</li>
+	  <li>VFET_Furniture</li>
+	  <li>VFET_AnimalHandling</li>
+	  <li>VFET_Bow</li>
+    </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->the tapestry of thought</li>
+    <li>subject_story->wove the fabric of their culture, rich with the threads of knowledge and belief</li>
+    <li>subject_story->cultivated the growth of intellectual pursuits, seeding the future with ideas</li>
+    <li>subject_story->embarked on the quest for understanding, elevating their tribe with wisdom</li>
+    <li>subject_gerund->cultivating the mind’s garden</li>
+  </rulesStrings>
+</generalRules>
+  </VFETribals.TribalResearchProjectDef>
+
+</Defs>

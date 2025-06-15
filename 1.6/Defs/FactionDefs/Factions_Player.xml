@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  	<FactionDef ParentName="PlayerFactionBase">
+		<defName>VFET_WildMen</defName>
+		<label>wild men</label>
+		<description>A player-controlled gathering of wild men.</description>
+		<isPlayer>true</isPlayer>
+		<categoryTag>VFET_WildMen</categoryTag>
+		<pawnSingular>native</pawnSingular>
+		<pawnsPlural>natives</pawnsPlural>
+		<basicMemberKind>VFET_Wildperson</basicMemberKind>
+		<techLevel>Animal</techLevel>
+		<factionNameMaker>NamerFactionTribal</factionNameMaker>
+		<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+		<allowedCultures>
+			<li>Corunan</li>
+		</allowedCultures>
+		<startingResearchTags>
+			<li>WildMenStart</li>
+		</startingResearchTags>
+		<disallowedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+		</disallowedMemes>
+		<disallowedPrecepts>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+		</disallowedPrecepts>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Tribal</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<factionIconPath>UI/Expanding/WildMenTribe</factionIconPath>
+		<settlementTexturePath>UI/FactionGathering</settlementTexturePath>
+		<forageabilityFactor>1.7</forageabilityFactor>
+		<modExtensions>
+			<li Class="VEF.Factions.FactionDefExtension">
+				<strangerInBlackReplacement>VFET_Wildperson</strangerInBlackReplacement>
+			</li>
+		</modExtensions>
+	</FactionDef>
+	
+</Defs>

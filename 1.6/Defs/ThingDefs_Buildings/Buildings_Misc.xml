@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>VFET_ResearchSpot</defName>
+    <label>research spot</label>
+    <description>A spot to think on, before a simple research bench can be constructed. Researchers work here to discover new things.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/ResearchSpot/ResearchSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+	<thingClass>Building_ResearchBench</thingClass>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+	  <Beauty>-2</Beauty>
+	  <ResearchSpeedFactor>0.25</ResearchSpeedFactor>
+    </statBases>
+    <rotatable>false</rotatable>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>False</useHitPoints>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2001</uiOrder>
+    <passability>Standable</passability>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <building>
+      <sowTag>SupportPlantsOnly</sowTag>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
+      <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+    </building>
+    <interactionCellOffset>(0,0,0)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <researchPrerequisites>
+      <li>VFET_Culture</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

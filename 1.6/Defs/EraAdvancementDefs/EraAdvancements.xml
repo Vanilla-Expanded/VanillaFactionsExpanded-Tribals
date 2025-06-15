@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <VFETribals.EraAdvancementDef>
+	<defName>VFET_FormTribe</defName>
+	<label>Neolithic tech level</label>
+	<description>You have successfully completed all pre-neolithic research projects and have advanced to neolithic tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+	<newTechLevel>Neolithic</newTechLevel>
+	<cornerstonePoint>1</cornerstonePoint>
+  </VFETribals.EraAdvancementDef>
+
+  <VFETribals.EraAdvancementDef>
+	<defName>VFET_FormTown</defName>
+	<label>Medieval tech level</label>
+	<description>You have successfully completed all neolithic research projects and have advanced to medieval tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+	<newTechLevel>Medieval</newTechLevel>
+	<cornerstonePoint>1</cornerstonePoint>
+  </VFETribals.EraAdvancementDef>
+
+  <VFETribals.EraAdvancementDef>
+	<defName>VFET_FormCity</defName>
+	<label>Industrial tech level</label>
+	<description>You have successfully completed all medieval research projects and have advanced to industrial tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+	<newTechLevel>Industrial</newTechLevel>
+	<cornerstonePoint>1</cornerstonePoint>
+  </VFETribals.EraAdvancementDef>
+  
+  <VFETribals.EraAdvancementDef>
+	<defName>VFET_FormCollective</defName>
+	<label>Spacer tech level</label>
+	<description>You have successfully completed all industrial research projects and have advanced to spacer tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+	<newTechLevel>Spacer</newTechLevel>
+	<cornerstonePoint>1</cornerstonePoint>
+  </VFETribals.EraAdvancementDef>
+  
+  <VFETribals.EraAdvancementDef>
+	<defName>VFET_FormNexus</defName>
+	<label>Ultratech tech level</label>
+	<description>You have successfully completed all spacer research projects and have advanced to ultratech tech level. This will allow you to pick a Cornerstone - a powerful bonus that applies only to your civilization.</description>
+	<newTechLevel>Ultra</newTechLevel>
+	<cornerstonePoint>1</cornerstonePoint>
+  </VFETribals.EraAdvancementDef>
+  
+</Defs>
