@@ -27,7 +27,7 @@ namespace VFETribals
             base.Tick(ritual);
             if (ritual.StageIndex == 1)
             {
-                if (ritual.PawnWithRole("organizer").IsHashIntervalTick(240))
+                if (ritual.PawnWithRole("organizer")?.IsHashIntervalTick(240)==true)
                 {
                     VFET_DefOf.VFET_RitualSounds_TribalGathering.PlayOneShot(new TargetInfo(ritual.selectedTarget.Cell, ritual.selectedTarget.Map));
                 }
