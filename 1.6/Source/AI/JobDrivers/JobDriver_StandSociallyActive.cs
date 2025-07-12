@@ -12,19 +12,17 @@ namespace VFETribals
             return true;
         }
 
-        public int AgeTicks => Find.TickManager.TicksGame - startTick;
-
         public override IEnumerable<Toil> MakeNewToils()
         {
-            Toil toil = ToilMaker.MakeToil("MakeNewToils");
-            toil.tickAction = delegate
+            var toil = ToilMaker.MakeToil();
+            toil.tickIntervalAction = delegate(int delta)
             {
-                if (AgeTicks % 240 == 0)
+                if (pawn.IsHashIntervalTick(240, delta))
                 {
                     pawn.Rotation = Rot4.Random;
                 }
 
-                pawn.GainComfortFromCellIfPossible(1);
+                pawn.GainComfortFromCellIfPossible(delta);
             };
             toil.socialMode = RandomSocialMode.SuperActive;
             toil.defaultCompleteMode = ToilCompleteMode.Never;
