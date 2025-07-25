@@ -37,6 +37,11 @@ namespace VFETribals
                     {
                         foreach (var type in tribalResearch.unlocksDesignators)
                         {
+                            if (type is null)
+                            {
+                                Log.Error($"TribalResearchProjectDef {__instance.defName} has a null designator type in unlocksDesignators.");
+                                continue;
+                            }
                             Designator designator = DesignatorUtility.StandaloneDesignators.TryGetValue(type);
                             if (designator == null)
                             {
