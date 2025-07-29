@@ -13,6 +13,12 @@ namespace VFETribals
             {
                 foreach (var type in def.unlocksDesignators)
                 {
+                    if (type is null)
+                    {
+                        Log.Error($"TribalResearchProjectDef {def.defName} has a null designator type in unlocksDesignators.");
+                        continue;
+                    }
+
                     if (DesignatorUtility.StandaloneDesignators.TryGetValue(type, out var designator) is false)
                     {
                         designator = Find.ReverseDesignatorDatabase.AllDesignators.FirstOrDefault(x => x.GetType() == type);
