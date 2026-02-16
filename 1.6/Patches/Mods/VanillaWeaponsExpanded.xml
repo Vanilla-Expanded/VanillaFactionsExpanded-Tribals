@@ -7,7 +7,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName="VWE_Throwing_Rocks" or defName="VWE_MeleeWeapon_Axe" or defName="VWE_Tool_Whip"]/recipeMaker</xpath>
+					<xpath>Defs/ThingDef[defName="VWE_Throwing_Rocks" or defName="VWE_MeleeWeapon_Axe"]/recipeMaker</xpath>
 					<value>
 						<researchPrerequisite>VFET_Weapons</researchPrerequisite>
 					</value>
