@@ -33,7 +33,8 @@ namespace VFETribals
                     targetTechLevel = props.targetTechLevel;
                 }
             }
-            if (Faction.OfPlayer.def.techLevel + 1 == targetTechLevel)
+            if (Faction.OfPlayer.def.techLevel + 1 == targetTechLevel
+                && ritual.activeObligations.NullOrEmpty())
             {
                 var obligation = new RitualObligation(ritual, expires: false);
                 ritual.AddObligation(obligation);
