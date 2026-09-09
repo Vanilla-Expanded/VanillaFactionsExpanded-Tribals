@@ -26,12 +26,12 @@ namespace VFETribals
             var result = base.CanUseTargetInternal(target, obligation);
             if (result.ShouldShowGizmo)
             {
-                var trigger = parent.obligationTriggers.OfType<RitualObligationTrigger_TargetTechlevel>().First();
+                var trigger = parent.obligationTriggers.OfType<RitualObligationTrigger_TargetTechlevel>().FirstOrDefault();
                 if (trigger != null) 
                 {
                     if (trigger.targetTechLevel == TechLevel.Undefined)
                     {
-                        var props = obligation.precept.sourcePattern.ritualObligationTriggers?
+                        var props = parent.sourcePattern?.ritualObligationTriggers?
                             .OfType<RitualObligationTrigger_TargetTechlevel_Props>().FirstOrDefault();
                         if (props != null)
                         {

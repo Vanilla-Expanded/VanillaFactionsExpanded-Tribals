@@ -19,7 +19,7 @@ namespace VFETribals
         public override void CopyTo(RitualObligationTrigger other)
         {
             base.CopyTo(other);
-            this.targetTechLevel = (other as RitualObligationTrigger_TargetTechlevel).targetTechLevel;
+            (other as RitualObligationTrigger_TargetTechlevel).targetTechLevel = this.targetTechLevel;
         }
 
         public void RegisterObligation()
