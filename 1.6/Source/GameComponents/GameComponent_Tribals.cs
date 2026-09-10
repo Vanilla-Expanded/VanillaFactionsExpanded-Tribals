@@ -105,8 +105,8 @@ namespace VFETribals
                     Precept_Ritual precept = ideo.PreceptsListForReading[i] as Precept_Ritual;
                     if (precept != null && Utils.advancementPrecepts.Contains(precept.def))
                     {
-                        var trigger = precept.obligationTriggers.OfType<RitualObligationTrigger_TargetTechlevel>().First();
-                        trigger.RegisterObligation();
+                        var trigger = precept.obligationTriggers.OfType<RitualObligationTrigger_TargetTechlevel>().FirstOrDefault();
+                        trigger?.RegisterObligation();
                     }
                 }
             }

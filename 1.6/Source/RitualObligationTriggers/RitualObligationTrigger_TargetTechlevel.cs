@@ -19,21 +19,21 @@ namespace VFETribals
         public override void CopyTo(RitualObligationTrigger other)
         {
             base.CopyTo(other);
-            this.targetTechLevel = (other as RitualObligationTrigger_TargetTechlevel).targetTechLevel;
+            (other as RitualObligationTrigger_TargetTechlevel).targetTechLevel = this.targetTechLevel;
         }
 
         public void RegisterObligation()
         {
             if (targetTechLevel == TechLevel.Undefined)
             {
-                var props = this.ritual?.sourcePattern?.ritualObligationTriggers?
-                            .OfType<RitualObligationTrigger_TargetTechlevel_Props>().FirstOrDefault();
+                var props = this.ritual?.sourcePattern?.ritualObligationTriggers?.OfType<RitualObligationTrigger_TargetTechlevel_Props>().FirstOrDefault();
                 if (props != null)
                 {
                     targetTechLevel = props.targetTechLevel;
                 }
             }
-            if (Faction.OfPlayer.def.techLevel + 1 == targetTechLevel)
+            if (Faction.OfPlayer.def.techLevel + 1 == targetTechLevel
+                && ritual.activeObligations.NullOrEmpty())
             {
                 var obligation = new RitualObligation(ritual, expires: false);
                 ritual.AddObligation(obligation);
